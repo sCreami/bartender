@@ -35,7 +35,7 @@ public class Inventaire {
     }
 
     /*
-     *  Retourne sous forme d'ArrayList toutes les boissons
+     *  return : ArrayList<Boisson> de toutes les boissons
      */
     public static ArrayList<Boisson> getListOfBoisson(){
         return null;
@@ -43,7 +43,7 @@ public class Inventaire {
 
     /*
      *  boissonVoulue : Objet Boisson qui contient les paramètres voulus.
-     *  return : ArrayList qui contient touts les boissons qui ont les critères de boissonVoulue
+     *  return : ArrayList<Boisson> qui contient touts les boissons qui ont les critères de boissonVoulue
      */
     public static ArrayList<Boisson> searchBoisson(Boisson boissonVoulue){
         return null;
