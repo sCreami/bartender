@@ -16,42 +16,30 @@ public class Serveur {
     }
 
     /**
-     * TODO Rédiger la méthode
+     * TODO Rédiger la méthode seConnecter()
      */
     public void seConnecter() {
 
     }
 
     /**
-     * TODO Rédiger la méthode
+     * TODO Rédiger la méthode seDeconnecter()
      */
     public void seDeconnecter() {
 
     }
 
-    public int getIdentifiant() {
-        return identifiant;
-    }
+    public int getIdentifiant() { return identifiant; }
 
-    public void setIdentifiant(int identifiant) {
-        this.identifiant = identifiant;
-    }
+    public void setIdentifiant(int identifiant) { this.identifiant = identifiant; }
 
-    public String getNom() {
-        return nom;
-    }
+    public String getNom() { return nom; }
 
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
+    public void setNom(String nom) {this.nom = nom; }
 
-    public String getMotDePasse() {
-        return motDePasse;
-    }
+    public String getMotDePasse() { return motDePasse; }
 
-    public void setMotDePasse(String motDePasse) {
-        this.motDePasse = motDePasse;
-    }
+    public void setMotDePasse(String motDePasse) { this.motDePasse = motDePasse; }
 
     @Override
     public String toString() {
