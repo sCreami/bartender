@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="30dp">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="BarTender"
+        android:textStyle="bold"
+        android:textSize="50dp"
+        android:textColor="#4BA18B"
+        android:paddingBottom="15dp"
+        android:gravity="center"/>
+
+    <Button
+        style="@style/btnStyleopal"
+        android:id="@+id/buttonCarte"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Carte"/>
+    <Button
+        style="@style/btnStyleopal"
+        android:id="@+id/buttonFacture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Facture"/>
+    <Button
+        style="@style/btnStyleopal"
+        android:id="@+id/buttonMusique"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Musique"/>
+    <Button
+        style="@style/btnStyleopal"
+        android:id="@+id/buttonOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Option"/>
+</LinearLayout>
