@@ -3,7 +3,7 @@ package lsinf1225.groupeq.bartender;
 import android.media.Image;
 
 /**
- * Created by alexis on 28/04/15.
+ * Groupe Q - Bartender
  */
 
 public class Boisson {
@@ -14,7 +14,6 @@ public class Boisson {
     private String description;
     private Image photo;
     private String type;
-
 
     public Boisson(int noBoisson, String nom, double tauxAlcool, String description, Image photo, String type) {
         this.noBoisson = noBoisson;
