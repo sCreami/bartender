@@ -1,5 +1,9 @@
 package lol;
 
+import java.util.Date;
+
+import lsinf1225.groupeq.bartender.Detail;
+
 public class Facture {
 	private int noFacture;
 	private Date date;
