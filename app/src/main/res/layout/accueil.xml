@@ -19,23 +19,29 @@
         android:id="@+id/buttonCarte"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Carte"/>
+        android:text="@string/carte"/>
     <Button
         style="@style/btnStyleopal"
         android:id="@+id/buttonFacture"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Facture"/>
+        android:text="@string/facture"/>
     <Button
         style="@style/btnStyleopal"
         android:id="@+id/buttonMusique"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Musique"/>
+        android:text="@string/Musique"/>
     <Button
         style="@style/btnStyleopal"
         android:id="@+id/buttonOption"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Option"/>
+        android:text="@string/inventaire"/>
+    <Button
+        style="@style/btnStyleopal"
+        android:id="@+id/buttonOption"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/option"/>
 </LinearLayout>
