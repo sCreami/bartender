@@ -14,7 +14,10 @@ public class Inventaire {
     private int qteSeuil;
     private int qteMax;
     private int qteStock;
-    private Boisson boisson;
+    private Boisson boisson; //Référence vers la boisson
+
+    private static ArrayList<Boisson> listeBoisson; //Liste qui contient touts les boissons
+                                                    //ex : [Coca 33, Coca 50, Eau, Jupiler]
 
     public Inventaire(int noProduit, int noBoisson, double prix, String format, int qteSeuil, int qteMax, int qteStock, Boisson boisson) {
         this.noProduit = noProduit;
@@ -25,6 +28,8 @@ public class Inventaire {
         this.qteMax = qteMax;
         this.qteStock = qteStock;
         this.boisson = boisson;
+        //Chaque fois qu'on crée un Inventaire, on ajoute la boisson à la liste;
+        listeBoisson.add(boisson);
     }
 
     /*
@@ -38,7 +43,7 @@ public class Inventaire {
      *  return : ArrayList<Boisson> de toutes les boissons
      */
     public static ArrayList<Boisson> getListOfBoisson(){
-        return null;
+        return listeBoisson;
     }
 
     /*
