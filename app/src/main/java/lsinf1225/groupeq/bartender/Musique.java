@@ -62,7 +62,7 @@ public class Musique {
         this.annee = annee;
     }
 
-    public void createPlaylist(LinkedList<Boisson> playlist){
+    public void createPlaylist(){
         this.playlist = new LinkedList<Boisson>();
     }
 
