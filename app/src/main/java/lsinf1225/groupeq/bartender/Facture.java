@@ -1,5 +1,6 @@
 package lol;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 import lsinf1225.groupeq.bartender.Detail;
@@ -12,7 +13,7 @@ public class Facture {
 	private boolean etat; // true = open, false = closed
 	private String serveur;
 	private double discount;
-	private Detail[] detail;
+	private ArrayList<Detail> detail;
 	
 	
 	public Facture(int noFacture, Date date, int noTable, String serveur) {
