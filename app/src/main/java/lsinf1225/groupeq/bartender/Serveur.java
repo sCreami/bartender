@@ -15,6 +15,20 @@ public class Serveur {
         this.motDePasse = motDePasse;
     }
 
+    /**
+     * TODO Rédiger la méthode
+     */
+    public void seConnecter() {
+
+    }
+
+    /**
+     * TODO Rédiger la méthode
+     */
+    public void seDeconnecter() {
+
+    }
+
     public int getIdentifiant() {
         return identifiant;
     }
