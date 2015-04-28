@@ -14,8 +14,9 @@ public class Inventaire {
     private int qteSeuil;
     private int qteMax;
     private int qteStock;
+    private Boisson boisson;
 
-    public Inventaire(int noProduit, int noBoisson, double prix, String format, int qteSeuil, int qteMax, int qteStock) {
+    public Inventaire(int noProduit, int noBoisson, double prix, String format, int qteSeuil, int qteMax, int qteStock, Boisson boisson) {
         this.noProduit = noProduit;
         this.noBoisson = noBoisson;
         this.prix = prix;
@@ -23,6 +24,7 @@ public class Inventaire {
         this.qteSeuil = qteSeuil;
         this.qteMax = qteMax;
         this.qteStock = qteStock;
+        this.boisson = boisson;
     }
 
     /*
@@ -33,17 +35,18 @@ public class Inventaire {
     }
 
     /*
-     *  ???
+     *  Retourne sous forme d'ArrayList toutes les boissons
      */
-    public ArrayList getListOfBoisson(){
+    public static ArrayList<Boisson> getListOfBoisson(){
         return null;
     }
 
     /*
-     *  ???
+     *  boissonVoulue : Objet Boisson qui contient les paramètres voulus.
+     *  return : ArrayList qui contient touts les boissons qui ont les critères de boissonVoulue
      */
-    public int searchBoisson(Boisson boissonVoulue){
-        return 0;
+    public static ArrayList<Boisson> searchBoisson(Boisson boissonVoulue){
+        return null;
     }
 
     public int getNoProduit() {
