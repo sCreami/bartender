@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Bartender</string>
+    <string name="app_name_swag"><b>Bar</b><i>tender</i></string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+
 </resources>
