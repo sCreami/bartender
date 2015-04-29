@@ -1,7 +1,8 @@
-package lol;
+package lsinf1225.groupeq.bartender;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.ListIterator;
 
 import lsinf1225.groupeq.bartender.Detail;
 
@@ -84,10 +85,29 @@ public class Facture {
 	public void closeFacture() {
 		this.etat = false;
 	}
-	// a modifier *********************************************
-	public double getPrix() {
-		return 42;
+
+	/*
+	 * Calcule le prix total a payer
+	 */
+    public double computePrice() {
+        ListIterator<Detail> itr = this.detail.listIterator();
+        double price = 0.0;
+
+        while (itr.hasNext()){
+            Detail dtl = itr.next();
+            price += dtl.getDejaLivre();
+        }
+        return price;
 	}
+
+    /*
+     * Applique une reduction a la facture
+     * ??? Juste comme ca : ???
+     */
+    public double addDiscount(double percent) {
+        double price = computePrice();
+        return (price-(price*(percent/100)));
+    }
 	
 	/**
 	 * 
@@ -95,12 +115,25 @@ public class Facture {
 	 * Si le produit noProduit n'existe pas encore, crée un nouvel objet détail et l'ajoute dans le tableau des détails
 	 * 
 	 * @param noProduit
-	 * @param quontite
+	 * @param quantite
 	 */
-	public void addDetail(int noProduit, int quontite) {
-		// lol
+	public void addDetail(int noProduit, int quantite) {
+        ListIterator<Detail> itr = this.detail.listIterator();
+        boolean existe = false;             // le produit noProduit existe-t-il dans le tableau ?
+
+        while (itr.hasNext()){              // Cherche le produit dans la liste
+            Detail dtl = itr.next();
+            if (dtl.getNoProduit() == noProduit) {
+                dtl.setaLivrer((dtl.getaLivrer() + quantite));
+                existe = true;
+            }
+        }
+        if (existe == false){               // Si pas encore dans la liste, cree detail et l'ajoute
+            Detail newDtl = new Detail(this.noFacture, noProduit, quantite, 0, 0);
+            this.detail.add(newDtl);
+        }
 	}
-	
+
 	/**
 	 * 
 	 * Valide la livraison du produit noProduit
@@ -110,7 +143,15 @@ public class Facture {
 	 * @param quantite
 	 */
 	public void validateLivraison (int noProduit, int quantite)  {
-		// #lol
+        ListIterator<Detail> itr = this.detail.listIterator();
+
+        while (itr.hasNext()) {
+            Detail dtl = itr.next();
+            if (dtl.getNoProduit() == noProduit){
+                dtl.setaLivrer((dtl.getaLivrer() - quantite));
+                dtl.setDejaLivre((dtl.getDejaLivre() + quantite));
+            }
+        }
 	}
 
 	/**
@@ -122,6 +163,14 @@ public class Facture {
 	 * @param quantite
 	 */
 	public void validatePayement (int noProduit, int quantite) {
-		// #lol
+        ListIterator<Detail> itr = this.detail.listIterator();
+
+        while (itr.hasNext()) {
+            Detail dtl = itr.next();
+            if (dtl.getNoProduit() == noProduit){
+                dtl.setDejaLivre((dtl.getDejaLivre() - quantite));
+                dtl.setDejaPaye((dtl.getDejaPaye() + quantite));
+            }
+        }
 	}
 }

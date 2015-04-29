@@ -6,14 +6,14 @@ package lsinf1225.groupeq.bartender;
 public class Detail {
     private int noFacture;
     private int noProduit;
-    private int aLivre;
+    private int aLivrer;
     private int dejaLivre;
     private int dejaPaye;
 
-    public Detail(int noFacture, int noProduit,int aLivre, int dejaLivre, int dejaPaye){
+    public Detail(int noFacture, int noProduit,int aLivrer, int dejaLivre, int dejaPaye){
         this.noFacture = noFacture;
         this.noProduit = noProduit;
-        this.aLivre = aLivre;
+        this.aLivrer = aLivrer;
         this.dejaLivre = dejaLivre;
         this.dejaPaye = dejaPaye;
     }
@@ -34,12 +34,12 @@ public class Detail {
         this.noProduit = noProduit;
     }
 
-    public int getaLivre() {
-        return aLivre;
+    public int getaLivrer() {
+        return aLivrer;
     }
 
-    public void setaLivre(int aLivre) {
-        this.aLivre = aLivre;
+    public void setaLivrer(int aLivrer) {
+        this.aLivrer = aLivrer;
     }
 
     public int getDejaLivre() {
