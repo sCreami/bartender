@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        style="@style/couleurTexteBase"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/connexionLogin"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Mot de passe"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        style="@style/couleurTexteBase"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/connextionMDP"
+        android:layout_gravity="center_horizontal"
+        android:paddingBottom="20dp" />
+
+    <Button
+        style="@style/btnStyleopal"
+        android:id="@+id/buttonAjouterProduit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connexion"/>
+    <Button
+        style="@style/btnStyleopal"
+        android:id="@+id/buttonRetourProduit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Retour"/>
+
+</LinearLayout>
