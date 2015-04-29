@@ -6,11 +6,11 @@
     android:padding="50dp">
 
     <TextView
+        style="@style/couleurTexteBase"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_name_swag"
         android:textSize="50dp"
-        android:textColor="#4BA18B"
         android:paddingBottom="15dp"
         android:gravity="center"/>
 
@@ -31,10 +31,10 @@
         android:id="@+id/buttonMusique"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/Musique"/>
+        android:text="@string/musique"/>
     <Button
         style="@style/btnStyleopal"
-        android:id="@+id/buttonOption"
+        android:id="@+id/buttonInventaire"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/inventaire"/>

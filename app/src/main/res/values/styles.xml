@@ -17,4 +17,7 @@
         <item name="android:background">@drawable/custom_btn_opal</item>
         <item name="android:padding">10dp</item>
     </style>
+    <style name="couleurTexteBase">
+        <item name="android:textColor">#4BA18B</item>
+    </style>
 </resources>

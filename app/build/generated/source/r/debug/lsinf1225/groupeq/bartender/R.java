@@ -18,15 +18,16 @@ public final class R {
         public static final int custom_btn_opal=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090008;
-        public static final int buttonAjouterProduit=0x7f090006;
+        public static final int action_settings=0x7f090009;
+        public static final int buttonAjouterProduit=0x7f090007;
         public static final int buttonCarte=0x7f090000;
         public static final int buttonFacture=0x7f090001;
+        public static final int buttonInventaire=0x7f090003;
         public static final int buttonMusique=0x7f090002;
-        public static final int buttonOption=0x7f090003;
-        public static final int buttonRetourProduit=0x7f090007;
-        public static final int calcul=0x7f090004;
-        public static final int raz=0x7f090005;
+        public static final int buttonOption=0x7f090004;
+        public static final int buttonRetourProduit=0x7f090008;
+        public static final int calcul=0x7f090005;
+        public static final int raz=0x7f090006;
     }
     public static final class layout {
         public static final int accueil=0x7f040000;
@@ -40,14 +41,14 @@ public final class R {
         public static final int ic_launcher=0x7f030000;
     }
     public static final class string {
-        public static final int Musique=0x7f060000;
-        public static final int action_settings=0x7f060001;
-        public static final int app_name=0x7f060002;
-        public static final int app_name_swag=0x7f060003;
-        public static final int carte=0x7f060004;
-        public static final int facture=0x7f060005;
-        public static final int hello_world=0x7f060006;
-        public static final int inventaire=0x7f060007;
+        public static final int action_settings=0x7f060000;
+        public static final int app_name=0x7f060001;
+        public static final int app_name_swag=0x7f060002;
+        public static final int carte=0x7f060003;
+        public static final int facture=0x7f060004;
+        public static final int hello_world=0x7f060005;
+        public static final int inventaire=0x7f060006;
+        public static final int musique=0x7f060007;
         public static final int option=0x7f060008;
     }
     public static final class style {
@@ -55,5 +56,6 @@ public final class R {
          */
         public static final int AppTheme=0x7f070000;
         public static final int btnStyleopal=0x7f070001;
+        public static final int couleurTexteBase=0x7f070002;
     }
 }

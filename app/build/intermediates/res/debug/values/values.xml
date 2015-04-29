@@ -6,7 +6,6 @@
     <dimen name="activity_vertical_margin">16dp</dimen>
     <!-- From: file:/Users/oliviermartin/Bartender/app/src/main/res/values/strings.xml -->
     <eat-comment/>
-    <string name="Musique">Musique</string>
     <string name="action_settings">Settings</string>
     <string name="app_name">Bartender</string>
     <string name="app_name_swag"><b>Bar</b><i>tender</i></string>
@@ -14,6 +13,7 @@
     <string name="facture">Facture</string>
     <string name="hello_world">Hello world!</string>
     <string name="inventaire">Inventaire</string>
+    <string name="musique">Musique</string>
     <string name="option">Options</string>
     <!-- From: file:/Users/oliviermartin/Bartender/app/src/main/res/values/styles.xml -->
     <eat-comment/>
@@ -32,5 +32,8 @@
         <item name="android:shadowRadius">0.6</item>
         <item name="android:background">@drawable/custom_btn_opal</item>
         <item name="android:padding">10dp</item>
+    </style>
+    <style name="couleurTexteBase">
+        <item name="android:textColor">#4BA18B</item>
     </style>
 </resources>

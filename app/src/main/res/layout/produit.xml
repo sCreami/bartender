@@ -13,8 +13,8 @@
         android:text="Orval"
         android:textSize="50dp"
         android:textStyle="bold"
-        android:textColor="#4BA18B"
-        android:gravity="center"/>
+        android:gravity="center"
+        style="@style/couleurTexteBase"/>
 
     <ImageView
         android:layout_width="match_parent"
@@ -29,8 +29,8 @@
         android:text="Description"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:textColor="#4BA18B"
-        android:gravity="center"/>
+        android:gravity="center"
+        style="@style/couleurTexteBase"/>
 
     <TextView
         android:layout_width="fill_parent"
@@ -53,7 +53,7 @@
             android:layout_marginLeft="30dip"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:textColor="#4BA18B"/>
+            style="@style/couleurTexteBase"/>
         <TextView
             android:id="@+id/raz"
             android:layout_width="wrap_content"
@@ -76,13 +76,13 @@
             android:layout_marginLeft="30dip"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:textColor="#4BA18B"/>
+            style="@style/couleurTexteBase"/>
         <TextView
             android:id="@+id/raz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="30dp"
-            android:text="33 cl€"/>
+            android:text="33 cl"/>
     </LinearLayout>
 
     <!-- Type -->
@@ -99,7 +99,7 @@
             android:layout_marginLeft="30dip"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:textColor="#4BA18B"/>
+            style="@style/couleurTexteBase"/>
         <TextView
             android:id="@+id/raz"
             android:layout_width="wrap_content"
@@ -122,13 +122,13 @@
             android:layout_marginLeft="30dip"
             android:textSize="20dp"
             android:textStyle="bold"
-            android:textColor="#4BA18B"/>
+            style="@style/couleurTexteBase"/>
         <TextView
             android:id="@+id/raz"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginRight="30dp"
-            android:text="5,2%€"
+            android:text="5,2%"
             android:paddingBottom="20dp"/>
     </LinearLayout>
 
