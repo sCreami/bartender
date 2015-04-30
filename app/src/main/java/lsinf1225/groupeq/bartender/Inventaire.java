@@ -52,12 +52,12 @@ public class Inventaire {
      *  return : l'Inventaire qui a le noProduit souhaité. null si rien n'est trouvé.
      *
      */
-    public Inventaire searchInventaire(int noProduit){
-        ListIterator<Inventaire> itr = this.listeInventaire.listIterator();
+    public static Inventaire searchInventaire(int noProduit){
+        ListIterator<Inventaire> itr = Inventaire.listeInventaire.listIterator();
         while (itr.hasNext()){
             Inventaire inv = itr.next();
-            if(inv.getNoProduit() == this.getNoProduit())
-                return this;
+            if(inv.getNoProduit() == noProduit)
+                return inv;
         }
         return null;
     }
