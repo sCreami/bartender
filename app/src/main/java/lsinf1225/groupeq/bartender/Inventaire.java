@@ -41,7 +41,7 @@ public class Inventaire {
     }
 
     /*
-     *  return : ArrayList<Boisson> de toutes les boissons
+     *  return : ArrayList<Inventaire> de toutes les Inventaires
      */
     public static ArrayList<Inventaire> getListOfBoisson(){
         return listeInventaire;
@@ -49,7 +49,8 @@ public class Inventaire {
 
     /*
      *  noProduit : identifiant d'un inventaire
-     *  return : l'Inventaire qui a le noProduit souhaité
+     *  return : l'Inventaire qui a le noProduit souhaité. null si rien n'est trouvé.
+     *
      */
     public Inventaire searchInventaire(int noProduit){
         ListIterator<Inventaire> itr = this.listeInventaire.listIterator();
