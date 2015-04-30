@@ -51,7 +51,7 @@
             android:id="@+id/buttonOption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="openOption"
+            android:onClick="openOptions"
             android:text="@string/option"/>
     </LinearLayout>
 </ScrollView>
