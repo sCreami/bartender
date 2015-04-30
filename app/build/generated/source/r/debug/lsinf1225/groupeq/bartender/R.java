@@ -18,37 +18,43 @@ public final class R {
         public static final int custom_btn_opal=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090013;
-        public static final int buttonAjouterProduit=0x7f09000a;
+        public static final int action_settings=0x7f090011;
+        public static final int buttonAjouterProduit=0x7f090009;
         public static final int buttonCarte=0x7f090000;
-        public static final int buttonCarteRetour=0x7f090007;
         public static final int buttonFacture=0x7f090001;
         public static final int buttonInventaire=0x7f090003;
         public static final int buttonMusique=0x7f090002;
         public static final int buttonOption=0x7f090004;
-        public static final int buttonOptionsConnexion=0x7f09000c;
-        public static final int buttonOptionsDeconnexion=0x7f09000d;
-        public static final int buttonOptionsLangue=0x7f09000e;
-        public static final int buttonOptionsRetour=0x7f090010;
-        public static final int buttonRetourProduit=0x7f09000b;
-        public static final int calcul=0x7f090011;
-        public static final int connexionLogin=0x7f090008;
-        public static final int connextionMDP=0x7f090009;
-        public static final int gridView=0x7f090006;
-        public static final int noTable=0x7f09000f;
-        public static final int raz=0x7f090012;
-        public static final int searchView=0x7f090005;
+        public static final int buttonOptionsConnexion=0x7f09000a;
+        public static final int buttonOptionsDeconnexion=0x7f09000b;
+        public static final int buttonOptionsLangue=0x7f09000c;
+        public static final int buttonOptionsRetour=0x7f09000e;
+        public static final int calcul=0x7f09000f;
+        public static final int carteSearchView=0x7f090005;
+        public static final int carteView=0x7f090006;
+        public static final int connexionLogin=0x7f090007;
+        public static final int connextionMDP=0x7f090008;
+        public static final int noTable=0x7f09000d;
+        public static final int raz=0x7f090010;
     }
     public static final class layout {
-        public static final int accueil=0x7f040000;
+        public static final int activity_accueil=0x7f040000;
         public static final int activity_carte=0x7f040001;
-        public static final int activity_main=0x7f040002;
-        public static final int connexion=0x7f040003;
-        public static final int options=0x7f040004;
-        public static final int produit=0x7f040005;
+        public static final int activity_connexion=0x7f040002;
+        public static final int activity_facture=0x7f040003;
+        public static final int activity_inventaire=0x7f040004;
+        public static final int activity_main=0x7f040005;
+        public static final int activity_musique=0x7f040006;
+        public static final int activity_options=0x7f040007;
+        public static final int activity_produit=0x7f040008;
     }
     public static final class menu {
-        public static final int menu_main=0x7f080000;
+        public static final int menu_carte=0x7f080000;
+        public static final int menu_facture=0x7f080001;
+        public static final int menu_inventaire=0x7f080002;
+        public static final int menu_main=0x7f080003;
+        public static final int menu_musique=0x7f080004;
+        public static final int menu_options=0x7f080005;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
@@ -63,6 +69,11 @@ public final class R {
         public static final int inventaire=0x7f060006;
         public static final int musique=0x7f060007;
         public static final int option=0x7f060008;
+        public static final int title_activity_carte=0x7f060009;
+        public static final int title_activity_facture=0x7f06000a;
+        public static final int title_activity_inventaire=0x7f06000b;
+        public static final int title_activity_musique=0x7f06000c;
+        public static final int title_activity_options=0x7f06000d;
     }
     public static final class style {
         /**  Customize your theme here. 
