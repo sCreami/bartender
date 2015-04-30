@@ -1,6 +1,7 @@
 package lsinf1225.groupeq.bartender;
 
 import java.util.ArrayList;
+import java.util.ListIterator;
 
 /**
  * Created by oliviermartin on 28/04/15.
@@ -16,7 +17,7 @@ public class Inventaire {
     private int qteStock;
     private Boisson boisson; //Référence vers la boisson
 
-    private static ArrayList<Boisson> listeBoisson; //Liste qui contient touts les boissons
+    private static ArrayList<Inventaire> listeInventaire; //Liste qui contient touts les boissons
                                                     //ex : [Coca 33, Coca 50, Eau, Jupiler]
 
     public Inventaire(int noProduit, int noBoisson, double prix, String format, int qteSeuil, int qteMax, int qteStock, Boisson boisson) {
@@ -28,8 +29,8 @@ public class Inventaire {
         this.qteMax = qteMax;
         this.qteStock = qteStock;
         this.boisson = boisson;
-        //Chaque fois qu'on crée un Inventaire, on ajoute la boisson à la liste;
-        listeBoisson.add(boisson);
+        //Chaque fois qu'on crée un Inventaire, on l'inventaire à la listeInventaire;
+        listeInventaire.add(this);
     }
 
     /*
@@ -42,15 +43,21 @@ public class Inventaire {
     /*
      *  return : ArrayList<Boisson> de toutes les boissons
      */
-    public static ArrayList<Boisson> getListOfBoisson(){
-        return listeBoisson;
+    public static ArrayList<Inventaire> getListOfBoisson(){
+        return listeInventaire;
     }
 
     /*
-     *  boissonVoulue : Objet Boisson qui contient les paramètres voulus.
-     *  return : ArrayList<Boisson> qui contient touts les boissons qui ont les critères de boissonVoulue
+     *  noProduit : identifiant d'un inventaire
+     *  return : l'Inventaire qui a le noProduit souhaité
      */
-    public static ArrayList<Boisson> searchBoisson(Boisson boissonVoulue){
+    public Inventaire searchInventaire(int noProduit){
+        ListIterator<Inventaire> itr = this.listeInventaire.listIterator();
+        while (itr.hasNext()){
+            Inventaire inv = itr.next();
+            if(inv.getNoProduit() == this.getNoProduit())
+                return this;
+        }
         return null;
     }
 
