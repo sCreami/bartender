@@ -1,5 +1,6 @@
 package lsinf1225.groupeq.bartender;
 
+import android.graphics.Bitmap;
 import android.media.Image;
 
 /**
@@ -12,10 +13,10 @@ public class Boisson {
     private String nom;
     private double tauxAlcool;
     private String description;
-    private Image photo;
+    private Bitmap photo;
     private String type;
 
-    public Boisson(int noBoisson, String nom, double tauxAlcool, String description, Image photo, String type) {
+    public Boisson(int noBoisson, String nom, double tauxAlcool, String description, Bitmap photo, String type) {
         this.noBoisson = noBoisson;
         this.nom = nom;
         this.tauxAlcool = tauxAlcool;
@@ -56,11 +57,11 @@ public class Boisson {
         this.description = description;
     }
 
-    public Image getPhoto() {
+    public Bitmap getPhoto() {
         return photo;
     }
 
-    public void setPhoto(Image photo) {
+    public void setPhoto(Bitmap photo) {
         this.photo = photo;
     }
 
