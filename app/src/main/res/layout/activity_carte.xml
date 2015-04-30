@@ -11,10 +11,9 @@
         android:id="@+id/carteSearchView"
         android:layout_gravity="right" />
 
-    <GridView
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/carteView"
-        android:layout_gravity="center_horizontal"
-        android:numColumns="3"/>
+        android:layout_gravity="center_horizontal"/>
 </LinearLayout>
