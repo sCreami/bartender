@@ -37,13 +37,5 @@
             android:layout_height="wrap_content"
             android:hint="N° table"
             android:inputType="number"
-            android:padding="20dp"
-            />
-        <Button
-            style="@style/btnStyleopal"
-            android:id="@+id/buttonOptionsRetour"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:text="Retour"/>
+            android:padding="20dp"/>
     </LinearLayout>
