@@ -95,19 +95,12 @@ public class Facture {
 
         while (itr.hasNext()){
             Detail dtl = itr.next();
-            price += dtl.getDejaLivre();
+            Inventaire inv = Inventaire.searchInventaire(dtl.getNoProduit());
+            double montant = (inv.getPrix()*dtl.getDejaLivre());           //prix * quantite
+            price += (montant-(montant*(discount/100)));                   //applique discount
         }
         return price;
 	}
-
-    /*
-     * Applique une reduction a la facture
-     * ??? Juste comme ca : ???
-     */
-    public double addDiscount(double percent) {
-        double price = computePrice();
-        return (price-(price*(percent/100)));
-    }
 	
 	/**
 	 * 
