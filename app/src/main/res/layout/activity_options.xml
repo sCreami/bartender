@@ -38,4 +38,10 @@
             android:hint="N° table"
             android:inputType="number"
             android:padding="20dp"/>
+        <Button
+            style="@style/btnStyleopal"
+            android:id="@+id/buttonOptionsValider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Valider"/>
     </LinearLayout>
