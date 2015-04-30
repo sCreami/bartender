@@ -3,9 +3,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingTop="10dp"
-        android:paddingLeft="50dp"
-        android:paddingRight="50dp">
+        android:padding="50dp">
 
         <TextView
             style="@style/couleurTexteBase"
@@ -40,7 +38,7 @@
             android:layout_height="wrap_content"
             android:hint="N° table"
             android:inputType="number"
-            android:padding="15dp"
+            android:padding="20dp"
             />
         <Button
             style="@style/btnStyleopal"
