@@ -23,30 +23,35 @@
             android:id="@+id/buttonCarte"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="openCarte"
             android:text="@string/carte"/>
         <Button
             style="@style/btnStyleopal"
             android:id="@+id/buttonFacture"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="openFacture"
             android:text="@string/facture"/>
         <Button
             style="@style/btnStyleopal"
             android:id="@+id/buttonMusique"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="openMusique"
             android:text="@string/musique"/>
         <Button
             style="@style/btnStyleopal"
             android:id="@+id/buttonInventaire"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="openInventaire"
             android:text="@string/inventaire"/>
         <Button
             style="@style/btnStyleopal"
             android:id="@+id/buttonOption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:onClick="openOption"
             android:text="@string/option"/>
     </LinearLayout>
 </ScrollView>

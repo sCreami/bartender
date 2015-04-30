@@ -16,6 +16,46 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CarteActivity"
+            android:label="@string/title_activity_carte"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+        </activity>
+        <activity
+            android:name=".FactureActivity"
+            android:label="@string/title_activity_facture"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+        </activity>
+        <activity
+            android:name=".MusiqueActivity"
+            android:label="@string/title_activity_musique"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+        </activity>
+        <activity
+            android:name=".InventaireActivity"
+            android:label="@string/title_activity_inventaire"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+        </activity>
+        <activity
+            android:name=".OptionsActivity"
+            android:label="@string/title_activity_options"
+            android:parentActivityName=".MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+        </activity>
     </application>
 
 </manifest>
