@@ -58,15 +58,22 @@ public class Detail {
         this.dejaPaye = dejaPaye;
     }
 
-    public void ajouterBoissonToCommande(int noProduit){
-        //
+    public void ajouterBoissonToCommande(int quantite){
+        this.aLivrer -= quantite;
+        this.dejaLivre += quantite;
     }
 
-    public void modifyStatutBoisson(int noProduit){
-        //
+    public void ajouterCommandeToFacture(int quantite){
+        this.dejaLivre -= quantite;
+        this.dejaPaye += quantite;
+    }
+
+    public void modifyStatutBoisson(int ajouter, int retirer){
+        this.aLivrer += ajouter;
+        this.aLivrer -= retirer;
     }
 
     public void payer(double montant){
-        //
+        // A quoi sert cette methode ??? (= ajouterCommandeToFacture ???)
     }
 }

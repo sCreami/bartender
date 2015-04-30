@@ -29,7 +29,7 @@ public class Inventaire {
         this.qteMax = qteMax;
         this.qteStock = qteStock;
         this.boisson = boisson;
-        //Chaque fois qu'on crée un Inventaire, on l'inventaire à la listeInventaire;
+        //Chaque fois qu'on crée un Inventaire, on l'ajoute à la listeInventaire;
         listeInventaire.add(this);
     }
 
