@@ -1,9 +1,11 @@
 package lsinf1225.groupeq.bartender;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 
 public class MainActivity extends Activity {
@@ -11,7 +13,7 @@ public class MainActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.accueil);
+        setContentView(R.layout.activity_accueil);
     }
 
 
@@ -35,5 +37,35 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void openCarte(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, CarteActivity.class);
+        startActivity(intent);
+    }
+
+    public void openFacture(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, FactureActivity.class);
+        startActivity(intent);
+    }
+
+    public void openMusique(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, MusiqueActivity.class);
+        startActivity(intent);
+    }
+
+    public void openInventaire(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, InventaireActivity.class);
+        startActivity(intent);
+    }
+
+    public void openOptions(View view)
+    {
+        Intent intent = new Intent(MainActivity.this, OptionsActivity.class);
+        startActivity(intent);
     }
 }

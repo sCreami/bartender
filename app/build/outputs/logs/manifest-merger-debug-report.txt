@@ -39,6 +39,52 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:16:17
 	android:name
 		ADDED from AndroidManifest.xml:16:27
+activity#lsinf1225.groupeq.bartender.CarteActivity
+ADDED from AndroidManifest.xml:19:9
+	android:label
+		ADDED from AndroidManifest.xml:21:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:22:13
+	android:name
+		ADDED from AndroidManifest.xml:20:13
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from AndroidManifest.xml:23:13
+	android:value
+		ADDED from AndroidManifest.xml:25:17
+	android:name
+		ADDED from AndroidManifest.xml:24:17
+activity#lsinf1225.groupeq.bartender.FactureActivity
+ADDED from AndroidManifest.xml:27:9
+	android:label
+		ADDED from AndroidManifest.xml:29:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:30:13
+	android:name
+		ADDED from AndroidManifest.xml:28:13
+activity#lsinf1225.groupeq.bartender.MusiqueActivity
+ADDED from AndroidManifest.xml:35:9
+	android:label
+		ADDED from AndroidManifest.xml:37:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:38:13
+	android:name
+		ADDED from AndroidManifest.xml:36:13
+activity#lsinf1225.groupeq.bartender.InventaireActivity
+ADDED from AndroidManifest.xml:43:9
+	android:label
+		ADDED from AndroidManifest.xml:45:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:46:13
+	android:name
+		ADDED from AndroidManifest.xml:44:13
+activity#lsinf1225.groupeq.bartender.OptionsActivity
+ADDED from AndroidManifest.xml:51:9
+	android:label
+		ADDED from AndroidManifest.xml:53:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:54:13
+	android:name
+		ADDED from AndroidManifest.xml:52:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 	android:targetSdkVersion

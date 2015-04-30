@@ -22,6 +22,46 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name="lsinf1225.groupeq.bartender.CarteActivity"
+            android:label="@string/title_activity_carte"
+            android:parentActivityName="lsinf1225.groupeq.bartender.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+        </activity>
+        <activity
+            android:name="lsinf1225.groupeq.bartender.FactureActivity"
+            android:label="@string/title_activity_facture"
+            android:parentActivityName="lsinf1225.groupeq.bartender.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+        </activity>
+        <activity
+            android:name="lsinf1225.groupeq.bartender.MusiqueActivity"
+            android:label="@string/title_activity_musique"
+            android:parentActivityName="lsinf1225.groupeq.bartender.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+        </activity>
+        <activity
+            android:name="lsinf1225.groupeq.bartender.InventaireActivity"
+            android:label="@string/title_activity_inventaire"
+            android:parentActivityName="lsinf1225.groupeq.bartender.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+        </activity>
+        <activity
+            android:name="lsinf1225.groupeq.bartender.OptionsActivity"
+            android:label="@string/title_activity_options"
+            android:parentActivityName="lsinf1225.groupeq.bartender.MainActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+        </activity>
     </application>
 
 </manifest>

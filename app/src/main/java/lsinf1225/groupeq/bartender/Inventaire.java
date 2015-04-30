@@ -50,7 +50,6 @@ public class Inventaire {
     /*
      *  noProduit : identifiant d'un inventaire
      *  return : l'Inventaire qui a le noProduit souhaité. null si rien n'est trouvé.
-     *
      */
     public static Inventaire searchInventaire(int noProduit){
         ListIterator<Inventaire> itr = Inventaire.listeInventaire.listIterator();

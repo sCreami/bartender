@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <LinearLayout
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -13,40 +9,41 @@
             style="@style/couleurTexteBase"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/app_name_swag"
+            android:text="Options"
             android:textSize="50dp"
             android:paddingBottom="15dp"
             android:gravity="center"/>
-
         <Button
             style="@style/btnStyleopal"
-            android:id="@+id/buttonCarte"
+            android:id="@+id/buttonOptionsConnexion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/carte"/>
+            android:text="Connexion"/>
         <Button
             style="@style/btnStyleopal"
-            android:id="@+id/buttonFacture"
+            android:id="@+id/buttonOptionsDeconnexion"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/facture"/>
+            android:text="Déconnexion"/>
         <Button
             style="@style/btnStyleopal"
-            android:id="@+id/buttonMusique"
+            android:id="@+id/buttonOptionsLangue"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/musique"/>
+            android:text="Langue"/>
+        <EditText
+            android:id="@+id/noTable"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:hint="N° table"
+            android:inputType="number"
+            android:padding="20dp"
+            />
         <Button
             style="@style/btnStyleopal"
-            android:id="@+id/buttonInventaire"
+            android:id="@+id/buttonOptionsRetour"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/inventaire"/>
-        <Button
-            style="@style/btnStyleopal"
-            android:id="@+id/buttonOption"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/option"/>
+            android:layout_gravity="bottom"
+            android:text="Retour"/>
     </LinearLayout>
-</ScrollView>
