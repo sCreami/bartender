@@ -141,8 +141,7 @@ public class Facture {
         while (itr.hasNext()) {
             Detail dtl = itr.next();
             if (dtl.getNoProduit() == noProduit){
-                dtl.setaLivrer((dtl.getaLivrer() - quantite));
-                dtl.setDejaLivre((dtl.getDejaLivre() + quantite));
+                dtl.ajouterBoissonToCommande(quantite);
             }
         }
 	}
@@ -161,8 +160,7 @@ public class Facture {
         while (itr.hasNext()) {
             Detail dtl = itr.next();
             if (dtl.getNoProduit() == noProduit){
-                dtl.setDejaLivre((dtl.getDejaLivre() - quantite));
-                dtl.setDejaPaye((dtl.getDejaPaye() + quantite));
+                dtl.ajouterCommandeToFacture(quantite);
             }
         }
 	}

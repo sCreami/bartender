@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/oliviermartin/Bartender/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/Quentin/Bartender/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/Users/oliviermartin/Bartender/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/Quentin/Bartender/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">Bartender</string>
@@ -16,11 +16,12 @@
     <string name="musique">Musique</string>
     <string name="option">Options</string>
     <string name="title_activity_carte">CarteActivity</string>
+    <string name="title_activity_connexion">ConnexionActivity</string>
     <string name="title_activity_facture">FactureActivity</string>
     <string name="title_activity_inventaire">InventaireActivity</string>
     <string name="title_activity_musique">MusiqueActivity</string>
     <string name="title_activity_options">OptionsActivity</string>
-    <!-- From: file:/Users/oliviermartin/Bartender/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/Quentin/Bartender/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
