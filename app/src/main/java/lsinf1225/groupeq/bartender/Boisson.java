@@ -49,9 +49,7 @@ public class Boisson {
         this.tauxAlcool = tauxAlcool;
     }
 
-    public String getDescription() {
-        return description;
-    }
+    public String getDescription() { return description; }
 
     public void setDescription(String description) {
         this.description = description;
