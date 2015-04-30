@@ -62,6 +62,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="lsinf1225.groupeq.bartender.MainActivity" />
         </activity>
+        <activity
+            android:name="lsinf1225.groupeq.bartender.ConnexionActivity"
+            android:label="@string/title_activity_connexion"
+            android:parentActivityName="lsinf1225.groupeq.bartender.OptionsActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lsinf1225.groupeq.bartender.OptionsActivity" />
+        </activity>
     </application>
 
 </manifest>

@@ -1,26 +1,24 @@
 package lsinf1225.groupeq.bartender;
 
 import android.app.Activity;
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 
 
-public class OptionsActivity extends Activity {
+public class ConnexionActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_options);
+        setContentView(R.layout.activity_connexion);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_options, menu);
+        getMenuInflater().inflate(R.menu.menu_connexion, menu);
         return true;
     }
 
@@ -37,10 +35,5 @@ public class OptionsActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void openConnexion(View view){
-        Intent intent = new Intent(OptionsActivity.this, ConnexionActivity.class);
-        startActivity(intent);
     }
 }

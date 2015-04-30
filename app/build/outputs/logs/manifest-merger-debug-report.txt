@@ -1,6 +1,8 @@
 -- Merging decision tree log ---
 manifest
 ADDED from AndroidManifest.xml:2:1
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
 	package
 		ADDED from AndroidManifest.xml:3:5
 		INJECTED from AndroidManifest.xml:0:0
@@ -8,8 +10,6 @@ ADDED from AndroidManifest.xml:2:1
 	android:versionName
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
-	xmlns:android
-		ADDED from AndroidManifest.xml:2:11
 	android:versionCode
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
@@ -49,10 +49,10 @@ ADDED from AndroidManifest.xml:19:9
 		ADDED from AndroidManifest.xml:20:13
 meta-data#android.support.PARENT_ACTIVITY
 ADDED from AndroidManifest.xml:23:13
-	android:value
-		ADDED from AndroidManifest.xml:25:17
 	android:name
 		ADDED from AndroidManifest.xml:24:17
+	android:value
+		ADDED from AndroidManifest.xml:25:17
 activity#lsinf1225.groupeq.bartender.FactureActivity
 ADDED from AndroidManifest.xml:27:9
 	android:label
@@ -85,6 +85,14 @@ ADDED from AndroidManifest.xml:51:9
 		ADDED from AndroidManifest.xml:54:13
 	android:name
 		ADDED from AndroidManifest.xml:52:13
+activity#lsinf1225.groupeq.bartender.ConnexionActivity
+ADDED from AndroidManifest.xml:59:9
+	android:label
+		ADDED from AndroidManifest.xml:61:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:62:13
+	android:name
+		ADDED from AndroidManifest.xml:60:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 	android:targetSdkVersion
