@@ -18,7 +18,7 @@ public final class R {
         public static final int custom_btn_opal=0x7f020000;
     }
     public static final class id {
-        public static final int action_settings=0x7f090012;
+        public static final int action_settings=0x7f090013;
         public static final int buttonAjouterProduit=0x7f090009;
         public static final int buttonCarte=0x7f090000;
         public static final int buttonFacture=0x7f090001;
@@ -28,7 +28,8 @@ public final class R {
         public static final int buttonOptionsConnexion=0x7f09000c;
         public static final int buttonOptionsDeconnexion=0x7f09000d;
         public static final int buttonOptionsLangue=0x7f09000e;
-        public static final int calcul=0x7f090010;
+        public static final int buttonOptionsValider=0x7f090010;
+        public static final int calcul=0x7f090011;
         public static final int carteSearchView=0x7f090005;
         public static final int carteView=0x7f090006;
         public static final int connexionLogin=0x7f090007;
@@ -36,7 +37,7 @@ public final class R {
         public static final int facturePrix=0x7f09000b;
         public static final int factureTable=0x7f09000a;
         public static final int noTable=0x7f09000f;
-        public static final int raz=0x7f090011;
+        public static final int raz=0x7f090012;
     }
     public static final class layout {
         public static final int activity_accueil=0x7f040000;
