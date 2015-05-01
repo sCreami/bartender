@@ -5,6 +5,8 @@
         android:layout_height="match_parent"
         android:padding="50dp">
 
+
+
         <TextView
             style="@style/couleurTexteBase"
             android:layout_width="fill_parent"
@@ -13,6 +15,28 @@
             android:textSize="50dp"
             android:paddingBottom="15dp"
             android:gravity="center"/>
+
+    <!-- Connecté en tant que -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Connecté en tant que"
+            android:layout_weight="1"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            style="@style/couleurTexteBase"/>
+        <TextView
+            android:id="@+id/optionsNom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="oli"/>
+    </LinearLayout>
         <Button
             style="@style/btnStyleopal"
             android:id="@+id/buttonOptionsConnexion"
@@ -26,6 +50,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Déconnexion"/>
+
         <Button
             style="@style/btnStyleopal"
             android:id="@+id/buttonOptionsLangue"
