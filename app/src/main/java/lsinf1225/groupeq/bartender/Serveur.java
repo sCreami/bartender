@@ -9,6 +9,11 @@ public class Serveur {
     private String nom;
     private String motDePasse;
 
+    //Variables static pour savoir si on est connecté
+    private static boolean isAdmin = false;
+    private static final String[] login = {"oli", "alexis", "denis", "quentin"};
+    private static final String[] password = {"mdp", "mdp", "mdp", "mdp"};
+
     public Serveur(int identifiant, String nom, String motDePasse) {
         this.identifiant = identifiant;
         this.nom = nom;
@@ -16,17 +21,28 @@ public class Serveur {
     }
 
     /**
-     * TODO Rédiger la méthode seConnecter()
+     *  Compare si le login et le password recu correspond a un administrateur.
+     *  retourne 1 su la connection a réussi et 0 sinon.
      */
-    public void seConnecter() {
-
+    public int seConnecter(String login, String password) {
+        for(int i = 0; i < Serveur.login.length; i++){
+            if(Serveur.login[i].equals(login) && Serveur.password[i].equals(password)) {
+                isAdmin = true;
+                return 1;
+            }
+        }
+        return 0;
     }
 
     /**
-     * TODO Rédiger la méthode seDeconnecter()
+     *  Déconnecte l'utilisateur
      */
     public void seDeconnecter() {
+        isAdmin = false;
+    }
 
+    public boolean isConnect(){
+        return isAdmin;
     }
 
     public int getIdentifiant() { return identifiant; }
