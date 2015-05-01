@@ -11,6 +11,8 @@ public class Serveur {
 
     //Variables static pour savoir si on est connecté
     private static boolean isAdmin = false;
+    //Les deux tableaux devront être crées grâce aux data de la BD
+    //Hardcode en attendant
     private static final String[] login = {"oli", "alexis", "denis", "quentin"};
     private static final String[] password = {"mdp", "mdp", "mdp", "mdp"};
 
