@@ -23,76 +23,78 @@ ADDED from AndroidManifest.xml:5:5
 		ADDED from AndroidManifest.xml:7:9
 	android:theme
 		ADDED from AndroidManifest.xml:9:9
+	android:name
+		ADDED from AndroidManifest.xml:10:9
 activity#lsinf1225.groupeq.bartender.MainActivity
-ADDED from AndroidManifest.xml:10:9
+ADDED from AndroidManifest.xml:11:9
 	android:label
+		ADDED from AndroidManifest.xml:13:13
+	android:name
 		ADDED from AndroidManifest.xml:12:13
-	android:name
-		ADDED from AndroidManifest.xml:11:13
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:13:13
+ADDED from AndroidManifest.xml:14:13
 action#android.intent.action.MAIN
-ADDED from AndroidManifest.xml:14:17
+ADDED from AndroidManifest.xml:15:17
 	android:name
-		ADDED from AndroidManifest.xml:14:25
+		ADDED from AndroidManifest.xml:15:25
 category#android.intent.category.LAUNCHER
-ADDED from AndroidManifest.xml:16:17
+ADDED from AndroidManifest.xml:17:17
 	android:name
-		ADDED from AndroidManifest.xml:16:27
+		ADDED from AndroidManifest.xml:17:27
 activity#lsinf1225.groupeq.bartender.CarteActivity
-ADDED from AndroidManifest.xml:19:9
+ADDED from AndroidManifest.xml:20:9
 	android:label
-		ADDED from AndroidManifest.xml:21:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:22:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:23:13
 	android:name
-		ADDED from AndroidManifest.xml:20:13
+		ADDED from AndroidManifest.xml:21:13
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from AndroidManifest.xml:23:13
+ADDED from AndroidManifest.xml:24:13
 	android:name
-		ADDED from AndroidManifest.xml:24:17
-	android:value
 		ADDED from AndroidManifest.xml:25:17
+	android:value
+		ADDED from AndroidManifest.xml:26:17
 activity#lsinf1225.groupeq.bartender.FactureActivity
-ADDED from AndroidManifest.xml:27:9
+ADDED from AndroidManifest.xml:28:9
 	android:label
-		ADDED from AndroidManifest.xml:29:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:30:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:31:13
 	android:name
-		ADDED from AndroidManifest.xml:28:13
+		ADDED from AndroidManifest.xml:29:13
 activity#lsinf1225.groupeq.bartender.MusiqueActivity
-ADDED from AndroidManifest.xml:35:9
+ADDED from AndroidManifest.xml:36:9
 	android:label
-		ADDED from AndroidManifest.xml:37:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:38:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:39:13
 	android:name
-		ADDED from AndroidManifest.xml:36:13
+		ADDED from AndroidManifest.xml:37:13
 activity#lsinf1225.groupeq.bartender.InventaireActivity
-ADDED from AndroidManifest.xml:43:9
+ADDED from AndroidManifest.xml:44:9
 	android:label
-		ADDED from AndroidManifest.xml:45:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:46:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:47:13
 	android:name
-		ADDED from AndroidManifest.xml:44:13
+		ADDED from AndroidManifest.xml:45:13
 activity#lsinf1225.groupeq.bartender.OptionsActivity
-ADDED from AndroidManifest.xml:51:9
+ADDED from AndroidManifest.xml:52:9
 	android:label
-		ADDED from AndroidManifest.xml:53:13
-	android:parentActivityName
 		ADDED from AndroidManifest.xml:54:13
-	android:name
-		ADDED from AndroidManifest.xml:52:13
-activity#lsinf1225.groupeq.bartender.ConnexionActivity
-ADDED from AndroidManifest.xml:59:9
-	android:label
-		ADDED from AndroidManifest.xml:61:13
 	android:parentActivityName
-		ADDED from AndroidManifest.xml:62:13
+		ADDED from AndroidManifest.xml:55:13
 	android:name
-		ADDED from AndroidManifest.xml:60:13
+		ADDED from AndroidManifest.xml:53:13
+activity#lsinf1225.groupeq.bartender.ConnexionActivity
+ADDED from AndroidManifest.xml:60:9
+	android:label
+		ADDED from AndroidManifest.xml:62:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:63:13
+	android:name
+		ADDED from AndroidManifest.xml:61:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 	android:targetSdkVersion
