@@ -1,4 +1,4 @@
-package lsinf1225.groupeq.bartender;
+package lsinf1225.groupeq.bartender.models;
 
 /**
  * Created by Quentin on 28/04/15.

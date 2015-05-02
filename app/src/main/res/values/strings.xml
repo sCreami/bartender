@@ -10,12 +10,12 @@
     <string name="musique">Musique</string>
     <string name="option">Options</string>
     <string name="inventaire">Inventaire</string>
-    <string name="title_activity_carte">CarteActivity</string>
-    <string name="title_activity_facture">FactureActivity</string>
-    <string name="title_activity_musique">MusiqueActivity</string>
-    <string name="title_activity_inventaire">InventaireActivity</string>
-    <string name="title_activity_options">OptionsActivity</string>
-    <string name="title_activity_connexion">ConnexionActivity</string>
+    <string name="title_activity_carte">Carte</string>
+    <string name="title_activity_facture">Facture</string>
+    <string name="title_activity_musique">Musique</string>
+    <string name="title_activity_inventaire">Inventaire</string>
+    <string name="title_activity_options">Options</string>
+    <string name="title_activity_connexion">Connexion</string>
 
 
 </resources>

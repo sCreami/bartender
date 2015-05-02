@@ -1,24 +1,26 @@
-package lsinf1225.groupeq.bartender;
+package lsinf1225.groupeq.bartender.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import lsinf1225.groupeq.bartender.R;
 
-public class FactureActivity extends Activity {
+
+public class MusiqueActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_facture);
+        setContentView(R.layout.activity_musique);
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_facture, menu);
+        getMenuInflater().inflate(R.menu.menu_musique, menu);
         return true;
     }
 

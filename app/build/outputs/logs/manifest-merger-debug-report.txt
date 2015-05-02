@@ -25,7 +25,7 @@ ADDED from AndroidManifest.xml:5:5
 		ADDED from AndroidManifest.xml:9:9
 	android:name
 		ADDED from AndroidManifest.xml:10:9
-activity#lsinf1225.groupeq.bartender.MainActivity
+activity#lsinf1225.groupeq.bartender.activity.MainActivity
 ADDED from AndroidManifest.xml:11:9
 	android:label
 		ADDED from AndroidManifest.xml:13:13
@@ -41,7 +41,7 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:17:17
 	android:name
 		ADDED from AndroidManifest.xml:17:27
-activity#lsinf1225.groupeq.bartender.CarteActivity
+activity#lsinf1225.groupeq.bartender.activity.CarteActivity
 ADDED from AndroidManifest.xml:20:9
 	android:label
 		ADDED from AndroidManifest.xml:22:13
@@ -55,7 +55,7 @@ ADDED from AndroidManifest.xml:24:13
 		ADDED from AndroidManifest.xml:26:17
 	android:name
 		ADDED from AndroidManifest.xml:25:17
-activity#lsinf1225.groupeq.bartender.FactureActivity
+activity#lsinf1225.groupeq.bartender.activity.FactureActivity
 ADDED from AndroidManifest.xml:28:9
 	android:label
 		ADDED from AndroidManifest.xml:30:13
@@ -63,7 +63,7 @@ ADDED from AndroidManifest.xml:28:9
 		ADDED from AndroidManifest.xml:31:13
 	android:name
 		ADDED from AndroidManifest.xml:29:13
-activity#lsinf1225.groupeq.bartender.MusiqueActivity
+activity#lsinf1225.groupeq.bartender.activity.MusiqueActivity
 ADDED from AndroidManifest.xml:36:9
 	android:label
 		ADDED from AndroidManifest.xml:38:13
@@ -71,7 +71,7 @@ ADDED from AndroidManifest.xml:36:9
 		ADDED from AndroidManifest.xml:39:13
 	android:name
 		ADDED from AndroidManifest.xml:37:13
-activity#lsinf1225.groupeq.bartender.InventaireActivity
+activity#lsinf1225.groupeq.bartender.activity.InventaireActivity
 ADDED from AndroidManifest.xml:44:9
 	android:label
 		ADDED from AndroidManifest.xml:46:13
@@ -79,7 +79,7 @@ ADDED from AndroidManifest.xml:44:9
 		ADDED from AndroidManifest.xml:47:13
 	android:name
 		ADDED from AndroidManifest.xml:45:13
-activity#lsinf1225.groupeq.bartender.OptionsActivity
+activity#lsinf1225.groupeq.bartender.activity.OptionsActivity
 ADDED from AndroidManifest.xml:52:9
 	android:label
 		ADDED from AndroidManifest.xml:54:13
@@ -87,7 +87,7 @@ ADDED from AndroidManifest.xml:52:9
 		ADDED from AndroidManifest.xml:55:13
 	android:name
 		ADDED from AndroidManifest.xml:53:13
-activity#lsinf1225.groupeq.bartender.ConnexionActivity
+activity#lsinf1225.groupeq.bartender.activity.ConnexionActivity
 ADDED from AndroidManifest.xml:60:9
 	android:label
 		ADDED from AndroidManifest.xml:62:13

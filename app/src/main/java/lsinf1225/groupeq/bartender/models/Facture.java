@@ -1,10 +1,10 @@
-package lsinf1225.groupeq.bartender;
+package lsinf1225.groupeq.bartender.models;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.ListIterator;
 
-import lsinf1225.groupeq.bartender.Detail;
+import lsinf1225.groupeq.bartender.models.Detail;
 
 public class Facture {
 	private int noFacture;

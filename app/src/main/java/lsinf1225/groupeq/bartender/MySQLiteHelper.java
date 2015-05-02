@@ -117,23 +117,6 @@ public class MySQLiteHelper extends SQLiteOpenHelper {
      * enregistrées.
      */
     private void initDatabase(SQLiteDatabase db) {
-/*
-// TODO décommenter cette partie et mettre les instructions correspondant au nouveau schéma de la base de données.
-        db.execSQL("DROP TABLE IF EXISTS \"users\";");
-
-        db.execSQL("CREATE TABLE \"users\" (\"_id\" INTEGER PRIMARY KEY  NOT NULL ,\"u_name\" TEXT NOT NULL  DEFAULT (null) ,\"u_password\" TEXT NOT NULL  DEFAULT (null) );");
-        db.execSQL("INSERT INTO \"users\" VALUES(1,'Guest','guest');");
-        db.execSQL("INSERT INTO \"users\" VALUES(2,'Damien','mercier');");
-        db.execSQL("INSERT INTO \"users\" VALUES(3,'Kim Mens','lsinf1225');");
-
-        db.execSQL("DROP TABLE IF EXISTS \"collected_items\";");
-        db.execSQL("CREATE TABLE \"collected_items\" (\"_id\" INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL , \"ci_name\" TEXT NOT NULL , \"ci_description\" TEXT, \"ci_rating\" FLOAT, \"ci_picture\" TEXT, \"u_id\" INTEGER NOT NULL, FOREIGN KEY (u_id) REFERENCES users(_id));");
-        db.execSQL("INSERT INTO \"collected_items\" VALUES(2,'Lampe de bureau','Ma super lampe de bureau',5.0,NULL,2);");
-        db.execSQL("INSERT INTO \"collected_items\" VALUES(3,'Table','',2.0,NULL,2);");
-        db.execSQL("INSERT INTO \"collected_items\" VALUES(4,'Tableau blanc','Tableau sur lequel on peut écrire et effacer. Très utile aussi pour les schéma',4,NULL,2);");
-        db.execSQL("INSERT INTO \"collected_items\" VALUES(5,'Objet Lambda','... pour une personne invitée.','',NULL,1);");
-        db.execSQL("INSERT INTO \"collected_items\" VALUES(6,'Crayon','Tout le monde a bien un simple crayon.',1,NULL,1);");
-*/
 
         try {
             // Ouverture du fichier sql.

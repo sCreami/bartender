@@ -1,7 +1,13 @@
-package lsinf1225.groupeq.bartender;
+package lsinf1225.groupeq.bartender.models;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.media.Image;
+
+import java.util.ArrayList;
+
+import lsinf1225.groupeq.bartender.MySQLiteHelper;
 
 /**
  * Groupe Q - Bartender
@@ -9,6 +15,23 @@ import android.media.Image;
 
 public class Boisson {
 
+    /* Table bdd */
+    public static final String DB_TABLE_BS = "Boisson";
+
+    public static final String DB_COL_NO = "numeroBoisson";
+    public static final String DB_COL_NM = "nom";
+    public static final String DB_COL_TA = "tauxAlcool";
+    public static final String DB_COL_DS = "description";
+    public static final String DB_COL_TY = "type";
+    public static final String DB_COL_PH = "photo";
+
+    /* pour éviter la confusion */
+    public static final String DB_COL_BS_ID = DB_TABLE_BS + "." + DB_COL_NO;
+
+    //"SELECT B.nom, B.tauxAlcool, B.description, B.type, I.prix, I.format FROM Boisson B, Inventaire I WHERE I.numeroBoisson = B.numeroBoisson"
+
+
+    /* Models Boisson */
     private int noBoisson;
     private String nom;
     private double tauxAlcool;
@@ -70,4 +93,5 @@ public class Boisson {
     public void setType(String type) {
         this.type = type;
     }
+
 }

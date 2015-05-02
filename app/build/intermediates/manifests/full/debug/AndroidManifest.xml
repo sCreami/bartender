@@ -15,7 +15,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="lsinf1225.groupeq.bartender.MainActivity"
+            android:name="lsinf1225.groupeq.bartender.activity.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,52 +24,52 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="lsinf1225.groupeq.bartender.CarteActivity"
+            android:name="lsinf1225.groupeq.bartender.activity.CarteActivity"
             android:label="@string/title_activity_carte"
-            android:parentActivityName="lsinf1225.groupeq.bartender.MainActivity" >
+            android:parentActivityName="lsinf1225.groupeq.bartender.activity.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+                android:value="lsinf1225.groupeq.bartender.activity.MainActivity" />
         </activity>
         <activity
-            android:name="lsinf1225.groupeq.bartender.FactureActivity"
+            android:name="lsinf1225.groupeq.bartender.activity.FactureActivity"
             android:label="@string/title_activity_facture"
-            android:parentActivityName="lsinf1225.groupeq.bartender.MainActivity" >
+            android:parentActivityName="lsinf1225.groupeq.bartender.activity.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+                android:value="lsinf1225.groupeq.bartender.activity.MainActivity" />
         </activity>
         <activity
-            android:name="lsinf1225.groupeq.bartender.MusiqueActivity"
+            android:name="lsinf1225.groupeq.bartender.activity.MusiqueActivity"
             android:label="@string/title_activity_musique"
-            android:parentActivityName="lsinf1225.groupeq.bartender.MainActivity" >
+            android:parentActivityName="lsinf1225.groupeq.bartender.activity.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+                android:value="lsinf1225.groupeq.bartender.activity.MainActivity" />
         </activity>
         <activity
-            android:name="lsinf1225.groupeq.bartender.InventaireActivity"
+            android:name="lsinf1225.groupeq.bartender.activity.InventaireActivity"
             android:label="@string/title_activity_inventaire"
-            android:parentActivityName="lsinf1225.groupeq.bartender.MainActivity" >
+            android:parentActivityName="lsinf1225.groupeq.bartender.activity.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+                android:value="lsinf1225.groupeq.bartender.activity.MainActivity" />
         </activity>
         <activity
-            android:name="lsinf1225.groupeq.bartender.OptionsActivity"
+            android:name="lsinf1225.groupeq.bartender.activity.OptionsActivity"
             android:label="@string/title_activity_options"
-            android:parentActivityName="lsinf1225.groupeq.bartender.MainActivity" >
+            android:parentActivityName="lsinf1225.groupeq.bartender.activity.MainActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="lsinf1225.groupeq.bartender.MainActivity" />
+                android:value="lsinf1225.groupeq.bartender.activity.MainActivity" />
         </activity>
         <activity
-            android:name="lsinf1225.groupeq.bartender.ConnexionActivity"
+            android:name="lsinf1225.groupeq.bartender.activity.ConnexionActivity"
             android:label="@string/title_activity_connexion"
-            android:parentActivityName="lsinf1225.groupeq.bartender.OptionsActivity" >
+            android:parentActivityName="lsinf1225.groupeq.bartender.activity.OptionsActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="lsinf1225.groupeq.bartender.OptionsActivity" />
+                android:value="lsinf1225.groupeq.bartender.activity.OptionsActivity" />
         </activity>
     </application>
 
