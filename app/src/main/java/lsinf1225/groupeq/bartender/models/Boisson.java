@@ -4,6 +4,7 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.media.Image;
+import android.util.SparseArray;
 
 import java.util.ArrayList;
 
@@ -15,6 +16,8 @@ import lsinf1225.groupeq.bartender.MySQLiteHelper;
 
 public class Boisson {
 
+    static ArrayList<Boisson> boissons;
+
     /* Table bdd */
     public static final String DB_TABLE_BS = "Boisson";
 
@@ -25,21 +28,17 @@ public class Boisson {
     public static final String DB_COL_TY = "type";
     public static final String DB_COL_PH = "photo";
 
-    /* pour éviter la confusion */
-    public static final String DB_COL_BS_ID = DB_TABLE_BS + "." + DB_COL_NO;
-
     //"SELECT B.nom, B.tauxAlcool, B.description, B.type, I.prix, I.format FROM Boisson B, Inventaire I WHERE I.numeroBoisson = B.numeroBoisson"
-
 
     /* Models Boisson */
     private int noBoisson;
     private String nom;
     private double tauxAlcool;
     private String description;
-    private Bitmap photo;
+    private String photo;
     private String type;
 
-    public Boisson(int noBoisson, String nom, double tauxAlcool, String description, Bitmap photo, String type) {
+    public Boisson(int noBoisson, String nom, double tauxAlcool, String description, String photo, String type) {
         this.noBoisson = noBoisson;
         this.nom = nom;
         this.tauxAlcool = tauxAlcool;
@@ -78,11 +77,11 @@ public class Boisson {
         this.description = description;
     }
 
-    public Bitmap getPhoto() {
+    public String getPhoto() {
         return photo;
     }
 
-    public void setPhoto(Bitmap photo) {
+    public void setPhoto(String photo) {
         this.photo = photo;
     }
 
@@ -92,6 +91,70 @@ public class Boisson {
 
     public void setType(String type) {
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Boisson{" +
+                "noBoisson=" + noBoisson +
+                ", nom='" + nom + '\'' +
+                ", tauxAlcool=" + tauxAlcool +
+                ", description='" + description + '\'' +
+                ", photo='" + photo + '\'' +
+                ", type='" + type + '\'' +
+                '}';
+    }
+
+    /* Partie static de la classe */
+
+    private static SparseArray<Boisson> BoissonSparseArray = new SparseArray<Boisson>();
+
+    public static ArrayList<Boisson> getBoissons() {
+
+        // Récupération du  SQLiteHelper et de la base de données.
+        SQLiteDatabase db = MySQLiteHelper.get().getReadableDatabase();
+
+        // Colonnes à récupérer
+        String[] colonnes = {DB_COL_NO, DB_COL_NM, DB_COL_TA, DB_COL_DS, DB_COL_TY, DB_COL_PH};
+
+        // Requête de selection (SELECT)
+        Cursor cursor = db.query(DB_TABLE_BS, colonnes, null, null, null, null, null);
+
+        // Placement du curseur sur la première ligne.
+        cursor.moveToFirst();
+
+        // Initialisation la liste des boissons.
+        boissons = new ArrayList<Boisson>();
+
+        // Tant qu'il y a des lignes.
+        while (!cursor.isAfterLast()) {
+            // Récupération des informations de la boisson pour chaque ligne.
+            int noBoisson = cursor.getInt(0);
+            String nom = cursor.getString(1);
+            double tauxAlcool = cursor.getDouble(2);
+            String description = cursor.getString(3);
+            String photo = cursor.getString(5);
+            String type = cursor.getString(4);
+
+            // Vérification pour savoir s'il y a déjà une instance de cet utilisateur.
+            Boisson boisson = Boisson.BoissonSparseArray.get(noBoisson);
+            if (boisson == null) {
+                // Si pas encore d'instance, création d'une nouvelle instance.
+                boisson = new Boisson(noBoisson,nom,tauxAlcool,description,photo,type);
+            }
+
+            // Ajout de l'utilisateur à la liste.
+            boissons.add(boisson);
+
+            // Passe à la ligne suivante.
+            cursor.moveToNext();
+        }
+
+        // Fermeture du curseur et de la base de données.
+        cursor.close();
+        db.close();
+
+        return boissons;
     }
 
 }
