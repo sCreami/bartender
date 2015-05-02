@@ -122,8 +122,9 @@ public class Facture {
             }
         }
         if (existe == false){               // Si pas encore dans la liste, cree detail et l'ajoute
-            Detail newDtl = new Detail(this.noFacture, noProduit, quantite, 0, 0);
-            this.detail.add(newDtl);
+            //TODO savoir ce qui se passait ici
+            //Detail newDtl = new Detail(this.noFacture, noProduit, quantite, 0, 0);
+            //this.detail.add(newDtl);
         }
 	}
 

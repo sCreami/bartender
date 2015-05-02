@@ -9,6 +9,7 @@ import android.view.View;
 
 import lsinf1225.groupeq.bartender.R;
 import lsinf1225.groupeq.bartender.models.Boisson;
+import lsinf1225.groupeq.bartender.models.Detail;
 import lsinf1225.groupeq.bartender.models.Inventaire;
 
 
@@ -22,6 +23,7 @@ public class MainActivity extends Activity {
         // Faut bien générer ça une fois !
         Boisson.getBoissons();
         Inventaire.getInventaires();
+        Detail.getDetails();
     }
 
     @Override

@@ -1,16 +1,39 @@
 package lsinf1225.groupeq.bartender.models;
 
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+import android.util.SparseArray;
+
+import java.util.ArrayList;
+
+import lsinf1225.groupeq.bartender.MySQLiteHelper;
+
 /**
  * Created by Quentin on 28/04/15.
  */
 public class Detail {
+
+    static ArrayList<Detail> details;
+
+    /* Table bdd */
+    public static final String DB_TABLE_DT = "Detail";
+
+    public static final String DB_COL_RW = "rowid";
+    public static final String DB_COL_NF = "numeroFacture";
+    public static final String DB_COL_NP = "numeroProduit";
+    public static final String DB_COL_AL = "aLivre";
+    public static final String DB_COL_DL = "dejaLivre";
+    public static final String DB_COL_DP = "dejaPaye";
+
+    private int rowid;
     private int noFacture;
     private int noProduit;
     private int aLivrer;
     private int dejaLivre;
     private int dejaPaye;
 
-    public Detail(int noFacture, int noProduit,int aLivrer, int dejaLivre, int dejaPaye){
+    private Detail(int rowid,int noFacture, int noProduit,int aLivrer, int dejaLivre, int dejaPaye){
+        this.rowid = rowid;
         this.noFacture = noFacture;
         this.noProduit = noProduit;
         this.aLivrer = aLivrer;
@@ -76,4 +99,57 @@ public class Detail {
     public void payer(double montant){
         // A quoi sert cette methode ??? (= ajouterCommandeToFacture ???)
     }
+
+    /* Partie static de la classe */
+
+    private static SparseArray<Detail> DetailSparseArray = new SparseArray<Detail>();
+
+    public static ArrayList<Detail> getDetails() {
+
+        // Récupération du  SQLiteHelper et de la base de données.
+        SQLiteDatabase db = MySQLiteHelper.get().getReadableDatabase();
+
+        // Colonnes à récupérer
+        String[] colonnes = {DB_COL_RW,DB_COL_NF,DB_COL_NP,DB_COL_AL,DB_COL_DL,DB_COL_DP};
+
+        // Requête de selection (SELECT)
+        Cursor cursor = db.query(DB_TABLE_DT, colonnes, null, null, null, null, null);
+
+        // Placement du curseur sur la première ligne.
+        cursor.moveToFirst();
+
+        // Initialisation la liste des boissons.
+        details = new ArrayList<Detail>();
+
+        // Tant qu'il y a des lignes.
+        while (!cursor.isAfterLast()) {
+            // Récupération des informations de la boisson pour chaque ligne.
+            int rowid = cursor.getInt(0);
+            int noFacture = cursor.getInt(1);
+            int noProduit = cursor.getInt(2);
+            int aLivrer = cursor.getInt(3);
+            int dejaLivre = cursor.getInt(4);
+            int dejaPaye = cursor.getInt(5);
+
+            // Vérification pour savoir s'il y a déjà une instance de cet utilisateur.
+            Detail detail = Detail.DetailSparseArray.get(rowid);
+            if (detail == null) {
+                // Si pas encore d'instance, création d'une nouvelle instance.
+                detail = new Detail(rowid, noFacture, noProduit, aLivrer, dejaLivre, dejaPaye);
+            }
+
+            // Ajout de l'utilisateur à la liste.
+            details.add(detail);
+
+            // Passe à la ligne suivante.
+            cursor.moveToNext();
+        }
+
+        // Fermeture du curseur et de la base de données.
+        cursor.close();
+        db.close();
+
+        return details;
+    }
+
 }
