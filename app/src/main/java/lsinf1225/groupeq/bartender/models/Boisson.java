@@ -93,6 +93,10 @@ public class Boisson {
         this.type = type;
     }
 
+    public static Boisson getBoissonFromId(int i) {
+        return boissons.get(i-1);
+    }
+
     @Override
     public String toString() {
         return "Boisson{" +

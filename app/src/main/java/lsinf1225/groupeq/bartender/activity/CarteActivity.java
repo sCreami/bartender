@@ -12,13 +12,10 @@ import java.util.ArrayList;
 
 import lsinf1225.groupeq.bartender.R;
 import lsinf1225.groupeq.bartender.models.Boisson;
+import lsinf1225.groupeq.bartender.models.Inventaire;
 
 
 public class CarteActivity extends Activity {
-
-    static final String[] FRUITS = new String[] { "Apple", "Avocado", "Banana",
-            "Blueberry", "Coconut", "Durian", "Guava", "Kiwifruit",
-            "Jackfruit", "Mango", "Olive", "Pear", "Sugar-apple" };
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -26,17 +23,28 @@ public class CarteActivity extends Activity {
 
         setContentView(R.layout.activity_carte);
 
-        ArrayList<Boisson> list = Boisson.getBoissons();
+        Boisson.getBoissons();
+
+        ArrayList<Inventaire> inventaire = Inventaire.getInventaires();
+        ArrayList<String> carte = new ArrayList<String>();
+
+        for(int i = 0; i < inventaire.size(); i++)
+        {
+            Inventaire n = inventaire.get(i);
+            Boisson b = Boisson.getBoissonFromId(n.getNoBoisson());
+            String text = b.getNom() + " " + n.getFormat() + "cl  " + n.getPrix() + "€";
+            carte.add(text);
+        }
 
         ListView lv = (ListView) findViewById(R.id.listView);
 
         // This is the array adapter, it takes the context of the activity as a
         // first parameter, the type of list view as a second parameter and your
         // array as a third parameter.
-        ArrayAdapter<Boisson> arrayAdapter = new ArrayAdapter<Boisson>(
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
                 this,
                 android.R.layout.simple_list_item_1,
-                list );
+                carte );
 
         lv.setAdapter(arrayAdapter);
     }
