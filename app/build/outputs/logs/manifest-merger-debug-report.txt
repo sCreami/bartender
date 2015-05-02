@@ -16,15 +16,15 @@ ADDED from AndroidManifest.xml:2:1
 application
 ADDED from AndroidManifest.xml:5:5
 	android:label
-		ADDED from AndroidManifest.xml:8:9
-	android:allowBackup
-		ADDED from AndroidManifest.xml:6:9
-	android:icon
-		ADDED from AndroidManifest.xml:7:9
-	android:theme
 		ADDED from AndroidManifest.xml:9:9
-	android:name
+	android:allowBackup
+		ADDED from AndroidManifest.xml:7:9
+	android:icon
+		ADDED from AndroidManifest.xml:8:9
+	android:theme
 		ADDED from AndroidManifest.xml:10:9
+	android:name
+		ADDED from AndroidManifest.xml:6:9
 activity#lsinf1225.groupeq.bartender.activity.MainActivity
 ADDED from AndroidManifest.xml:11:9
 	android:label
@@ -95,6 +95,14 @@ ADDED from AndroidManifest.xml:60:9
 		ADDED from AndroidManifest.xml:63:13
 	android:name
 		ADDED from AndroidManifest.xml:61:13
+activity#lsinf1225.groupeq.bartender.activity.DescriptionActivity
+ADDED from AndroidManifest.xml:68:9
+	android:label
+		ADDED from AndroidManifest.xml:70:13
+	android:parentActivityName
+		ADDED from AndroidManifest.xml:71:13
+	android:name
+		ADDED from AndroidManifest.xml:69:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 	android:targetSdkVersion

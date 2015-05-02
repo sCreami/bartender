@@ -93,8 +93,11 @@ public class Boisson {
         this.type = type;
     }
 
-    public static Boisson getBoissonFromId(int i) {
-        return boissons.get(i-1);
+    public static Boisson getBoissonFromNo(int no) {
+       for(int i = 0; i < boissons.size(); i++)
+           if(boissons.get(i).noBoisson == no)
+               return boissons.get(i);
+       return null;
     }
 
     @Override

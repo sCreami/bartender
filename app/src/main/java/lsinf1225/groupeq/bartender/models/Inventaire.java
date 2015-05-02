@@ -131,6 +131,13 @@ public class Inventaire {
         this.qteStock = qteStock;
     }
 
+    public static Inventaire getProduitFromNo(int no){
+        for(int i = 0; i < inventaires.size(); i++)
+            if(inventaires.get(i).noProduit == no)
+                return inventaires.get(i);
+        return null;
+    }
+
 
     /* Partie static de la classe */
 

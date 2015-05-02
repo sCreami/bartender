@@ -71,6 +71,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="lsinf1225.groupeq.bartender.activity.OptionsActivity" />
         </activity>
+        <activity
+            android:name="lsinf1225.groupeq.bartender.activity.DescriptionActivity"
+            android:label="@string/title_activity_description"
+            android:parentActivityName="lsinf1225.groupeq.bartender.activity.CarteActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="lsinf1225.groupeq.bartender.activity.CarteActivity" />
+        </activity>
     </application>
 
 </manifest>

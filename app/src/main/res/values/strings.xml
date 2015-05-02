@@ -16,6 +16,7 @@
     <string name="title_activity_inventaire">Inventaire</string>
     <string name="title_activity_options">Options</string>
     <string name="title_activity_connexion">Connexion</string>
+    <string name="title_activity_description">Produit</string>
 
 
 </resources>

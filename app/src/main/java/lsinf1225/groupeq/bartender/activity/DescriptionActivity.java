@@ -5,29 +5,46 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
+import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import lsinf1225.groupeq.bartender.R;
 import lsinf1225.groupeq.bartender.models.Boisson;
 import lsinf1225.groupeq.bartender.models.Inventaire;
 
-
-public class MainActivity extends Activity {
+public class DescriptionActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accueil);
+        setContentView(R.layout.activity_produit);
 
-        // Faut bien générer ça une fois !
-        Boisson.getBoissons();
-        Inventaire.getInventaires();
+        Intent myIntent = getIntent();
+        String position = myIntent.getStringExtra("position");
+        int pos = Integer.parseInt(position); // p-1
+
+        Inventaire in = Inventaire.getProduitFromNo(pos+1);
+        Boisson bo = Boisson.getBoissonFromNo(in.getNoBoisson());
+
+        TextView nom = (TextView) findViewById(R.id.produitNom);
+        TextView description = (TextView) findViewById(R.id.produitDescription);
+        TextView format = (TextView) findViewById(R.id.produitFormat);
+        TextView taux = (TextView) findViewById(R.id.produitTaux);
+        TextView type = (TextView) findViewById(R.id.produitType);
+
+        nom.setText(bo.getNom());
+        description.setText(bo.getDescription());
+        format.setText(in.getFormat());
+        taux.setText(Double.toString(bo.getTauxAlcool()));
+        type.setText(bo.getType());
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_description, menu);
         return true;
     }
 
@@ -44,35 +61,5 @@ public class MainActivity extends Activity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    public void openCarte(View view)
-    {
-        Intent intent = new Intent(MainActivity.this, CarteActivity.class);
-        startActivity(intent);
-    }
-
-    public void openFacture(View view)
-    {
-        Intent intent = new Intent(MainActivity.this, FactureActivity.class);
-        startActivity(intent);
-    }
-
-    public void openMusique(View view)
-    {
-        Intent intent = new Intent(MainActivity.this, MusiqueActivity.class);
-        startActivity(intent);
-    }
-
-    public void openInventaire(View view)
-    {
-        Intent intent = new Intent(MainActivity.this, InventaireActivity.class);
-        startActivity(intent);
-    }
-
-    public void openOptions(View view)
-    {
-        Intent intent = new Intent(MainActivity.this, OptionsActivity.class);
-        startActivity(intent);
     }
 }

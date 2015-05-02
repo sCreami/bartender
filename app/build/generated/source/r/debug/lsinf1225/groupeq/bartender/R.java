@@ -19,7 +19,7 @@ public final class R {
     }
     public static final class id {
         public static final int ProduitPrix=0x7f090015;
-        public static final int action_settings=0x7f090019;
+        public static final int action_settings=0x7f09001b;
         public static final int buttonAjouterProduit=0x7f09000a;
         public static final int buttonCarte=0x7f090000;
         public static final int buttonFacture=0x7f090001;
@@ -36,6 +36,8 @@ public final class R {
         public static final int connextionMDP=0x7f090009;
         public static final int facturePrix=0x7f09000c;
         public static final int factureTable=0x7f09000b;
+        public static final int icon=0x7f090019;
+        public static final int label=0x7f09001a;
         public static final int listView=0x7f090006;
         public static final int noTable=0x7f090011;
         public static final int optionsNom=0x7f09000d;
@@ -55,15 +57,17 @@ public final class R {
         public static final int activity_musique=0x7f040006;
         public static final int activity_options=0x7f040007;
         public static final int activity_produit=0x7f040008;
+        public static final int rowlayout=0x7f040009;
     }
     public static final class menu {
         public static final int menu_carte=0x7f080000;
         public static final int menu_connexion=0x7f080001;
-        public static final int menu_facture=0x7f080002;
-        public static final int menu_inventaire=0x7f080003;
-        public static final int menu_main=0x7f080004;
-        public static final int menu_musique=0x7f080005;
-        public static final int menu_options=0x7f080006;
+        public static final int menu_description=0x7f080002;
+        public static final int menu_facture=0x7f080003;
+        public static final int menu_inventaire=0x7f080004;
+        public static final int menu_main=0x7f080005;
+        public static final int menu_musique=0x7f080006;
+        public static final int menu_options=0x7f080007;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
@@ -80,10 +84,11 @@ public final class R {
         public static final int option=0x7f060008;
         public static final int title_activity_carte=0x7f060009;
         public static final int title_activity_connexion=0x7f06000a;
-        public static final int title_activity_facture=0x7f06000b;
-        public static final int title_activity_inventaire=0x7f06000c;
-        public static final int title_activity_musique=0x7f06000d;
-        public static final int title_activity_options=0x7f06000e;
+        public static final int title_activity_description=0x7f06000b;
+        public static final int title_activity_facture=0x7f06000c;
+        public static final int title_activity_inventaire=0x7f06000d;
+        public static final int title_activity_musique=0x7f06000e;
+        public static final int title_activity_options=0x7f06000f;
     }
     public static final class style {
         /**  Customize your theme here. 
