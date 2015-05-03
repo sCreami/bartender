@@ -14,6 +14,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import lsinf1225.groupeq.bartender.R;
+import lsinf1225.groupeq.bartender.activity.adapter.CarteArrayAdapter;
 import lsinf1225.groupeq.bartender.models.Boisson;
 import lsinf1225.groupeq.bartender.models.Inventaire;
 
@@ -25,26 +26,16 @@ public class CarteActivity extends ListActivity {
         super.onCreate(savedInstanceState);
 
         ArrayList<Inventaire> inventaire = Inventaire.getInventaires();
-        ArrayList<String> carte = new ArrayList<String>();
 
-        for(int i = 0; i < inventaire.size(); i++)
-        {
-            Inventaire n = inventaire.get(i);
-            Boisson b = Boisson.getBoissonFromNo(n.getNoBoisson());
-            String text = b.getNom() + " " + n.getFormat() + "cl  " + n.getPrix() + "€";
-            carte.add(text);
-        }
+        Inventaire[] carte = new Inventaire[inventaire.size()];
+        carte = inventaire.toArray(carte);
 
         // This is the array adapter, it takes the context of the activity as a
         // first parameter, the type of list view as a second parameter and your
         // array as a third parameter.
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(
-                this,
-                R.layout.rowlayout,
-                R.id.label,
-                carte);
+        CarteArrayAdapter adapter = new CarteArrayAdapter(this, carte);
 
-        setListAdapter(arrayAdapter);
+        setListAdapter(adapter);
     }
 
     @Override
