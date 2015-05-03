@@ -4,7 +4,7 @@ CREATE TABLE Boisson(numeroBoisson INTEGER PRIMARY KEY AUTOINCREMENT,nom TEXT NO
 
 CREATE TABLE Inventaire(numeroProduit INTEGER PRIMARY KEY AUTOINCREMENT,numeroBoisson INTEGER REFERENCES Boisson(numeroBoisson),prix REAL NOT NULL,format INTEGER NOT NULL,stock INTEGER NOT NULL,seuil INTEGER,max INTEGER);
 
-CREATE TABLE Facture(numeroFacture INTEGER PRIMARY KEY AUTOINCREMENT,etat INTEGER NOT NULL,jetons INTEGER,numeroTable INTEGER NOT NULL,date DATETIME NOT NULL,serveur TEXT REFERENCES Serveur(identifiant));
+CREATE TABLE Facture(numeroFacture INTEGER PRIMARY KEY AUTOINCREMENT,etat INTEGER NOT NULL,jetons INTEGER,numeroTable INTEGER NOT NULL,date TEXT NOT NULL,serveur TEXT REFERENCES Serveur(identifiant));
 
 CREATE TABLE Detail(aLivre INTEGER,dejaLivre INTEGER,dejaPaye REAL NOT NULL,numeroProduit INTEGER REFERENCES Inventaire(numeroProduit),numeroFacture INTEGER REFERENCES Facture(numeroFacture));
 
@@ -36,10 +36,10 @@ INSERT INTO Inventaire VALUES (NULL, (SELECT numeroBoisson FROM Boisson WHERE no
 INSERT INTO Inventaire VALUES (NULL, (SELECT numeroBoisson FROM Boisson WHERE nom="Spa pétillante"), 1.50, 50, 23, 5, 50);
 INSERT INTO Inventaire VALUES (NULL, (SELECT numeroBoisson FROM Boisson WHERE nom="Spa pétillante"), 3.00, 100, 23, 5, 50);
 
-INSERT INTO Facture VALUES (NULL, 1, 0, 3, 2013-10-07, (SELECT identifiant FROM Serveur WHERE nom="Denis"));
-INSERT INTO Facture VALUES (NULL, 1, 2, 1, 2015-02-14, (SELECT identifiant FROM Serveur WHERE nom="Denis"));
-INSERT INTO Facture VALUES (NULL, 0, 8, 2, 2014-01-01, (SELECT identifiant FROM Serveur WHERE nom="Marcel"));
-INSERT INTO Facture VALUES (NULL, 1, 6, 1, 2014-01-02, (SELECT identifiant FROM Serveur WHERE nom="Philippe"));
+INSERT INTO Facture VALUES (NULL, 1, 0, 3, "2013-10-07", (SELECT identifiant FROM Serveur WHERE nom="Denis"));
+INSERT INTO Facture VALUES (NULL, 1, 2, 1, "2015-02-14", (SELECT identifiant FROM Serveur WHERE nom="Denis"));
+INSERT INTO Facture VALUES (NULL, 0, 8, 2, "2014-01-01", (SELECT identifiant FROM Serveur WHERE nom="Marcel"));
+INSERT INTO Facture VALUES (NULL, 1, 6, 1, "2014-01-02", (SELECT identifiant FROM Serveur WHERE nom="Philippe"));
 
 INSERT INTO Detail VALUES (4, 3, 0, 1, 1);   /* Facture 1 */
 INSERT INTO Detail VALUES (1, 1, 2, 2, 1);
