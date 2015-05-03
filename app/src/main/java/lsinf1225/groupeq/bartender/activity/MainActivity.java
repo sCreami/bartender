@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
+import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
 import lsinf1225.groupeq.bartender.models.Boisson;
 import lsinf1225.groupeq.bartender.models.Detail;
@@ -18,20 +19,28 @@ import lsinf1225.groupeq.bartender.models.Serveur;
 
 public class MainActivity extends Activity {
 
+    boolean ok = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
 
-        // Faut bien générer ça une fois !
-        Boisson.loadBoissons();
-        Detail.loadDetails();
-        Facture.loadFactures();
-        Inventaire.loadInventaires();
-        Musique.loadMusiques();
-        Serveur.loadServeurs();
+        if(ok == false) {
+            // Faut bien générer ça une fois !
+            //Oui mais ca le racharge a chaque fois qu'on retourne au menu...!
+            //J'ai ajouté un boolean ok pour lutter contre cela
+            //On pourrait mettre cela dans la main aussi
+            Boisson.loadBoissons();
+            Detail.loadDetails();
+            Facture.loadFactures();
+            Inventaire.loadInventaires();
+            Musique.loadMusiques();
+            Serveur.loadServeurs();
 
-        Facture.factureActuelle = new Facture(123, null, Serveur.getNumeroTable(), "oli", 0, 0);
+            Facture.factureActuelle = new Facture(123, null, Bartender.table, "oli", 0, 0);
+            ok = true;
+        }
     }
 
     public void openCarte(View view)

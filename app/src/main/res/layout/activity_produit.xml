@@ -136,4 +136,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ajouter"/>
+    <Button
+        style="@style/btnStyleopal"
+        android:id="@+id/buttonLivrerProduit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Livrer"/>
 </LinearLayout>

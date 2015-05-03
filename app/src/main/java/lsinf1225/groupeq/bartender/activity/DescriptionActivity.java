@@ -20,6 +20,8 @@ import lsinf1225.groupeq.bartender.models.Inventaire;
 public class DescriptionActivity extends Activity {
 
     Button ajouter = null;
+    Button livrer = null;
+
     int lastId = 0;
 
     @Override
@@ -29,6 +31,9 @@ public class DescriptionActivity extends Activity {
 
         ajouter = (Button)findViewById(R.id.buttonAjouterProduit);
         ajouter.setOnClickListener(ajouterListener);
+
+        livrer = (Button)findViewById(R.id.buttonLivrerProduit);
+        livrer.setOnClickListener(livrerListener);
 
         Intent myIntent = getIntent();
         String position = myIntent.getStringExtra("position");
@@ -56,6 +61,14 @@ public class DescriptionActivity extends Activity {
         public void onClick(View v) {
             Facture.factureActuelle.addDetail(lastId, 1);
             Toast.makeText(DescriptionActivity.this, "Boisson Ajoutée id(" + lastId + ")", Toast.LENGTH_SHORT).show();
+        }
+    };
+
+    private View.OnClickListener livrerListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Facture.factureActuelle.validateLivraison(lastId, 1);
+            Toast.makeText(DescriptionActivity.this, "Boisson Livrée id(" + lastId + ")", Toast.LENGTH_SHORT).show();
         }
     };
 }

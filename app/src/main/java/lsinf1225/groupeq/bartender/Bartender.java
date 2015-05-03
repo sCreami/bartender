@@ -9,6 +9,8 @@ public class Bartender extends Application {
 
     private static Bartender context;
 
+    public static int table;
+
     public static Bartender getContext(){
         return context;
     }
