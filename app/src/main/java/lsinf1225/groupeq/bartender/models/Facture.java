@@ -155,7 +155,7 @@ public class Facture {
             Detail newDtl = new Detail(0,this.noFacture, noProduit, quantite, 0, 0);
             this.detail.add(newDtl);
         }
-	}
+    }
 
 	/**
 	 * 
