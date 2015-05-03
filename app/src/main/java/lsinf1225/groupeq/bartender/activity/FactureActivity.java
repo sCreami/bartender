@@ -13,6 +13,7 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
+import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
 import lsinf1225.groupeq.bartender.models.Boisson;
 import lsinf1225.groupeq.bartender.models.Detail;
@@ -49,7 +50,7 @@ public class FactureActivity extends Activity {
         liste.setAdapter(adapter);
 
         noTable = (TextView)findViewById(R.id.factureTable);
-        noTable.setText("Table " + Serveur.getNumeroTable());
+        noTable.setText("Table " + Bartender.table);
 
         prixFacture = (TextView)findViewById(R.id.facturePrix);
         prixFacture.setText("" + Facture.factureActuelle.computePrice() + " €");

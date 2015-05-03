@@ -36,9 +36,10 @@ public class CarteArrayAdapter extends ArrayAdapter<Inventaire> {
         TextView firstLine = (TextView) rowView.findViewById(R.id.carteFirstLine);
         TextView secondLine = (TextView) rowView.findViewById(R.id.carteSecondLine);
 
-        Boisson b = Boisson.getBoissonFromNo(values[position].getNoBoisson());
-
-        firstLine.setText(b.getNom());
+        //Boisson b = Boisson.getBoissonFromNo(values[position].getNoBoisson());
+        Inventaire i = Inventaire.getProduitFromNo(values[position].getNoProduit());
+        Boisson b = i.searchBoisson(i.getNoBoisson());
+        firstLine.setText(b.getNom() + " " + i.getFormat()+"cl");
 
         secondLine.setText(b.getType());
 
