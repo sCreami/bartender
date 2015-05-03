@@ -32,7 +32,7 @@ public class Detail {
     private int dejaLivre;
     private int dejaPaye;
 
-    private Detail(int rowid,int noFacture, int noProduit,int aLivrer, int dejaLivre, int dejaPaye){
+    public Detail(int rowid,int noFacture, int noProduit,int aLivrer, int dejaLivre, int dejaPaye){
         this.rowid = rowid;
         this.noFacture = noFacture;
         this.noProduit = noProduit;
