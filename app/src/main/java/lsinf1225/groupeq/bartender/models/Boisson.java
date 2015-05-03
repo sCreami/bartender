@@ -28,8 +28,6 @@ public class Boisson {
     public static final String DB_COL_TY = "type";
     public static final String DB_COL_PH = "photo";
 
-    //"SELECT B.nom, B.tauxAlcool, B.description, B.type, I.prix, I.format FROM Boisson B, Inventaire I WHERE I.numeroBoisson = B.numeroBoisson"
-
     /* Models Boisson */
     private int noBoisson;
     private String nom;
