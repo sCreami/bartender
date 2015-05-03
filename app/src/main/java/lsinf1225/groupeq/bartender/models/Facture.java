@@ -32,7 +32,10 @@ public class Facture {
     private int etat; // 0 = open, 1 = closed
 	private int jetons;
 	private double discount;
-	
+	private ArrayList<Detail> detail;
+
+    public static Facture factureActuelle;
+
 	public Facture(int noFacture, String date, int noTable, String serveur, int etat, int jetons) {
 		this.noFacture = noFacture;
 		this.date = date;
@@ -40,6 +43,9 @@ public class Facture {
 		this.serveur = serveur;
 		this.etat = etat;
 		this.discount = 0;
+		this.jetons = 0;
+        this.detail = Detail.details;
+        Facture.factureActuelle = this;
 		this.jetons = jetons;
 	}
 	

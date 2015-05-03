@@ -31,6 +31,7 @@ public class MainActivity extends Activity {
         Musique.loadMusiques();
         Serveur.loadServeurs();
 
+        Facture.factureActuelle = new Facture(123, null, Serveur.getNumeroTable(), "oli", 0, 0);
     }
 
     @Override

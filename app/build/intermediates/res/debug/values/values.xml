@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/Users/alexis/Developer/Bartender/app/src/main/res/values/dimens.xml -->
+    <!-- From: file:/Users/oliviermartin/Bartender/app/src/main/res/values/dimens.xml -->
     <eat-comment/>
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <!-- From: file:/Users/alexis/Developer/Bartender/app/src/main/res/values/strings.xml -->
+    <!-- From: file:/Users/oliviermartin/Bartender/app/src/main/res/values/strings.xml -->
     <eat-comment/>
     <string name="action_settings">Settings</string>
     <string name="app_name">Bartender</string>
     <string name="app_name_swag"><b>Bar</b><i>tender</i></string>
     <string name="carte">Carte</string>
     <string name="facture">Facture</string>
+    <string name="facture_boisson"><b>Boisson</b></string>
     <string name="hello_world">Hello world!</string>
     <string name="inventaire">Inventaire</string>
     <string name="musique">Musique</string>
@@ -22,7 +23,7 @@
     <string name="title_activity_inventaire">Inventaire</string>
     <string name="title_activity_musique">Musique</string>
     <string name="title_activity_options">Options</string>
-    <!-- From: file:/Users/alexis/Developer/Bartender/app/src/main/res/values/styles.xml -->
+    <!-- From: file:/Users/oliviermartin/Bartender/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">
         <!-- Customize your theme here. -->
