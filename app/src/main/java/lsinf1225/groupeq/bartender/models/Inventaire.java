@@ -113,7 +113,7 @@ public class Inventaire {
     public static Inventaire getProduitFromNo(int no){
 
         // Techniquement ils sont dans l'ordre...
-        return inventaires.get(no);
+        return inventaires.get(no-1);
 
         /*
         for(int i = 0; i < inventaires.size(); i++)

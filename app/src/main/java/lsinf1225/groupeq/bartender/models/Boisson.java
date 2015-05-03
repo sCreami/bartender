@@ -94,7 +94,7 @@ public class Boisson {
     public static Boisson getBoissonFromNo(int no) {
 
         // Techniquement ils sont dans l'ordre...
-        return boissons.get(no);
+        return boissons.get(no-1);
 
         /*
         for(int i = 0; i < boissons.size(); i++)
