@@ -19,21 +19,22 @@ public final class R {
     }
     public static final class id {
         public static final int ProduitPrix=0x7f090016;
-        public static final int action_settings=0x7f09001d;
+        public static final int action_settings=0x7f09001e;
         public static final int buttonAjouterProduit=0x7f09000a;
         public static final int buttonCarte=0x7f090000;
         public static final int buttonFacture=0x7f090001;
         public static final int buttonInventaire=0x7f090003;
+        public static final int buttonLivrerProduit=0x7f09001a;
         public static final int buttonMusique=0x7f090002;
         public static final int buttonOption=0x7f090004;
         public static final int buttonOptionsConnexion=0x7f09000f;
         public static final int buttonOptionsDeconnexion=0x7f090010;
         public static final int buttonOptionsLangue=0x7f090011;
         public static final int buttonOptionsValider=0x7f090013;
-        public static final int carteFirstLine=0x7f09001c;
-        public static final int carteIcon=0x7f09001a;
+        public static final int carteFirstLine=0x7f09001d;
+        public static final int carteIcon=0x7f09001b;
         public static final int carteSearchView=0x7f090005;
-        public static final int carteSecondLine=0x7f09001b;
+        public static final int carteSecondLine=0x7f09001c;
         public static final int carteView=0x7f090007;
         public static final int connexionLogin=0x7f090008;
         public static final int connextionMDP=0x7f090009;

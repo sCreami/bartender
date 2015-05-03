@@ -43,7 +43,7 @@ public class FactureActivity extends Activity {
             Inventaire inv = Inventaire.searchInventaire(det.getNoProduit());
             Boisson boi = Inventaire.searchBoisson(inv.getNoBoisson());
             exemple.add(boi.getNom() + " " + inv.getFormat() + " cl");
-            exemple.add("  " + det.getaLivrer() + "         " + inv.getPrix() + " €");
+            exemple.add(det.getaLivrer() + " / " + det.getDejaLivre() + "      " + inv.getPrix() + " €");
         }
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, exemple);
         liste.setAdapter(adapter);
