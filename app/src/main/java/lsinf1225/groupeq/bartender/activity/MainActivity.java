@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
 
-        if(!ok) {
+        if(ok == false) {
             // Faut bien générer ça une fois !
             //Oui mais ca le racharge a chaque fois qu'on retourne au menu...!
             //J'ai ajouté un boolean ok pour lutter contre cela
