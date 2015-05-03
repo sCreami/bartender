@@ -40,8 +40,8 @@ public class FactureActivity extends Activity {
         {
             Detail det = Detail.getDetails().get(i);
 
-            Inventaire inv = Inventaire.searchInventaire(det.getNoProduit());
-            Boisson boi = Inventaire.searchBoisson(inv.getNoBoisson());
+            Inventaire inv = Inventaire.getProduitFromNo(det.getNoProduit());
+            Boisson boi = Boisson.getBoissonFromNo(inv.getNoBoisson());
             exemple.add(boi.getNom() + " " + inv.getFormat() + " cl");
             exemple.add("  " + det.getaLivrer() + "         " + inv.getPrix() + " €");
         }
@@ -55,26 +55,4 @@ public class FactureActivity extends Activity {
         prixFacture.setText("" + Facture.factureActuelle.computePrice() + " €");
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_facture, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

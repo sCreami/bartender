@@ -18,13 +18,14 @@ public class Facture {
     /* Table bdd */
     public static final String DB_TABLE_FT = "Facture";
 
-    public static final String DB_COL_NF = "numeroFacture";
-    public static final String DB_COL_ET = "etat";
-    public static final String DB_COL_JT = "jetons";
-    public static final String DB_COL_NT = "numeroTable";
-    public static final String DB_COL_DT = "date";
-    public static final String DB_COL_SV = "serveur";
+    private static final String DB_COL_NF = "numeroFacture";
+    private static final String DB_COL_ET = "etat";
+    private static final String DB_COL_JT = "jetons";
+    private static final String DB_COL_NT = "numeroTable";
+    private static final String DB_COL_DT = "date";
+    private static final String DB_COL_SV = "serveur";
 
+    /* Attributs objet */
     private int noFacture;
 	private String date;
 	private int noTable;
@@ -32,7 +33,6 @@ public class Facture {
     private int etat; // 0 = open, 1 = closed
 	private int jetons;
 	private double discount;
-	private ArrayList<Detail> detail;
 
     public static Facture factureActuelle;
 
@@ -44,7 +44,6 @@ public class Facture {
 		this.etat = etat;
 		this.discount = 0;
 		this.jetons = 0;
-        this.detail = Detail.details;
         Facture.factureActuelle = this;
 		this.jetons = jetons;
 	}
@@ -120,7 +119,7 @@ public class Facture {
 
         while (itr.hasNext()){
             Detail dtl = itr.next();
-            Inventaire inv = Inventaire.searchInventaire(dtl.getNoProduit());
+            Inventaire inv = Inventaire.getProduitFromNo(dtl.getNoProduit());
             double montant = (inv.getPrix()*dtl.getDejaLivre());           //prix * quantite
             price += (montant-(montant*(discount/100)));                   //applique discount
         }

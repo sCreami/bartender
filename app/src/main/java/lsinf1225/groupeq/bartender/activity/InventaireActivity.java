@@ -1,41 +1,36 @@
 package lsinf1225.groupeq.bartender.activity;
 
 import android.app.Activity;
+import android.app.ListActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 import lsinf1225.groupeq.bartender.R;
+import lsinf1225.groupeq.bartender.activity.adapter.CarteArrayAdapter;
+import lsinf1225.groupeq.bartender.models.Inventaire;
 
 
-public class InventaireActivity extends Activity {
+public class InventaireActivity extends ListActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_inventaire);
+
+        ArrayList<Inventaire> inventaireAL = Inventaire.getInventaires();
+
+        // Besoin d'un tableau pour l'adaptateur sinon c'est dégeulasse
+        Inventaire[] inventaire = new Inventaire[inventaireAL.size()];
+        inventaire = inventaireAL.toArray(inventaire);
+
+        // This is the array adapter, it takes the context of the activity as a
+        // first parameter, the type of list view as a second parameter and your
+        // array as a third parameter.
+        CarteArrayAdapter adapter = new CarteArrayAdapter(this, inventaire);
+
+        setListAdapter(adapter);
     }
 
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_inventaire, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
 }

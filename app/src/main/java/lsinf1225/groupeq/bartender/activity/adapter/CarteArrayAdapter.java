@@ -33,14 +33,16 @@ public class CarteArrayAdapter extends ArrayAdapter<Inventaire> {
 
         View rowView = inflater.inflate(R.layout.cartelayout, parent, false);
 
-        TextView firstLine = (TextView) rowView.findViewById(R.id.carteFirstLine);
-        TextView secondLine = (TextView) rowView.findViewById(R.id.carteSecondLine);
+        TextView name = (TextView) rowView.findViewById(R.id.carteName);
+        TextView price = (TextView) rowView.findViewById(R.id.cartePrice);
+        TextView info = (TextView) rowView.findViewById(R.id.carteMoreInfo);
 
+        Inventaire i = values[position];
         Boisson b = Boisson.getBoissonFromNo(values[position].getNoBoisson());
 
-        firstLine.setText(b.getNom());
-
-        secondLine.setText(b.getType());
+        name.setText(b.getNom());
+        price.setText("Prix: " + Double.toString(i.getPrix()) + "€");
+        info.setText("Alc: " + Double.toString(b.getTauxAlcool()) + "% Ft: "+ i.getFormat() +"cl");
 
         return rowView;
     }

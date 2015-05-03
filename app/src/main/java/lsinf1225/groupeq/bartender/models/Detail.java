@@ -18,13 +18,14 @@ public class Detail {
     /* Table bdd */
     public static final String DB_TABLE_DT = "Detail";
 
-    public static final String DB_COL_RW = "rowid";
-    public static final String DB_COL_NF = "numeroFacture";
-    public static final String DB_COL_NP = "numeroProduit";
-    public static final String DB_COL_AL = "aLivre";
-    public static final String DB_COL_DL = "dejaLivre";
-    public static final String DB_COL_DP = "dejaPaye";
+    private static final String DB_COL_RW = "rowid";
+    private static final String DB_COL_NF = "numeroFacture";
+    private static final String DB_COL_NP = "numeroProduit";
+    private static final String DB_COL_AL = "aLivre";
+    private static final String DB_COL_DL = "dejaLivre";
+    private static final String DB_COL_DP = "dejaPaye";
 
+    /* Attributs objet */
     private int rowid;
     private int noFacture;
     private int noProduit;

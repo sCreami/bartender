@@ -21,7 +21,7 @@ public class InventaireArrayAdapter extends ArrayAdapter<Inventaire> {
     private final Inventaire[] values;
 
     public InventaireArrayAdapter(Context context, Inventaire[] values) {
-        super(context, R.layout.cartelayout, values);
+        super(context, R.layout.inventairelayout, values);
         this.context = context;
         this.values = values;
     }
@@ -31,16 +31,20 @@ public class InventaireArrayAdapter extends ArrayAdapter<Inventaire> {
         LayoutInflater inflater = (LayoutInflater) context
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-        View rowView = inflater.inflate(R.layout.cartelayout, parent, false);
+        View rowView = inflater.inflate(R.layout.inventairelayout, parent, false);
 
-        TextView firstLine = (TextView) rowView.findViewById(R.id.carteFirstLine);
-        TextView secondLine = (TextView) rowView.findViewById(R.id.carteSecondLine);
+        TextView name = (TextView) rowView.findViewById(R.id.inventaireName);
+        TextView seuil = (TextView) rowView.findViewById(R.id.inventaireSeuil);
+        TextView stock = (TextView) rowView.findViewById(R.id.inventaireStock);
 
+        Inventaire i = values[position];
         Boisson b = Boisson.getBoissonFromNo(values[position].getNoBoisson());
 
-        firstLine.setText(b.getNom());
 
-        secondLine.setText(b.getType());
+        //TODO Modifier adaptateur inventaire
+        name.setText(b.getNom());
+        seuil.setText(Double.toString(i.getQteSeuil()));
+        stock.setText(Double.toString(i.getQteStock()));
 
         return rowView;
     }

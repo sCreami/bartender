@@ -15,16 +15,17 @@ import lsinf1225.groupeq.bartender.MySQLiteHelper;
 public class Inventaire {
 
     /* Table bdd */
-    public static final String DB_TABLE_BS = "Inventaire";
+    private static final String DB_TABLE_BS = "Inventaire";
 
-    public static final String DB_COL_NP = "numeroProduit";
-    public static final String DB_COL_NB = "numeroBoisson";
-    public static final String DB_COL_PX = "prix";
-    public static final String DB_COL_FT = "format";
-    public static final String DB_COL_SK = "stock";
-    public static final String DB_COL_SL = "seuil";
-    public static final String DB_COL_MX = "max";
+    private static final String DB_COL_NP = "numeroProduit";
+    private static final String DB_COL_NB = "numeroBoisson";
+    private static final String DB_COL_PX = "prix";
+    private static final String DB_COL_FT = "format";
+    private static final String DB_COL_SK = "stock";
+    private static final String DB_COL_SL = "seuil";
+    private static final String DB_COL_MX = "max";
 
+    /* Attributs objet */
     private int noProduit;
     private int noBoisson;
     private double prix;
@@ -32,10 +33,9 @@ public class Inventaire {
     private int qteSeuil;
     private int qteMax;
     private int qteStock;
-    private Boisson boisson; //Référence vers la boisson
 
-    public static ArrayList<Inventaire> inventaires; //Liste qui contient touts les boissons
-                                                    //ex : [Coca 33, Coca 50, Eau, Jupiler]
+    /* Contient l'inventaire */
+    public static ArrayList<Inventaire> inventaires;
 
     private Inventaire(int noProduit, int noBoisson, double prix, String format, int qteSeuil, int qteMax, int qteStock) {
         this.noProduit = noProduit;
@@ -52,37 +52,6 @@ public class Inventaire {
      */
     public static void alertAdmin(){
 
-    }
-
-    /*
-     *  return : ArrayList<Inventaire> de toutes les Inventaires
-     */
-    public static ArrayList<Inventaire> getListOfBoisson(){
-        return inventaires;
-    }
-
-    /*
-     *  noProduit : identifiant d'un inventaire
-     *  return : l'Inventaire qui a le noProduit souhaité. null si rien n'est trouvé.
-     */
-    public static Inventaire searchInventaire(int noProduit){
-        ListIterator<Inventaire> itr = Inventaire.inventaires.listIterator();
-        while (itr.hasNext()){
-            Inventaire inv = itr.next();
-            if(inv.getNoProduit() == noProduit)
-                return inv;
-        }
-        return null;
-    }
-
-    public static Boisson searchBoisson(int noBoisson){
-        ListIterator<Boisson> itr = Boisson.boissons.listIterator();
-        while (itr.hasNext()){
-            Boisson b = itr.next();
-            if(b.getNoBoisson() == noBoisson)
-                return b;
-        }
-        return null;
     }
 
     public int getNoProduit() {
@@ -142,10 +111,16 @@ public class Inventaire {
     }
 
     public static Inventaire getProduitFromNo(int no){
+
+        // Techniquement ils sont dans l'ordre...
+        return inventaires.get(no);
+
+        /*
         for(int i = 0; i < inventaires.size(); i++)
             if(inventaires.get(i).noProduit == no)
                 return inventaires.get(i);
         return null;
+        */
     }
 
 

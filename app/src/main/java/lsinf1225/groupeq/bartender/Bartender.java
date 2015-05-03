@@ -9,9 +9,6 @@ public class Bartender extends Application {
 
     private static Bartender context;
 
-    /* Référence la table active */
-    public static int table = 1;
-
     public static Bartender getContext(){
         return context;
     }

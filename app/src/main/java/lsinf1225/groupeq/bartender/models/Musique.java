@@ -19,12 +19,13 @@ public class Musique {
     /* Table bdd */
     public static final String DB_TABLE_MS = "Musique";
 
-    public static final String DB_COL_NO = "numeroMusique";
-    public static final String DB_COL_TT = "titre";
-    public static final String DB_COL_AR = "artiste";
-    public static final String DB_COL_GN = "genre";
-    public static final String DB_COL_AN = "annee";
+    private static final String DB_COL_NO = "numeroMusique";
+    private static final String DB_COL_TT = "titre";
+    private static final String DB_COL_AR = "artiste";
+    private static final String DB_COL_GN = "genre";
+    private static final String DB_COL_AN = "annee";
 
+    /* Attributs objet */
     private int noMusique;
     private String titre;
     private String artiste;

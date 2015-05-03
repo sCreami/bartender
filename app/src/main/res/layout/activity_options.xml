@@ -44,14 +44,8 @@
             android:layout_height="wrap_content"
             android:onClick="openConnexion"
             android:text="Connexion"/>
-        <Button
-            style="@style/btnStyleopal"
-            android:id="@+id/buttonOptionsDeconnexion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Déconnexion"/>
 
-        <Button
+    <Button
             style="@style/btnStyleopal"
             android:id="@+id/buttonOptionsLangue"
             android:layout_width="match_parent"

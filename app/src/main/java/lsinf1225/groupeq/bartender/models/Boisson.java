@@ -21,14 +21,14 @@ public class Boisson {
     /* Table bdd */
     public static final String DB_TABLE_BS = "Boisson";
 
-    public static final String DB_COL_NO = "numeroBoisson";
-    public static final String DB_COL_NM = "nom";
-    public static final String DB_COL_TA = "tauxAlcool";
-    public static final String DB_COL_DS = "description";
-    public static final String DB_COL_TY = "type";
-    public static final String DB_COL_PH = "photo";
+    private static final String DB_COL_NO = "numeroBoisson";
+    private static final String DB_COL_NM = "nom";
+    private static final String DB_COL_TA = "tauxAlcool";
+    private static final String DB_COL_DS = "description";
+    private static final String DB_COL_TY = "type";
+    private static final String DB_COL_PH = "photo";
 
-    /* Models Boisson */
+    /* Attributs objet */
     private int noBoisson;
     private String nom;
     private double tauxAlcool;
@@ -92,23 +92,18 @@ public class Boisson {
     }
 
     public static Boisson getBoissonFromNo(int no) {
-       for(int i = 0; i < boissons.size(); i++)
-           if(boissons.get(i).noBoisson == no)
-               return boissons.get(i);
-       return null;
+
+        // Techniquement ils sont dans l'ordre...
+        return boissons.get(no);
+
+        /*
+        for(int i = 0; i < boissons.size(); i++)
+            if(boissons.get(i).noBoisson == no)
+                return boissons.get(i);
+        return null;
+        */
     }
 
-    @Override
-    public String toString() {
-        return "Boisson{" +
-                "noBoisson=" + noBoisson +
-                ", nom='" + nom + '\'' +
-                ", tauxAlcool=" + tauxAlcool +
-                ", description='" + description + '\'' +
-                ", photo='" + photo + '\'' +
-                ", type='" + type + '\'' +
-                '}';
-    }
 
     /* Partie static de la classe */
 

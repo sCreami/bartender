@@ -16,19 +16,21 @@ public class Serveur {
     static ArrayList<Serveur> serveurs;
 
     /* Table bdd */
-    public static final String DB_TABLE_SV = "Serveur";
+    private static final String DB_TABLE_SV = "Serveur";
 
-    public static final String DB_COL_ID = "identifiant";
-    public static final String DB_COL_NM = "nom";
-    public static final String DB_COL_MP = "mdp";
+    private static final String DB_COL_ID = "identifiant";
+    private static final String DB_COL_NM = "nom";
+    private static final String DB_COL_MP = "mdp";
 
+    /* Attributs objet */
     private int identifiant;
     private String nom;
     private String mdp;
 
-    private static int numeroTable = 1;
+    public static int numeroTable = 1;
+
     //Variables static pour savoir si on est connecté
-    private static boolean isAdmin = false;
+    public static boolean isAdmin = false;
 
     public Serveur(int identifiant, String nom, String mdp) {
         this.identifiant = identifiant;
@@ -81,15 +83,6 @@ public class Serveur {
     public String getMotDePasse() { return mdp; }
 
     public void setMotDePasse(String motDePasse) { this.mdp = motDePasse; }
-
-    @Override
-    public String toString() {
-        return "Serveur{" +
-                "identifiant=" + identifiant +
-                ", nom='" + nom + '\'' +
-                ", motDePasse='" + mdp + '\'' +
-                '}';
-    }
 
     /* Partie static de la classe */
 
