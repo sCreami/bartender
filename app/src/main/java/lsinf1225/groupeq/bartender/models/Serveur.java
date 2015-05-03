@@ -9,6 +9,7 @@ public class Serveur {
     private String nom;
     private String motDePasse;
 
+    private static int numeroTable = 1;
     //Variables static pour savoir si on est connecté
     private static boolean isAdmin = false;
     //Les deux tableaux devront être crées grâce aux data de la BD
@@ -45,6 +46,14 @@ public class Serveur {
 
     public boolean isConnect(){
         return isAdmin;
+    }
+
+    public static int getNumeroTable() {
+        return numeroTable;
+    }
+
+    public static void setNumeroTable(int numeroTable) {
+        Serveur.numeroTable = numeroTable;
     }
 
     public int getIdentifiant() { return identifiant; }

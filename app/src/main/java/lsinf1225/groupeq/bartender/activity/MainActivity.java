@@ -10,7 +10,9 @@ import android.view.View;
 import lsinf1225.groupeq.bartender.R;
 import lsinf1225.groupeq.bartender.models.Boisson;
 import lsinf1225.groupeq.bartender.models.Detail;
+import lsinf1225.groupeq.bartender.models.Facture;
 import lsinf1225.groupeq.bartender.models.Inventaire;
+import lsinf1225.groupeq.bartender.models.Serveur;
 
 
 public class MainActivity extends Activity {
@@ -24,6 +26,7 @@ public class MainActivity extends Activity {
         Boisson.getBoissons();
         Inventaire.getInventaires();
         Detail.getDetails();
+        Facture.factureActuelle = new Facture(123, null, Serveur.getNumeroTable(), "oli");
     }
 
     @Override

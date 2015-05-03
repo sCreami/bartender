@@ -75,6 +75,16 @@ public class Inventaire {
         return null;
     }
 
+    public static Boisson searchBoisson(int noBoisson){
+        ListIterator<Boisson> itr = Boisson.boissons.listIterator();
+        while (itr.hasNext()){
+            Boisson b = itr.next();
+            if(b.getNoBoisson() == noBoisson)
+                return b;
+        }
+        return null;
+    }
+
     public int getNoProduit() {
         return noProduit;
     }

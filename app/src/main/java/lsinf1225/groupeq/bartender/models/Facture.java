@@ -15,6 +15,8 @@ public class Facture {
 	private String serveur;
 	private double discount;
 	private ArrayList<Detail> detail;
+
+    public static Facture factureActuelle;
 	
 	
 	public Facture(int noFacture, Date date, int noTable, String serveur) {
@@ -26,6 +28,8 @@ public class Facture {
 		this.etat = true;
 		this.discount = 0;
 		this.jetons = 0;
+        this.detail = Detail.details;
+        Facture.factureActuelle = this;
 	}
 	
 	public double getDiscount() {

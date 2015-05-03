@@ -15,19 +15,43 @@
         android:layout_gravity="center"
         style="@style/couleurTexteBase"/>
 
-    <ScrollView android:layout_marginBottom="35dp"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <!-- Prix -->
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Boisson"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="15dp"
+            style="@style/couleurTexteBase"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Qte     Prix"
+            android:layout_weight="1"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="30dp"
+            style="@style/couleurTexteBase"/>
+
+    </LinearLayout>
 
     <LinearLayout android:layout_width="match_parent"
         android:layout_height="match_parent">
         <GridView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/carteView"
+            android:id="@+id/factureView"
+            android:paddingBottom="60dp"
+            android:numColumns="2"
+            android:gravity="center"
             android:layout_gravity="center_horizontal"/>
           </LinearLayout>
-     </ScrollView>
 
      <LinearLayout android:layout_marginTop="-35dp"
          android:layout_width="match_parent"
