@@ -59,7 +59,7 @@ public final class R {
         public static final int activity_musique=0x7f040006;
         public static final int activity_options=0x7f040007;
         public static final int activity_produit=0x7f040008;
-        public static final int rowlayout=0x7f040009;
+        public static final int cartelayout =0x7f040009;
     }
     public static final class menu {
         public static final int menu_carte=0x7f080000;

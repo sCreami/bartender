@@ -15,12 +15,12 @@ import android.widget.TextView;
 /**
  * Created by alexis on 03/05/15.
  */
-public class CarteArrayAdapter extends ArrayAdapter<Inventaire> {
+public class InventaireArrayAdapter extends ArrayAdapter<Inventaire> {
 
     private final Context context;
     private final Inventaire[] values;
 
-    public CarteArrayAdapter(Context context, Inventaire[] values) {
+    public InventaireArrayAdapter(Context context, Inventaire[] values) {
         super(context, R.layout.cartelayout, values);
         this.context = context;
         this.values = values;
