@@ -143,7 +143,9 @@ public class Inventaire {
 
     private static SparseArray<Inventaire> InventaireSparseArray = new SparseArray<Inventaire>();
 
-    public static ArrayList<Inventaire> getInventaires() {
+    public static ArrayList<Inventaire> getInventaires() { return inventaires; }
+
+    public static void loadInventaires() {
 
         // Récupération du  SQLiteHelper et de la base de données.
         SQLiteDatabase db = MySQLiteHelper.get().getReadableDatabase();
@@ -188,8 +190,6 @@ public class Inventaire {
         // Fermeture du curseur et de la base de données.
         cursor.close();
         db.close();
-
-        return inventaires;
     }
 
 }

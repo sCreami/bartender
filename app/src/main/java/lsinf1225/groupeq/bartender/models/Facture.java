@@ -189,7 +189,9 @@ public class Facture {
 
     private static SparseArray<Facture> FactureSparseArray = new SparseArray<Facture>();
 
-    public static ArrayList<Facture> getFactures() {
+    public static ArrayList<Facture> getFactures() { return factures; }
+
+    public static void loadFactures() {
 
         // Récupération du  SQLiteHelper et de la base de données.
         SQLiteDatabase db = MySQLiteHelper.get().getReadableDatabase();
@@ -233,8 +235,6 @@ public class Facture {
         // Fermeture du curseur et de la base de données.
         cursor.close();
         db.close();
-
-        return factures;
     }
 
 }

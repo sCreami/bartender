@@ -86,7 +86,9 @@ public class Serveur {
 
     private static SparseArray<Serveur> ServeurSparseArray = new SparseArray<Serveur>();
 
-    public static ArrayList<Serveur> getServeurs() {
+    public static ArrayList<Serveur> getServeurs() { return serveurs; }
+
+    public static void loadServeurs() {
 
         // Récupération du  SQLiteHelper et de la base de données.
         SQLiteDatabase db = MySQLiteHelper.get().getReadableDatabase();
@@ -127,7 +129,5 @@ public class Serveur {
         // Fermeture du curseur et de la base de données.
         cursor.close();
         db.close();
-
-        return serveurs;
     }
 }

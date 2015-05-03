@@ -104,7 +104,9 @@ public class Detail {
 
     private static SparseArray<Detail> DetailSparseArray = new SparseArray<Detail>();
 
-    public static ArrayList<Detail> getDetails() {
+    public static ArrayList<Detail> getDetails() { return details; }
+
+    public static void loadDetails() {
 
         // Récupération du  SQLiteHelper et de la base de données.
         SQLiteDatabase db = MySQLiteHelper.get().getReadableDatabase();
@@ -148,8 +150,6 @@ public class Detail {
         // Fermeture du curseur et de la base de données.
         cursor.close();
         db.close();
-
-        return details;
     }
 
 }

@@ -114,7 +114,9 @@ public class Boisson {
 
     private static SparseArray<Boisson> BoissonSparseArray = new SparseArray<Boisson>();
 
-    public static ArrayList<Boisson> getBoissons() {
+    public static ArrayList<Boisson> getBoissons() { return  boissons; }
+
+    public static void loadBoissons() {
 
         // Récupération du  SQLiteHelper et de la base de données.
         SQLiteDatabase db = MySQLiteHelper.get().getReadableDatabase();
@@ -158,8 +160,6 @@ public class Boisson {
         // Fermeture du curseur et de la base de données.
         cursor.close();
         db.close();
-
-        return boissons;
     }
 
 }
