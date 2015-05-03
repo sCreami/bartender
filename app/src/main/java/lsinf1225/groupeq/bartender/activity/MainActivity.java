@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
         Boisson.getBoissons();
         Inventaire.getInventaires();
         Detail.getDetails();
-        Facture.factureActuelle = new Facture(123, null, Serveur.getNumeroTable(), "oli");
+        Facture.factureActuelle = new Facture(123, null, Serveur.getNumeroTable(), "oli", 0, 0);
     }
 
     @Override
