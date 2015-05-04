@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Bartender</string>
-    <string name="app_name_swag"><b>Bar</b><i>tender</i></string>
+    <string name="app_name" translatable="false">Bartender</string>
+    <string name="app_name_swag" translatable="false"><b>Bar</b><i>tender</i></string>
 
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="hello_world" translatable="false">Hello world!</string>
+    <string name="action_settings">Options</string>
 
     <string name="carte">Carte</string>
     <string name="facture">Facture</string>
