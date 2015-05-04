@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
@@ -25,7 +26,7 @@ public class OptionsActivity extends Activity {
         Button buttonOptionsConnexion = (Button) findViewById(R.id.buttonOptionsConnexion);
         Button buttonOptionslangue = (Button) findViewById(R.id.buttonOptionsLangue);
         Button buttonOptionsValider = (Button) findViewById(R.id.buttonOptionsValider);
-        EditText noTable = (EditText) findViewById(R.id.noTable);
+        final EditText noTable = (EditText) findViewById(R.id.noTable);
         TextView optionsNom = (TextView) findViewById(R.id.optionsNom);
 
         // Boutton connexion
@@ -46,6 +47,28 @@ public class OptionsActivity extends Activity {
             noTable.setVisibility(View.VISIBLE);
             buttonOptionsValider.setVisibility(View.VISIBLE);
         }
+
+        // Changer de table
+        buttonOptionsValider.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                int table;
+
+                try {
+                    table = Integer.parseInt(noTable.getText().toString());
+                }catch (Exception e){
+                    Toast.makeText(OptionsActivity.this, "ParseInt errorgit ", Toast.LENGTH_SHORT).show();
+                    table = 1;
+                }
+
+                if(table < 1) {
+                    Toast.makeText(OptionsActivity.this, "Table incorrect", Toast.LENGTH_SHORT).show();
+                    Bartender.table = 1;
+                } else {
+                    Toast.makeText(OptionsActivity.this, "Table set to "+table, Toast.LENGTH_SHORT).show();
+                    Bartender.table = table;
+                }
+            }
+        });
 
     }
 
