@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 
 import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
@@ -25,6 +26,12 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_accueil);
+
+        Button b = (Button)findViewById(R.id.buttonInventaire);
+        if(Bartender.connectedUser == null)
+            b.setVisibility(View.GONE);
+        else
+            b.setVisibility(View.VISIBLE);
 
         if(ok == false) {
             // Faut bien générer ça une fois !

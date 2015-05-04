@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import org.w3c.dom.Text;
 
+import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
 import lsinf1225.groupeq.bartender.models.Boisson;
 import lsinf1225.groupeq.bartender.models.Facture;
@@ -34,6 +35,10 @@ public class DescriptionActivity extends Activity {
 
         livrer = (Button)findViewById(R.id.buttonLivrerProduit);
         livrer.setOnClickListener(livrerListener);
+        if(Bartender.connectedUser == null)
+            livrer.setVisibility(View.GONE);
+        else
+            livrer.setVisibility(View.VISIBLE);
 
         Intent myIntent = getIntent();
         String position = myIntent.getStringExtra("position");
