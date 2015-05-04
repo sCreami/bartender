@@ -3,6 +3,7 @@ package lsinf1225.groupeq.bartender.models;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.SparseArray;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -134,22 +135,24 @@ public class Facture {
 	 * @param noProduit
 	 * @param quantite
 	 */
-	public void addDetail(int noProduit, int quantite) {
+	public int addDetail(int noProduit, int quantite) {
         ListIterator<Detail> itr = Detail.details.listIterator();
         boolean existe = false;             // le produit noProduit existe-t-il dans le tableau ?
+        if(Inventaire.getProduitFromNo(noProduit).viderInventaire(1) == 0)return 0;
 
         while (itr.hasNext()){              // Cherche le produit dans la liste
             Detail dtl = itr.next();
             if (dtl.getNoProduit() == noProduit) {
                 dtl.setaLivrer((dtl.getaLivrer() + quantite));
                 existe = true;
-                return;
+                return 1;
             }
         }
         if (existe == false){               // Si pas encore dans la liste, cree detail et l'ajoute
             Detail newDtl = new Detail(0,this.noFacture, noProduit, quantite, 0, 0);
             Detail.details.add(newDtl);
         }
+        return 2;
     }
 
 	/**
