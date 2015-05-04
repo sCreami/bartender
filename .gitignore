@@ -15,6 +15,7 @@ gen/
 # Pas sur de ceci
 app/build/
 app/app.iml
+/*/build/
 
 # Local configuration file (sdk path, etc)
 local.properties
