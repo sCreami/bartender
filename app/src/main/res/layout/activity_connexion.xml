@@ -17,9 +17,8 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
         android:id="@+id/connexionLogin"
+        android:singleLine="true"
         android:layout_gravity="center_horizontal" />
 
     <TextView
@@ -34,13 +33,14 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/connextionMDP"
+        android:inputType="textPassword"
+        android:id="@+id/connexionMDP"
         android:layout_gravity="center_horizontal"
         android:paddingBottom="20dp" />
 
     <Button
         style="@style/btnStyleopal"
-        android:id="@+id/buttonAjouterProduit"
+        android:id="@+id/buttonConnexion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Connexion"/>
