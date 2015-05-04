@@ -1,7 +1,10 @@
 package lsinf1225.groupeq.bartender.activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -11,6 +14,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
 import lsinf1225.groupeq.bartender.models.Serveur;
@@ -18,16 +23,23 @@ import lsinf1225.groupeq.bartender.models.Serveur;
 
 public class OptionsActivity extends Activity {
 
+    private static Button buttonOptionsConnexion;
+    private static Button buttonOptionsLangue;
+    private static Button buttonOptionsValider;
+    private static EditText noTable;
+    private static TextView optionsNom;
+    private Locale myLocale;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
 
-        Button buttonOptionsConnexion = (Button) findViewById(R.id.buttonOptionsConnexion);
-        Button buttonOptionslangue = (Button) findViewById(R.id.buttonOptionsLangue);
-        Button buttonOptionsValider = (Button) findViewById(R.id.buttonOptionsValider);
-        final EditText noTable = (EditText) findViewById(R.id.noTable);
-        TextView optionsNom = (TextView) findViewById(R.id.optionsNom);
+        buttonOptionsConnexion = (Button) findViewById(R.id.buttonOptionsConnexion);
+        buttonOptionsLangue = (Button) findViewById(R.id.buttonOptionsLangue);
+        buttonOptionsValider = (Button) findViewById(R.id.buttonOptionsValider);
+        noTable = (EditText) findViewById(R.id.noTable);
+        optionsNom = (TextView) findViewById(R.id.optionsNom);
 
         // Boutton connexion
         if(!Serveur.isConnect())
@@ -70,6 +82,26 @@ public class OptionsActivity extends Activity {
             }
         });
 
+        buttonOptionsLangue.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+
+                final String[] items = {"Français","English"};
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(OptionsActivity.this);
+                builder.setTitle("Select language");
+                builder.setItems(items, new DialogInterface.OnClickListener() {
+                    public void onClick(DialogInterface dialog, int item) {
+                        if(items[item].equals("Français"))
+                            changeLang("fr");
+                        else
+                            changeLang("en");
+                    }
+                });
+                AlertDialog alert = builder.create();
+                alert.show();
+            }
+        });
+
     }
 
     public void openConnexion(View view){
@@ -85,4 +117,27 @@ public class OptionsActivity extends Activity {
             startActivity(intent);
         }
     }
+
+    public void changeLang(String lang)
+    {
+        if (lang.equalsIgnoreCase(""))
+            return;
+        myLocale = new Locale(lang);
+        saveLocale(lang);
+        Locale.setDefault(myLocale);
+        android.content.res.Configuration config = new android.content.res.Configuration();
+        config.locale = myLocale;
+        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+    }
+
+
+    public void saveLocale(String lang)
+    {
+        String langPref = "Language";
+        SharedPreferences prefs = getSharedPreferences("CommonPrefs", Activity.MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+        editor.putString(langPref, lang);
+        editor.commit();
+    }
+
 }
