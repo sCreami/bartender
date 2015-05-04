@@ -60,5 +60,5 @@ INSERT INTO Detail VALUES (2, 1, 0, 1, 4);
 
 INSERT INTO Musique VALUES (NULL,"Bob Marley","No Woman No Cry","Reggae", "1982");
 INSERT INTO Musique VALUES (NULL,"Gabriella Cilmi","Sweet About Me","Country", "2009");
-INSERT INTO Musique VALUES (NULL,"Sugar","Maroon 5","Pop", "2014");
+INSERT INTO Musique VALUES (NULL,"Maroon 5","Sugar","Pop", "2014");
 INSERT INTO Musique VALUES (NULL,"Hozier","Take me to chuch","Pop", "2014");
