@@ -170,6 +170,7 @@ public class Facture {
             Detail dtl = itr.next();
             if (dtl.getNoProduit() == noProduit){
                 dtl.ajouterBoissonToCommande(quantite);
+                return;
             }
         }
 	}
@@ -189,6 +190,7 @@ public class Facture {
             Detail dtl = itr.next();
             if (dtl.getNoProduit() == noProduit){
                 dtl.ajouterCommandeToFacture(quantite);
+                return;
             }
         }
 	}
