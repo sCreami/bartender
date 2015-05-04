@@ -50,6 +50,22 @@ public class FactureActivity extends Activity {
         prixFacture = (TextView)findViewById(R.id.facturePrix);
         prixFacture.setText("" + Facture.factureActuelle.computePrice() + " €");
 
+        liste.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(FactureActivity.this, DescriptionActivity.class);
+
+                for(int i = 0; i < Inventaire.getInventaires().size(); i++){
+                    if(Detail.details.get(position / 2).getNoProduit() == Inventaire.getInventaires().get(i).getNoProduit()) {
+                        intent.putExtra("position", Integer.toString(i));
+                        break;
+                    }
+                }
+                startActivity(intent);
+                return true;
+            }
+        });
+
         liste.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView <?> parent, View v,
@@ -64,23 +80,6 @@ public class FactureActivity extends Activity {
                 startActivity(intent);
             }
         });
-
-        liste.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
-            @Override
-            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(FactureActivity.this, DescriptionActivity.class);
-
-                Detail.details.get(position / 2).ajouterCommandeToFacture(1);
-                for(int i = 0; i < Inventaire.getInventaires().size(); i++){
-                    if(Detail.details.get(position / 2).getNoProduit() == Inventaire.getInventaires().get(i).getNoProduit()) {
-                        intent.putExtra("position", Integer.toString(i));
-                        break;
-                    }
-                }
-                startActivity(intent);
-                return true;
-            }
-        });
     }
 
     private void load(List<String> exemple){
@@ -92,6 +91,13 @@ public class FactureActivity extends Activity {
             exemple.add(boi.getNom() + " " + inv.getFormat() + " cl");
             exemple.add(det.getaLivrer() + " / " + det.getDejaLivre() + "      " + inv.getPrix() + " €");
         }
+    }
+
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+        this.onCreate(null);
     }
 
 }
