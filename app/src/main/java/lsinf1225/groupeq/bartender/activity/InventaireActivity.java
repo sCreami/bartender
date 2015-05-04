@@ -10,6 +10,7 @@ import java.util.ArrayList;
 
 import lsinf1225.groupeq.bartender.R;
 import lsinf1225.groupeq.bartender.activity.adapter.CarteArrayAdapter;
+import lsinf1225.groupeq.bartender.activity.adapter.InventaireArrayAdapter;
 import lsinf1225.groupeq.bartender.models.Inventaire;
 
 
@@ -28,7 +29,7 @@ public class InventaireActivity extends ListActivity {
         // This is the array adapter, it takes the context of the activity as a
         // first parameter, the type of list view as a second parameter and your
         // array as a third parameter.
-        CarteArrayAdapter adapter = new CarteArrayAdapter(this, inventaire);
+        InventaireArrayAdapter adapter = new InventaireArrayAdapter(this, inventaire);
 
         setListAdapter(adapter);
     }
