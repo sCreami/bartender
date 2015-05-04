@@ -143,6 +143,7 @@ public class Facture {
             if (dtl.getNoProduit() == noProduit) {
                 dtl.setaLivrer((dtl.getaLivrer() + quantite));
                 existe = true;
+                return;
             }
         }
         if (existe == false){               // Si pas encore dans la liste, cree detail et l'ajoute

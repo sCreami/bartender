@@ -83,14 +83,20 @@ public class Detail {
     }
 
     public void ajouterBoissonToCommande(int quantite){
+        if(this.aLivrer == 0)return;
         this.aLivrer -= quantite;
         this.dejaLivre += quantite;
     }
 
     public void ajouterCommandeToFacture(int quantite){
-        if(dejaLivre==0)return;
+        if(dejaLivre == 0) {
+            return;
+        }
         this.dejaLivre -= quantite;
         this.dejaPaye += quantite;
+        if(dejaLivre == 0 && aLivrer == 0) {
+            Detail.details.remove(this);
+        }
     }
 
     public void modifyStatutBoisson(int ajouter, int retirer){
