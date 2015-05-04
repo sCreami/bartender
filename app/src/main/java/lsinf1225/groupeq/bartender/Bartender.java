@@ -9,7 +9,8 @@ public class Bartender extends Application {
 
     private static Bartender context;
 
-    public static int table=1;
+    public static int table = 1;
+    public static String connectedUser = null;
 
     public static Bartender getContext(){
         return context;

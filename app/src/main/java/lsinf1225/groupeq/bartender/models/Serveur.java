@@ -6,6 +6,7 @@ import android.util.SparseArray;
 
 import java.util.ArrayList;
 
+import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.MySQLiteHelper;
 
 /**
@@ -27,9 +28,6 @@ public class Serveur {
     private String nom;
     private String mdp;
 
-    //Variables static pour savoir si on est connecté
-    public static boolean isAdmin = false;
-
     public Serveur(int identifiant, String nom, String mdp) {
         this.identifiant = identifiant;
         this.nom = nom;
@@ -39,27 +37,32 @@ public class Serveur {
     /**
      *  Compare si le login et le password recu correspond a un administrateur.
      *  retourne 1 su la connection a réussi et 0 sinon.
-     * TODO fix se connecter
-    public int seConnecter(String login, String password) {
-        for(int i = 0; i < Serveur.login.length; i++){
-            if(Serveur.login[i].equals(login) && Serveur.password[i].equals(password)) {
-                isAdmin = true;
-                return 1;
+     */
+    public static int seConnecter(String login, String password) {
+
+        for(int i = 0; i < serveurs.size(); i++)
+        {
+            if(serveurs.get(i).getNom().equals(login))
+            {
+                if(serveurs.get(i).getMotDePasse().equals(password))
+                {
+                    Bartender.connectedUser = login;
+                    return 1;
+                }
             }
         }
         return 0;
     }
-    */
 
     /**
      *  Déconnecte l'utilisateur
      */
-    public void seDeconnecter() {
-        isAdmin = false;
+    public static void seDeconnecter() {
+        Bartender.connectedUser = null;
     }
 
-    public boolean isConnect(){
-        return isAdmin;
+    public static boolean isConnect(){
+        return (Bartender.connectedUser != null);
     }
 
     public int getIdentifiant() { return identifiant; }

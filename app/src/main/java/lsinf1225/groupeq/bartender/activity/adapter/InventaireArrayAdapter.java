@@ -40,11 +40,9 @@ public class InventaireArrayAdapter extends ArrayAdapter<Inventaire> {
         Inventaire i = values[position];
         Boisson b = Boisson.getBoissonFromNo(values[position].getNoBoisson());
 
-
-        //TODO Modifier adaptateur inventaire
-        name.setText(b.getNom());
-        seuil.setText(Double.toString(i.getQteSeuil()));
-        stock.setText(Double.toString(i.getQteStock()));
+        name.setText(b.getNom() + " " + i.getFormat());
+        seuil.setText(Integer.toString((int)i.getQteSeuil()));
+        stock.setText("Stock : " + Integer.toString((int)i.getQteStock()));
 
         return rowView;
     }

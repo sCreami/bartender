@@ -54,6 +54,16 @@ public class Inventaire {
 
     }
 
+    public void remplirInventaire(int quantitee){
+        this.qteStock += quantitee;
+    }
+
+    public int viderInventaire(int quantitee){
+        if(qteStock == 0)return 0;
+        this.qteStock -= quantitee;
+        return 1;
+    }
+
     public int getNoProduit() {
         return noProduit;
     }
