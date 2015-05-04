@@ -59,8 +59,12 @@ public class DescriptionActivity extends Activity {
     private View.OnClickListener ajouterListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            Facture.factureActuelle.addDetail(lastId, 1);
-            Toast.makeText(DescriptionActivity.this, "Boisson Ajoutée id(" + lastId + ")", Toast.LENGTH_SHORT).show();
+            int r = Facture.factureActuelle.addDetail(lastId, 1);
+            if (r == 0)
+                Toast.makeText(DescriptionActivity.this, "Stock Vide", Toast.LENGTH_SHORT).show();
+            else
+                Toast.makeText(DescriptionActivity.this, "Boisson Ajoutée x1", Toast.LENGTH_SHORT).show();
+
         }
     };
 
@@ -68,7 +72,7 @@ public class DescriptionActivity extends Activity {
         @Override
         public void onClick(View v) {
             Facture.factureActuelle.validateLivraison(lastId, 1);
-            Toast.makeText(DescriptionActivity.this, "Boisson Livrée id(" + lastId + ")", Toast.LENGTH_SHORT).show();
+            Toast.makeText(DescriptionActivity.this, "Boisson Livrée x1", Toast.LENGTH_SHORT).show();
         }
     };
 }
