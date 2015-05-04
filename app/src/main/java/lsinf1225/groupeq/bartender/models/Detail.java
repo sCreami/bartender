@@ -88,6 +88,7 @@ public class Detail {
     }
 
     public void ajouterCommandeToFacture(int quantite){
+        if(dejaLivre==0)return;
         this.dejaLivre -= quantite;
         this.dejaPaye += quantite;
     }
