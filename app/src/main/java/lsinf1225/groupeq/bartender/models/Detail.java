@@ -13,7 +13,7 @@ import lsinf1225.groupeq.bartender.MySQLiteHelper;
  */
 public class Detail {
 
-    static ArrayList<Detail> details;
+    public static ArrayList<Detail> details;
 
     /* Table bdd */
     public static final String DB_TABLE_DT = "Detail";

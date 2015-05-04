@@ -19,7 +19,7 @@ import lsinf1225.groupeq.bartender.models.Serveur;
 
 public class MainActivity extends Activity {
 
-    boolean ok = false;
+    static boolean ok = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

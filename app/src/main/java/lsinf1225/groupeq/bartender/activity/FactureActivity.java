@@ -37,9 +37,9 @@ public class FactureActivity extends Activity {
         liste = (GridView) findViewById(R.id.factureView);
         List<String> exemple = new ArrayList<String>();
 
-        for(int i = 0; i < Facture.factureActuelle.getDetail().size(); i++)
+        for(int i = 0; i < Detail.details.size(); i++)
         {
-            Detail det = Facture.factureActuelle.getDetail().get(i);
+            Detail det = Detail.details.get(i);
 
             Inventaire inv = Inventaire.getProduitFromNo(det.getNoProduit());
             Boisson boi = Boisson.getBoissonFromNo(inv.getNoBoisson());

@@ -34,8 +34,6 @@ public class Facture {
 	private int jetons;
 	private double discount;
 
-    private ArrayList<Detail> detail;
-
     public static Facture factureActuelle;
 
 	public Facture(int noFacture, String date, int noTable, String serveur, int etat, int jetons) {
@@ -49,10 +47,6 @@ public class Facture {
         Facture.factureActuelle = this;
 		this.jetons = jetons;
 	}
-
-    public ArrayList<Detail> getDetail() {
-        return detail;
-    }
 
 	public double getDiscount() {
 		return discount;
@@ -120,7 +114,7 @@ public class Facture {
 	 * Calcule le prix total a payer
 	 */
     public double computePrice() {
-        ListIterator<Detail> itr = detail.listIterator();
+        ListIterator<Detail> itr = Detail.details.listIterator();
         double price = 0.0;
 
         while (itr.hasNext()){
@@ -141,7 +135,7 @@ public class Facture {
 	 * @param quantite
 	 */
 	public void addDetail(int noProduit, int quantite) {
-        ListIterator<Detail> itr = detail.listIterator();
+        ListIterator<Detail> itr = Detail.details.listIterator();
         boolean existe = false;             // le produit noProduit existe-t-il dans le tableau ?
 
         while (itr.hasNext()){              // Cherche le produit dans la liste
@@ -153,7 +147,7 @@ public class Facture {
         }
         if (existe == false){               // Si pas encore dans la liste, cree detail et l'ajoute
             Detail newDtl = new Detail(0,this.noFacture, noProduit, quantite, 0, 0);
-            this.detail.add(newDtl);
+            Detail.details.add(newDtl);
         }
     }
 
@@ -166,7 +160,7 @@ public class Facture {
 	 * @param quantite
 	 */
 	public void validateLivraison (int noProduit, int quantite)  {
-        ListIterator<Detail> itr = detail.listIterator();
+        ListIterator<Detail> itr = Detail.details.listIterator();
 
         while (itr.hasNext()) {
             Detail dtl = itr.next();
@@ -185,7 +179,7 @@ public class Facture {
 	 * @param quantite
 	 */
 	public void validatePayement (int noProduit, int quantite) {
-        ListIterator<Detail> itr = detail.listIterator();
+        ListIterator<Detail> itr = Detail.details.listIterator();
 
         while (itr.hasNext()) {
             Detail dtl = itr.next();
