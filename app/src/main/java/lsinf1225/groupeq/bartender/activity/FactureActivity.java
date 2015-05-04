@@ -50,16 +50,27 @@ public class FactureActivity extends Activity {
         prixFacture = (TextView)findViewById(R.id.facturePrix);
         prixFacture.setText("" + Facture.factureActuelle.computePrice() + " €");
 
+        liste.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                Intent intent = new Intent(FactureActivity.this, DescriptionActivity.class);
+
+                for(int i = 0; i < Inventaire.getInventaires().size(); i++){
+                    if(Detail.details.get(position / 2).getNoProduit() == Inventaire.getInventaires().get(i).getNoProduit()) {
+                        intent.putExtra("position", Integer.toString(i));
+                        break;
+                    }
+                }
+                startActivity(intent);
+                return true;
+            }
+        });
+
         liste.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView <?> parent, View v,
                                     int position, long id) {
 
-                // Sending image id to FullScreenActivity
-                //Intent i = new Intent(getApplicationContext(), FullImageActivity.class);
-                // passing array index
-                //i.putExtra("id", position);
-                //startActivity(i);
                 Toast.makeText(FactureActivity.this, "Payement Validé", Toast.LENGTH_SHORT).show();
                 prixFacture.setText("" + Facture.factureActuelle.computePrice() + " €");
 
@@ -80,6 +91,13 @@ public class FactureActivity extends Activity {
             exemple.add(boi.getNom() + " " + inv.getFormat() + " cl");
             exemple.add(det.getaLivrer() + " / " + det.getDejaLivre() + "      " + inv.getPrix() + " €");
         }
+    }
+
+    @Override
+    protected void onResume() {
+
+        super.onResume();
+        this.onCreate(null);
     }
 
 }

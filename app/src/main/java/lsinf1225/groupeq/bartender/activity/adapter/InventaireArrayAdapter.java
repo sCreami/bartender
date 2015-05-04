@@ -1,5 +1,6 @@
 package lsinf1225.groupeq.bartender.activity.adapter;
 
+import android.graphics.Color;
 import android.widget.ArrayAdapter;
 
 import lsinf1225.groupeq.bartender.R;
@@ -43,6 +44,9 @@ public class InventaireArrayAdapter extends ArrayAdapter<Inventaire> {
         name.setText(b.getNom() + " " + i.getFormat());
         seuil.setText(Integer.toString((int)i.getQteSeuil()));
         stock.setText("Stock : " + Integer.toString((int)i.getQteStock()));
+
+        if(i.getQteStock() <= i.getQteSeuil())
+            name.setTextColor(Color.RED);
 
         return rowView;
     }

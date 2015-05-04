@@ -33,7 +33,7 @@ public class Musique {
     private int annee;
 
     /* todo expliquer ce que c'est */
-    private LinkedList<Boisson> playlist;
+    private LinkedList<Musique> playlist;
 
     public Musique(int noMusique, String titre, String artiste, String genre, int annee){
         this.noMusique = noMusique;
@@ -84,19 +84,22 @@ public class Musique {
     }
 
     public void createPlaylist(){
-        this.playlist = new LinkedList<Boisson>();
+        this.playlist = new LinkedList<Musique>();
     }
 
-    public void push(Boisson boisson){
-        this.playlist.add(boisson);
+    public void push(Musique musique){
+        this.playlist.add(musique);
     }
 
-    public Boisson pop(){
+    public Musique pop(){
         return this.playlist.poll();
     }
 
 
     /* Partie static de la classe */
+    public static Musique getMusiqueFromNo(int no){
+        return musiques.get(no-1);
+    }
 
     private static SparseArray<Musique> MusiqueSparseArray = new SparseArray<Musique>();
 
@@ -123,8 +126,8 @@ public class Musique {
         while (!cursor.isAfterLast()) {
             // Récupération des informations de la boisson pour chaque ligne.
             int noMusique = cursor.getInt(0);
-            String titre = cursor.getString(1);
-            String artiste = cursor.getString(2);
+            String artiste = cursor.getString(1);
+            String titre = cursor.getString(2);
             String genre = cursor.getString(3);
             int annee = cursor.getInt(4);
 
