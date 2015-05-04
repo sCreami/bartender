@@ -54,6 +54,10 @@ public class Inventaire {
 
     }
 
+    public void remplirInventaire(int quantitee){
+        this.qteStock += quantitee;
+    }
+
     public int getNoProduit() {
         return noProduit;
     }
