@@ -27,7 +27,7 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Description"
+        android:text="@string/description"
         android:textSize="20dp"
         android:textStyle="bold"
         android:gravity="center"
@@ -49,7 +49,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Prix"
+            android:text="@string/prix"
             android:layout_weight="1"
             android:layout_marginLeft="30dip"
             android:textSize="20dp"
@@ -71,7 +71,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Format"
+            android:text="@string/format"
             android:layout_weight="1"
             android:layout_marginLeft="30dip"
             android:textSize="20dp"
@@ -93,7 +93,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Type"
+            android:text="@string/type"
             android:layout_weight="1"
             android:layout_marginLeft="30dip"
             android:textSize="20dp"
@@ -115,7 +115,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Taux d'alchol"
+            android:text="@string/taux"
             android:layout_weight="1"
             android:layout_marginLeft="30dip"
             android:textSize="20dp"
@@ -135,11 +135,11 @@
         android:id="@+id/buttonAjouterProduit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ajouter"/>
+        android:text="@string/ajouter"/>
     <Button
         style="@style/btnStyleopal"
         android:id="@+id/buttonLivrerProduit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Livrer"/>
+        android:text="@string/livrer"/>
 </LinearLayout>

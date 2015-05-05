@@ -20,5 +20,14 @@
 
     <string name="facture_boisson"><b>Boisson</b></string>
 
+    <string name="description">Description</string>
+    <string name="prix">Prix</string>
+    <string name="format">Format</string>
+    <string name="type">Type</string>
+    <string name="taux">Taux alcohol</string>
+    <string name="ajouter">Ajouter</string>
+    <string name="livrer">Livrer</string>
+
+
 
 </resources>

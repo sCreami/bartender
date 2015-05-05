@@ -14,4 +14,14 @@
     <string name="title_activity_inventaire">Inventaire</string>
     <string name="title_activity_musique">Musique</string>
     <string name="title_activity_options">Options</string>
+
+    <string name="format">Format</string>
+    <string name="ajouter">Ajouter</string>
+    <string name="description">Description</string>
+    <string name="livrer">Livrer</string>
+    <string name="prix">Prix</string>
+    <string name="taux">Taux alcool</string>
+    <string name="type">Type</string>
+
+
 </resources>

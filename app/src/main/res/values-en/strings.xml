@@ -15,4 +15,13 @@
     <string name="title_activity_musique">Music</string>
     <string name="title_activity_options">Settings</string>
     <string name="hello_world"></string>
+
+    <string name="description">Description</string>
+    <string name="prix">Price</string>
+    <string name="format">Format</string>
+    <string name="type">Type</string>
+    <string name="taux">Alcohol Concentration</string>
+    <string name="ajouter">Add</string>
+    <string name="livrer">Deliver</string>
+
 </resources>

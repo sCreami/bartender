@@ -20,5 +20,4 @@ public class Bartender extends Application {
         super.onCreate();
         context = (Bartender) getApplicationContext();
     }
-
 }
