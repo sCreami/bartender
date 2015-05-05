@@ -28,8 +28,14 @@ import lsinf1225.groupeq.bartender.models.Inventaire;
 
 public class DescriptionActivity extends Activity {
 
-    Button ajouter = null;
-    Button livrer = null;
+    static Button ajouter;
+    static Button livrer;
+    static TextView nom;
+    static TextView description;
+    static TextView prix;
+    static TextView format;
+    static TextView taux;
+    static TextView type;
 
     int lastId = 0;
 
@@ -73,12 +79,12 @@ public class DescriptionActivity extends Activity {
                 break;
         }
 
-        TextView nom = (TextView) findViewById(R.id.produitNom);
-        TextView description = (TextView) findViewById(R.id.produitDescription);
-        TextView prix = (TextView) findViewById(R.id.produitPrix);
-        TextView format = (TextView) findViewById(R.id.produitFormat);
-        TextView taux = (TextView) findViewById(R.id.produitTaux);
-        TextView type = (TextView) findViewById(R.id.produitType);
+        nom = (TextView) findViewById(R.id.produitNom);
+        description = (TextView) findViewById(R.id.produitDescription);
+        prix = (TextView) findViewById(R.id.produitPrix);
+        format = (TextView) findViewById(R.id.produitFormat);
+        taux = (TextView) findViewById(R.id.produitTaux);
+        type = (TextView) findViewById(R.id.produitType);
 
         nom.setText(bo.getNom());
         if(Bartender.locale.equals("fr"))

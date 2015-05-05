@@ -32,10 +32,10 @@ import lsinf1225.groupeq.bartender.models.Serveur;
 
 public class FactureActivity extends Activity {
 
-    GridView liste = null;
-    TextView prixFacture = null;
-    TextView noTable = null;
-    TextView jetonsFacture = null;
+    static GridView liste;
+    static TextView prixFacture;
+    static TextView noTable;
+    static TextView jetonsFacture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

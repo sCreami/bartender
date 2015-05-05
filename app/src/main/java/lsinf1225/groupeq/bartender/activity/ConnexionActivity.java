@@ -21,14 +21,18 @@ import lsinf1225.groupeq.bartender.models.Serveur;
 
 public class ConnexionActivity extends Activity {
 
+    static EditText connexionLogin;
+    static EditText connexionMDP;
+    static Button buttonConnexion;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
 
-        final EditText connexionLogin = (EditText) findViewById(R.id.connexionLogin);
-        final EditText connexionMDP = (EditText) findViewById(R.id.connexionMDP);
-        Button buttonConnexion = (Button) findViewById(R.id.buttonConnexion);
+        connexionLogin = (EditText) findViewById(R.id.connexionLogin);
+        connexionMDP = (EditText) findViewById(R.id.connexionMDP);
+        buttonConnexion = (Button) findViewById(R.id.buttonConnexion);
 
         buttonConnexion.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
