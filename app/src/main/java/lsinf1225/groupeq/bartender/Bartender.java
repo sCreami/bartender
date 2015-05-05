@@ -1,6 +1,8 @@
 package lsinf1225.groupeq.bartender;
 
 import android.app.Application;
+import android.view.Gravity;
+import android.widget.Toast;
 
 /**
  * Created by alexis on 30/04/15.
@@ -20,5 +22,4 @@ public class Bartender extends Application {
         super.onCreate();
         context = (Bartender) getApplicationContext();
     }
-
 }

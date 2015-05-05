@@ -1,8 +1,6 @@
 -- Merging decision tree log ---
 manifest
 ADDED from AndroidManifest.xml:2:1
-	xmlns:android
-		ADDED from AndroidManifest.xml:2:11
 	package
 		ADDED from AndroidManifest.xml:3:5
 		INJECTED from AndroidManifest.xml:0:0
@@ -10,6 +8,8 @@ ADDED from AndroidManifest.xml:2:1
 	android:versionName
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
+	xmlns:android
+		ADDED from AndroidManifest.xml:2:11
 	android:versionCode
 		INJECTED from AndroidManifest.xml:0:0
 		INJECTED from AndroidManifest.xml:0:0
@@ -51,10 +51,10 @@ ADDED from AndroidManifest.xml:20:9
 		ADDED from AndroidManifest.xml:21:13
 meta-data#android.support.PARENT_ACTIVITY
 ADDED from AndroidManifest.xml:24:13
-	android:name
-		ADDED from AndroidManifest.xml:25:17
 	android:value
 		ADDED from AndroidManifest.xml:26:17
+	android:name
+		ADDED from AndroidManifest.xml:25:17
 activity#lsinf1225.groupeq.bartender.activity.FactureActivity
 ADDED from AndroidManifest.xml:28:9
 	android:label
