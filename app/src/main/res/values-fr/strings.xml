@@ -14,4 +14,31 @@
     <string name="title_activity_inventaire">Inventaire</string>
     <string name="title_activity_musique">Musique</string>
     <string name="title_activity_options">Options</string>
+
+    <string name="boisson">Boisson</string>
+    <string name="total">Total</string>
+    <string name="qteAndPrix">A livrer / Livré / Prix</string>
+
+    <string name="format">Format</string>
+    <string name="ajouter">Ajouter</string>
+    <string name="description">Description</string>
+    <string name="livrer">Livrer</string>
+    <string name="prix">Prix</string>
+    <string name="taux">Taux alcool</string>
+    <string name="type">Type</string>
+    <string name="connexion">Connexion</string>
+    <string name="langue">Langue</string>
+    <string name="connecteEnTantQue">Connecté en tant que</string>
+    <string name="deconnexion">Déconnexion</string>
+    <string name="invite">Invité</string>
+    <string name="login">Nom</string>
+    <string name="mdp">Mot de passe</string>
+    <string name="numTable">N°Table</string>
+    <string name="valider">Valider</string>
+    <string name="seuil">Seuil</string>
+    <string name="stock">Stock</string>
+    <string name="appelezServeur">Appelez le serveur pour payer svp!</string>
+    <string name="payementValide">Paiement validé</string>
+
+
 </resources>

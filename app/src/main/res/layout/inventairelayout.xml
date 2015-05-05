@@ -45,7 +45,7 @@
             android:layout_alignWithParentIfMissing="true"
             android:layout_toRightOf="@id/inventaireIcon"
             android:gravity="center_vertical"
-            android:text="Seuil"
+            android:text="@string/seuil"
             android:textSize="16sp" />
 
         <TextView
@@ -58,7 +58,7 @@
             android:layout_alignWithParentIfMissing="true"
             android:layout_toRightOf="@id/inventaireIcon"
             android:gravity="center_vertical"
-            android:text="Stock"
+            android:text="@string/stock"
             android:textSize="16sp" />
 
     </LinearLayout>

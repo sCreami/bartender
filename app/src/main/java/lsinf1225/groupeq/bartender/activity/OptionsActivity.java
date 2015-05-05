@@ -43,14 +43,14 @@ public class OptionsActivity extends Activity {
 
         // Boutton connexion
         if(!Serveur.isConnect())
-            buttonOptionsConnexion.setText("Connexion");
+            buttonOptionsConnexion.setText(getResources().getString(R.string.connexion));
         else
-            buttonOptionsConnexion.setText("Déconnexion");
+            buttonOptionsConnexion.setText(getResources().getString(R.string.deconnexion));
 
         // Connecté user
         if(Bartender.connectedUser == null) {
             // cache les options serveur
-            optionsNom.setText("invité");
+            optionsNom.setText(getResources().getString(R.string.invite));
             noTable.setVisibility(View.GONE);
             buttonOptionsValider.setVisibility(View.GONE);
         } else {
@@ -112,14 +112,11 @@ public class OptionsActivity extends Activity {
         } else {
             // Pour se déconnecter
             Bartender.connectedUser = null;
-            Intent intent = new Intent(OptionsActivity.this, OptionsActivity.class);
-            intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-            startActivity(intent);
+            reloadActivity();
         }
     }
 
-    public void changeLang(String lang)
-    {
+    public void changeLang(String lang) {
         if (lang.equalsIgnoreCase(""))
             return;
         myLocale = new Locale(lang);
@@ -128,16 +125,23 @@ public class OptionsActivity extends Activity {
         android.content.res.Configuration config = new android.content.res.Configuration();
         config.locale = myLocale;
         getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
+
+        reloadActivity();
     }
 
 
-    public void saveLocale(String lang)
-    {
+    public void saveLocale(String lang) {
         String langPref = "Language";
         SharedPreferences prefs = getSharedPreferences("CommonPrefs", Activity.MODE_PRIVATE);
         SharedPreferences.Editor editor = prefs.edit();
         editor.putString(langPref, lang);
         editor.commit();
+    }
+
+    public void reloadActivity() {
+        Intent intent = new Intent(OptionsActivity.this, OptionsActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
 }

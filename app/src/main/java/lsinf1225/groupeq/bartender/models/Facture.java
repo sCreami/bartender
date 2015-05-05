@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.ListIterator;
 
+import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.MySQLiteHelper;
 import lsinf1225.groupeq.bartender.models.Detail;
 
@@ -193,6 +194,12 @@ public class Facture {
 	 * @param quantite
 	 */
 	public void validatePayement (int noProduit, int quantite) {
+        if(Bartender.connectedUser == null) {
+
+            return;
+        }
+
+
         ListIterator<Detail> itr = Detail.details.listIterator();
 
         while (itr.hasNext()) {
