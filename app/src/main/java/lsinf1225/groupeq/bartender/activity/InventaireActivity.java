@@ -29,11 +29,6 @@ public class InventaireActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if(!getResources().getConfiguration().locale.toString().equals(Bartender.locale)) {
-            setLocale(Bartender.locale);
-            refreshActivity();
-        }
-
         ArrayList<Inventaire> inventaireAL = Inventaire.getInventaires();
 
         // Besoin d'un tableau pour l'adaptateur sinon c'est dégeulasse
@@ -66,22 +61,5 @@ public class InventaireActivity extends ListActivity {
 
         setListAdapter(adapter);
 
-    }
-
-    public void setLocale(String lang) {
-        Locale myLocale = new Locale(lang);
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = myLocale;
-        res.updateConfiguration(conf, dm);
-
-        refreshActivity();
-    }
-
-    public void refreshActivity() {
-        Intent intent = new Intent(this, InventaireActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivity(intent);
     }
 }

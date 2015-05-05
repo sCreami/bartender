@@ -26,11 +26,6 @@ public class ConnexionActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_connexion);
 
-        if(!getResources().getConfiguration().locale.toString().equals(Bartender.locale)) {
-            setLocale(Bartender.locale);
-            refreshActivity();
-        }
-
         final EditText connexionLogin = (EditText) findViewById(R.id.connexionLogin);
         final EditText connexionMDP = (EditText) findViewById(R.id.connexionMDP);
         Button buttonConnexion = (Button) findViewById(R.id.buttonConnexion);
@@ -45,22 +40,5 @@ public class ConnexionActivity extends Activity {
                 }
             }
         });
-    }
-
-    public void setLocale(String lang) {
-        Locale myLocale = new Locale(lang);
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = myLocale;
-        res.updateConfiguration(conf, dm);
-
-        refreshActivity();
-    }
-
-    public void refreshActivity() {
-        Intent intent = new Intent(this, ConnexionActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivity(intent);
     }
 }

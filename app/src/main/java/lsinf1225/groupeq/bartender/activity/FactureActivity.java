@@ -42,11 +42,6 @@ public class FactureActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_facture);
 
-        if(!getResources().getConfiguration().locale.toString().equals(Bartender.locale)) {
-            setLocale(Bartender.locale);
-            refreshActivity();
-        }
-
         liste = (GridView) findViewById(R.id.factureView);
         final List<String> exemple = new ArrayList<String>();
         load(exemple);
@@ -114,22 +109,5 @@ public class FactureActivity extends Activity {
 
         super.onResume();
         this.onCreate(null);
-    }
-
-    public void setLocale(String lang) {
-        Locale myLocale = new Locale(lang);
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = myLocale;
-        res.updateConfiguration(conf, dm);
-
-        refreshActivity();
-    }
-
-    public void refreshActivity() {
-        Intent intent = new Intent(this, FactureActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivity(intent);
     }
 }
