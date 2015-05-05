@@ -36,5 +36,9 @@
     <string name="mdp">Password</string>
     <string name="numTable">N°Table</string>
     <string name="valider">Validate</string>
+    <string name="seuil">Threshold</string>
+    <string name="stock">Stock</string>
+    <string name="appelezServeur">Call the server to pay please!</string>
+    <string name="payementValide">Payment validated</string>
 
 </resources>

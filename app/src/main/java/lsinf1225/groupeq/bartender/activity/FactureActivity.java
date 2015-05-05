@@ -70,6 +70,10 @@ public class FactureActivity extends Activity {
             @Override
             public void onItemClick(AdapterView <?> parent, View v,
                                     int position, long id) {
+                if(Bartender.connectedUser == null) {
+                    Toast.makeText(FactureActivity.this, getString(R.string.appelezServeur), Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 Toast.makeText(FactureActivity.this, "Payement Validé", Toast.LENGTH_SHORT).show();
                 prixFacture.setText("" + Facture.factureActuelle.computePrice() + " €");

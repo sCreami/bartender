@@ -35,6 +35,10 @@
     <string name="mdp">Mot de passe</string>
     <string name="numTable">N°Table</string>
     <string name="valider">Valider</string>
+    <string name="seuil">Seuil</string>
+    <string name="stock">Stock</string>
+    <string name="appelezServeur">Appelez le serveur pour payer svp!</string>
+    <string name="payementValide">Paiement validé</string>
 
 
 </resources>
