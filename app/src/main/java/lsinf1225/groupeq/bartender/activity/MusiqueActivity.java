@@ -31,11 +31,6 @@ public class MusiqueActivity extends ListActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if(!getResources().getConfiguration().locale.toString().equals(Bartender.locale)) {
-            setLocale(Bartender.locale);
-            refreshActivity();
-        }
-
         ArrayList<Musique> musiques = Musique.getMusiques();
 
         Musique[] musique = new Musique[musiques.size()];
@@ -55,22 +50,5 @@ public class MusiqueActivity extends ListActivity {
         }else{
             Toast.makeText(MusiqueActivity.this, "Vous n'avez plus de jeton. Vous gagnez 1 jeton par tranche de 5€.", Toast.LENGTH_SHORT).show();
         }
-    }
-
-    public void setLocale(String lang) {
-        Locale myLocale = new Locale(lang);
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = myLocale;
-        res.updateConfiguration(conf, dm);
-
-        refreshActivity();
-    }
-
-    public void refreshActivity() {
-        Intent intent = new Intent(this, MusiqueActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivity(intent);
     }
 }

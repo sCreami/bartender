@@ -30,11 +30,6 @@ public class CarteActivity extends ListActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        if(!getResources().getConfiguration().locale.toString().equals(Bartender.locale)) {
-            setLocale(Bartender.locale);
-            refreshActivity();
-        }
-
         ArrayList<Inventaire> inventaire = Inventaire.getInventaires();
 
         Inventaire[] carte = new Inventaire[inventaire.size()];
@@ -53,22 +48,5 @@ public class CarteActivity extends ListActivity {
         Intent myIntent = new Intent(this,DescriptionActivity.class);
         myIntent.putExtra("position",Integer.toString(position));
         startActivity(myIntent);
-    }
-
-    public void setLocale(String lang) {
-        Locale myLocale = new Locale(lang);
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = myLocale;
-        res.updateConfiguration(conf, dm);
-
-        refreshActivity();
-    }
-
-    public void refreshActivity() {
-        Intent intent = new Intent(this, CarteActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivity(intent);
     }
 }

@@ -36,11 +36,6 @@ public class DescriptionActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_produit);
 
-        if(!getResources().getConfiguration().locale.toString().equals(Bartender.locale)) {
-            setLocale(Bartender.locale);
-            refreshActivity();
-        }
-
         ajouter = (Button)findViewById(R.id.buttonAjouterProduit);
         ajouter.setOnClickListener(ajouterListener);
 
@@ -91,21 +86,4 @@ public class DescriptionActivity extends Activity {
             Toast.makeText(DescriptionActivity.this, getString(R.string.boissonLivree) + " x1", Toast.LENGTH_SHORT).show();
         }
     };
-
-    public void setLocale(String lang) {
-        Locale myLocale = new Locale(lang);
-        Resources res = getResources();
-        DisplayMetrics dm = res.getDisplayMetrics();
-        Configuration conf = res.getConfiguration();
-        conf.locale = myLocale;
-        res.updateConfiguration(conf, dm);
-
-        refreshActivity();
-    }
-
-    public void refreshActivity() {
-        Intent intent = new Intent(this, DescriptionActivity.class);
-        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-        startActivity(intent);
-    }
 }
