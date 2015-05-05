@@ -60,7 +60,7 @@
                 android:textStyle="bold"
                 style="@style/couleurTexteBase"/>
             <TextView
-                android:id="@+id/ProduitPrix"
+                android:id="@+id/produitPrix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30dp"

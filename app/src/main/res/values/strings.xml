@@ -59,5 +59,8 @@
 
     <string name="resetFacture">Clôturer Facture</string>
     <string name="title_activity_splash">Bartender</string>
+    <string name="badlogin">Nom Incorrect</string>
+    <string name="tableSetTo">N°Table est</string>
+    <string name="tableIncorrect">Table Incorrecte</string>
 
 </resources>

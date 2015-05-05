@@ -49,6 +49,8 @@
     <string name="ajoutPlaylist">ajoutée à la playlist</string>
     <string name="resetFacture">Clôturer Facture</string>
     <string name="title_activity_splash">Bartender</string>
-
+    <string name="badlogin">Nom Incorrect</string>
+    <string name="tableIncorrect">Table Incorrcte</string>
+    <string name="tableSetTo">N°Table est</string>
 
 </resources>

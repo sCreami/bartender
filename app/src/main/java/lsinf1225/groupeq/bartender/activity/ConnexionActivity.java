@@ -33,7 +33,7 @@ public class ConnexionActivity extends Activity {
         buttonConnexion.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 if(Serveur.seConnecter(connexionLogin.getText().toString(), connexionMDP.getText().toString()) != 1) {
-                    Toast.makeText(ConnexionActivity.this, "Login incorrect", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ConnexionActivity.this, getString(R.string.badlogin), Toast.LENGTH_SHORT).show();
                 }else{
                     Intent intent = new Intent(ConnexionActivity.this, OptionsActivity.class);
                     startActivity(intent);
