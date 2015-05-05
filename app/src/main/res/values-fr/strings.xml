@@ -17,7 +17,7 @@
 
     <string name="boisson">Boisson</string>
     <string name="total">Total</string>
-    <string name="qteAndPrix">A livrer / Livré / Prix</string>
+    <string name="qteAndPrix">A livrer | Livré @ Prix</string>
 
     <string name="format">Format</string>
     <string name="ajouter">Ajouter</string>

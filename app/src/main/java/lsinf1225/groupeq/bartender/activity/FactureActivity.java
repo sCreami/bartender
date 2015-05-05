@@ -106,7 +106,7 @@ public class FactureActivity extends Activity {
             Inventaire inv = Inventaire.getProduitFromNo(det.getNoProduit());
             Boisson boi = Boisson.getBoissonFromNo(inv.getNoBoisson());
             exemple.add(boi.getNom() + " " + inv.getFormat() + " cl");
-            exemple.add(det.getaLivrer() + " / " + det.getDejaLivre() + "      " + inv.getPrix() + " €");
+            exemple.add(det.getaLivrer() + " | " + det.getDejaLivre() + "   @   " + inv.getPrix() + " €");
         }
     }
 
