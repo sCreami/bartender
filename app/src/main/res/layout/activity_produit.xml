@@ -26,7 +26,8 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:contentDescription="alt"
-            android:src="@mipmap/ic_launcher" />
+            android:src="@mipmap/ic_launcher"
+            android:id="@+id/descriptionIcon" />
 
         <TextView
             android:layout_width="fill_parent"

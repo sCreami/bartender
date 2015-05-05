@@ -19,12 +19,12 @@ INSERT INTO Serveur VALUES ("server6", "a", "a");
 
 
 INSERT INTO Boisson VALUES (NULL, "Coca-Cola", 0, "Paquet de sucre liquide","Sugar blood" , "soft");
-INSERT INTO Boisson VALUES (NULL, "Stella", 3.6, "Pils blonde", "The blond pils","bière");
-INSERT INTO Boisson VALUES (NULL, "Jupiler", 3.7, "Pils blonde", "","bière");
+INSERT INTO Boisson VALUES (NULL, "Stella", 3.6, "Pils blonde", "The blond pils","biere");
+INSERT INTO Boisson VALUES (NULL, "Jupiler", 3.7, "Pils blonde", "","biere");
 INSERT INTO Boisson VALUES (NULL, "Domaine de l'Agly", 12.7, "Vin de Bordeaux","", "vin");
 INSERT INTO Boisson VALUES (NULL, "Spa pétillante", 0, "L'eau hydratante","", "eau");
-INSERT INTO Boisson VALUES (NULL, "Tripel Karmeliet", 4.2, "Blonde triple","", "bière");
-INSERT INTO Boisson VALUES (NULL, "Kasteel Rouge", 4.7, "Parfaite pour violer","", "bière");
+INSERT INTO Boisson VALUES (NULL, "Tripel Karmeliet", 4.2, "Blonde triple","", "biere");
+INSERT INTO Boisson VALUES (NULL, "Kasteel Rouge", 4.7, "Parfaite pour violer","", "biere");
 INSERT INTO Boisson VALUES (NULL, "Fanta", 0, "Is this real life ? Or is this fanta sea ?","", "soft");
 
 INSERT INTO Inventaire VALUES (NULL, (SELECT numeroBoisson FROM Boisson WHERE nom="Coca-Cola"), 1.50, 33, 45, 15, 100);

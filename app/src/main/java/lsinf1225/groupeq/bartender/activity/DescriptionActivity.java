@@ -12,6 +12,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -51,9 +52,26 @@ public class DescriptionActivity extends Activity {
         String position = myIntent.getStringExtra("position");
         int pos = Integer.parseInt(position); // p-1
 
-        Inventaire in = Inventaire.getProduitFromNo(pos+1);
+        Inventaire in = Inventaire.getProduitFromNo(pos + 1);
         lastId = in.getNoProduit();
         Boisson bo = Boisson.getBoissonFromNo(in.getNoBoisson());
+
+        ImageView icon = (ImageView) findViewById(R.id.descriptionIcon);
+
+        switch(bo.getType()){
+            case "biere": icon.setImageResource(R.drawable.biere);
+                break;
+            case "soft": icon.setImageResource(R.drawable.soft);
+                break;
+            case "eau": icon.setImageResource(R.drawable.soft);
+                break;
+            case "vin": icon.setImageResource(R.drawable.vin);
+                break;
+            case "spirit": icon.setImageResource(R.drawable.spirit);
+                break;
+            default: icon.setImageResource(R.mipmap.ic_launcher);
+                break;
+        }
 
         TextView nom = (TextView) findViewById(R.id.produitNom);
         TextView description = (TextView) findViewById(R.id.produitDescription);

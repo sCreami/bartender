@@ -11,6 +11,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
@@ -41,6 +42,22 @@ public class CarteArrayAdapter extends ArrayAdapter<Inventaire> {
         Inventaire i = values[position];
         Boisson b = Boisson.getBoissonFromNo(values[position].getNoBoisson());
 
+        ImageView icon = (ImageView) rowView.findViewById(R.id.carteIcon);
+
+        switch(b.getType()){
+            case "biere": icon.setImageResource(R.drawable.biere);
+                break;
+            case "soft": icon.setImageResource(R.drawable.soft);
+                break;
+            case "eau": icon.setImageResource(R.drawable.soft);
+                break;
+            case "vin": icon.setImageResource(R.drawable.vin);
+                break;
+            case "spirit": icon.setImageResource(R.drawable.spirit);
+                break;
+            default: icon.setImageResource(R.mipmap.ic_launcher);
+                break;
+        }
 
         name.setText(b.getNom());
         price.setText(getContext().getResources().getString(R.string.prix) + ": " + Double.toString(i.getPrix()) + "€");

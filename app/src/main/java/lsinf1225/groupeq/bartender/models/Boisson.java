@@ -27,7 +27,6 @@ public class Boisson {
     private static final String DB_COL_DF = "descriptionFR";
     private static final String DB_COL_DE = "descriptionEN";
     private static final String DB_COL_TY = "type";
-    private static final String DB_COL_PH = "photo";
 
     /* Attributs objet */
     private int noBoisson;
@@ -38,13 +37,12 @@ public class Boisson {
     private String photo;
     private String type;
 
-    public Boisson(int noBoisson, String nom, double tauxAlcool, String descriptionFR, String descriptionEN, String photo, String type) {
+    public Boisson(int noBoisson, String nom, double tauxAlcool, String descriptionFR, String descriptionEN, String type) {
         this.noBoisson = noBoisson;
         this.nom = nom;
         this.tauxAlcool = tauxAlcool;
         this.descriptionFR = descriptionFR;
         this.descriptionEN = descriptionEN;
-        this.photo = photo;
         this.type = type;
     }
 
@@ -84,7 +82,7 @@ public class Boisson {
         SQLiteDatabase db = MySQLiteHelper.get().getReadableDatabase();
 
         // Colonnes à récupérer
-        String[] colonnes = {DB_COL_NO, DB_COL_NM, DB_COL_TA, DB_COL_DF, DB_COL_DE, DB_COL_PH, DB_COL_TY};
+        String[] colonnes = {DB_COL_NO, DB_COL_NM, DB_COL_TA, DB_COL_DF, DB_COL_DE, DB_COL_TY};
 
         // Requête de selection (SELECT)
         Cursor cursor = db.query(DB_TABLE_BS, colonnes, null, null, null, null, null);
@@ -103,14 +101,13 @@ public class Boisson {
             double tauxAlcool = cursor.getDouble(2);
             String descriptionFR = cursor.getString(3);
             String descriptionEN = cursor.getString(4);
-            String photo = cursor.getString(5);
-            String type = cursor.getString(6);
+            String type = cursor.getString(5);
 
             // Vérification pour savoir s'il y a déjà une instance de cet utilisateur.
             Boisson boisson = Boisson.BoissonSparseArray.get(noBoisson);
             if (boisson == null) {
                 // Si pas encore d'instance, création d'une nouvelle instance.
-                boisson = new Boisson(noBoisson,nom,tauxAlcool,descriptionFR,descriptionEN,photo,type);
+                boisson = new Boisson(noBoisson,nom,tauxAlcool,descriptionFR,descriptionEN,type);
             }
 
             // Ajout de l'utilisateur à la liste.
