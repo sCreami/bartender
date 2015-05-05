@@ -31,6 +31,7 @@ public class FactureActivity extends Activity {
     GridView liste = null;
     TextView prixFacture = null;
     TextView noTable = null;
+    TextView jetonsFacture = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,9 @@ public class FactureActivity extends Activity {
 
         prixFacture = (TextView)findViewById(R.id.facturePrix);
         prixFacture.setText("" + Facture.factureActuelle.computePrice() + " €");
+
+        jetonsFacture = (TextView)findViewById(R.id.factureJetons);
+        jetonsFacture.setText("" + Facture.factureActuelle.getJetons());
 
         liste.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override

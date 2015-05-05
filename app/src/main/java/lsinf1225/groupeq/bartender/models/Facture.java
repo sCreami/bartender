@@ -34,6 +34,7 @@ public class Facture {
     private int etat; // 0 = open, 1 = closed
 	private int jetons;
 	private double discount;
+    private double montant = 0.0;
 
     public static Facture factureActuelle;
 
@@ -170,6 +171,14 @@ public class Facture {
             Detail dtl = itr.next();
             if (dtl.getNoProduit() == noProduit){
                 dtl.ajouterBoissonToCommande(quantite);
+
+                Inventaire inv = Inventaire.getProduitFromNo(dtl.getNoProduit());
+                double paye = inv.getPrix()*quantite;
+                this.montant = this.montant + paye;
+                while (this.montant>=5.0) {
+                    this.jetons = this.jetons + 1;
+                    this.montant = this.montant - 5.0;
+                }
                 return;
             }
         }
