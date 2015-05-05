@@ -84,7 +84,7 @@ public class Boisson {
         SQLiteDatabase db = MySQLiteHelper.get().getReadableDatabase();
 
         // Colonnes à récupérer
-        String[] colonnes = {DB_COL_NO, DB_COL_NM, DB_COL_TA, DB_COL_DF, DB_COL_DE, DB_COL_TY, DB_COL_PH};
+        String[] colonnes = {DB_COL_NO, DB_COL_NM, DB_COL_TA, DB_COL_DF, DB_COL_DE, DB_COL_PH, DB_COL_TY};
 
         // Requête de selection (SELECT)
         Cursor cursor = db.query(DB_TABLE_BS, colonnes, null, null, null, null, null);

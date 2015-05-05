@@ -31,7 +31,7 @@
     <string name="langue">Language</string>
     <string name="connecteEnTantQue">Logged in as</string>
     <string name="deconnexion">Disconnect</string>
-    <string name="invite">Guest</string>
+    <string name="invite">Client</string>
     <string name="login">Login</string>
     <string name="mdp">Password</string>
     <string name="numTable">N°Table</string>

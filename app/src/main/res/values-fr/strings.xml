@@ -30,7 +30,7 @@
     <string name="langue">Langue</string>
     <string name="connecteEnTantQue">Connecté en tant que</string>
     <string name="deconnexion">Déconnexion</string>
-    <string name="invite">Invité</string>
+    <string name="invite">Client</string>
     <string name="login">Nom</string>
     <string name="mdp">Mot de passe</string>
     <string name="numTable">N°Table</string>
