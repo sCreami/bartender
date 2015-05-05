@@ -11,14 +11,22 @@
     <string name="app_name" translatable="false">Bartender</string>
     <string name="app_name_swag" translatable="false"><b>Bar</b><i>tender</i></string>
     <string name="carte">Carte</string>
+    <string name="connecteEnTantQue">Connecté en tant que</string>
+    <string name="connexion">Connexion</string>
+    <string name="deconnexion">Déconnexion</string>
     <string name="description">Description</string>
     <string name="facture">Facture</string>
     <string name="facture_boisson"><b>Boisson</b></string>
     <string name="format">Format</string>
     <string name="hello_world" translatable="false">Hello world!</string>
     <string name="inventaire">Inventaire</string>
+    <string name="invite">Invité</string>
+    <string name="langue">Langue</string>
     <string name="livrer">Livrer</string>
+    <string name="login">Nom</string>
+    <string name="mdp">Mot de passe</string>
     <string name="musique">Musique</string>
+    <string name="numTable">N°Table</string>
     <string name="option">Options</string>
     <string name="prix">Prix</string>
     <string name="taux">Taux alcohol</string>
@@ -30,6 +38,7 @@
     <string name="title_activity_musique">Musique</string>
     <string name="title_activity_options">Options</string>
     <string name="type">Type</string>
+    <string name="valider">Valider</string>
     <!-- From: file:/Users/oliviermartin/Bartender/app/src/main/res/values/styles.xml -->
     <eat-comment/>
     <style name="AppTheme" parent="android:Theme.Holo.Light.DarkActionBar">

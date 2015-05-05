@@ -22,6 +22,15 @@
     <string name="prix">Prix</string>
     <string name="taux">Taux alcool</string>
     <string name="type">Type</string>
+    <string name="connexion">Connexion</string>
+    <string name="langue">Langue</string>
+    <string name="connecteEnTantQue">Connecté en tant que</string>
+    <string name="deconnexion">Déconnexion</string>
+    <string name="invite">Invité</string>
+    <string name="login">Nom</string>
+    <string name="mdp">Mot de passe</string>
+    <string name="numTable">N°Table</string>
+    <string name="valider">Valider</string>
 
 
 </resources>
