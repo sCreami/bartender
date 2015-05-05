@@ -46,7 +46,7 @@ public class CarteArrayAdapter extends ArrayAdapter<Inventaire> {
         price.setText(getContext().getResources().getString(R.string.prix) + ": " + Double.toString(i.getPrix()) + "€");
         info.setText("Alc: " + Double.toString(b.getTauxAlcool()) + "% Ft: "+ i.getFormat() +"cl");
 
-        if(i.getQteStock() <= i.getQteSeuil()) {
+        if(i.getQteStock() == 0) {
             rowView.setBackgroundColor(Color.GRAY);
         }
         return rowView;

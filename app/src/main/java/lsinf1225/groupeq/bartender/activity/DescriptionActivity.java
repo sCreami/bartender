@@ -83,7 +83,7 @@ public class DescriptionActivity extends Activity {
         @Override
         public void onClick(View v) {
             int r = Facture.factureActuelle.addDetail(lastId, 1);
-            if (r == 0) {
+            if (Inventaire.getProduitFromNo(lastId).getQteStock() == 0) {
                 Toast.makeText(DescriptionActivity.this, getString(R.string.stockVide), Toast.LENGTH_SHORT).show();
                 ajouter.setClickable(false);
                 ajouter.setBackgroundColor(Color.GRAY);
