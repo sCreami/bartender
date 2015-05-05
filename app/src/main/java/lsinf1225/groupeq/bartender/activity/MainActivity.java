@@ -1,5 +1,6 @@
 package lsinf1225.groupeq.bartender.activity;
 
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -30,16 +31,12 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_accueil);
-
-        Button b = (Button)findViewById(R.id.buttonInventaire);
-        if(Bartender.connectedUser == null)
-            b.setVisibility(View.GONE);
-        else
-            b.setVisibility(View.VISIBLE);
 
         if(bddLoaded == false) {
+
+            Intent splash = new Intent(this,SplashActivity.class);
+            startActivity(splash);
+
             // Faut bien générer ça une fois !
             //Oui mais ca le racharge a chaque fois qu'on retourne au menu...!
             //J'ai ajouté un boolean ok pour lutter contre cela
@@ -54,6 +51,15 @@ public class MainActivity extends Activity {
             Facture.factureActuelle = new Facture(123, null, Bartender.table, "oli", 0, 0);
             bddLoaded = true;
         }
+
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_accueil);
+
+        Button b = (Button)findViewById(R.id.buttonInventaire);
+        if(Bartender.connectedUser == null)
+            b.setVisibility(View.GONE);
+        else
+            b.setVisibility(View.VISIBLE);
     }
 
     public void openCarte(View view)

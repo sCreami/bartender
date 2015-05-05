@@ -48,6 +48,7 @@
     <string name="noJetons">Vous ne possédez plus de jeton, vous gagnez 1 jeton par tranche de 5€</string>
     <string name="ajoutPlaylist">ajoutée à la playlist</string>
     <string name="resetFacture">Clôturer Facture</string>
+    <string name="title_activity_splash">Bartender</string>
 
 
 </resources>

@@ -49,5 +49,6 @@
     <string name="noJetons">You have no token, you earn 1 token for every 5 €</string>
     <string name="ajoutPlaylist">added to playlist</string>
     <string name="resetFacture">Close Bill</string>
+    <string name="title_activity_splash">Bartender</string>
 
 </resources>
