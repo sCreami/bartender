@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Configuration;
 import android.content.res.Resources;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.DisplayMetrics;
 import android.util.EventLogTags;
@@ -65,14 +66,22 @@ public class DescriptionActivity extends Activity {
         format.setText(in.getFormat()+"cl");
         taux.setText(Double.toString(bo.getTauxAlcool())+"%");
         type.setText(bo.getType());
+
+        if(in.getQteStock() == 0) {
+            ajouter.setClickable(false);
+            ajouter.setBackgroundColor(Color.GRAY);
+        }
     }
 
     private View.OnClickListener ajouterListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             int r = Facture.factureActuelle.addDetail(lastId, 1);
-            if (r == 0)
+            if (r == 0) {
                 Toast.makeText(DescriptionActivity.this, getString(R.string.stockVide), Toast.LENGTH_SHORT).show();
+                ajouter.setClickable(false);
+                ajouter.setBackgroundColor(Color.GRAY);
+            }
             else
                 Toast.makeText(DescriptionActivity.this, getString(R.string.boissonAjoutee) + " x1", Toast.LENGTH_SHORT).show();
 

@@ -1,5 +1,6 @@
 package lsinf1225.groupeq.bartender.activity.adapter;
 
+import android.graphics.Color;
 import android.widget.ArrayAdapter;
 
 import lsinf1225.groupeq.bartender.R;
@@ -45,6 +46,9 @@ public class CarteArrayAdapter extends ArrayAdapter<Inventaire> {
         price.setText(getContext().getResources().getString(R.string.prix) + ": " + Double.toString(i.getPrix()) + "€");
         info.setText("Alc: " + Double.toString(b.getTauxAlcool()) + "% Ft: "+ i.getFormat() +"cl");
 
+        if(i.getQteStock() <= i.getQteSeuil()) {
+            rowView.setBackgroundColor(Color.GRAY);
+        }
         return rowView;
     }
 }
