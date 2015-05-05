@@ -48,6 +48,9 @@
     <string name="noJetons">Vous ne possédez plus de jeton, vous gagnez 1 jeton par tranche de 5€</string>
     <string name="ajoutPlaylist">ajoutée à la playlist</string>
     <string name="resetFacture">Clôturer Facture</string>
+    <string name="badlogin">Nom Incorrect</string>
+    <string name="tableIncorrect">Table Incorrcte</string>
+    <string name="tableSetTo">N°Table est</string>
 
 
 </resources>

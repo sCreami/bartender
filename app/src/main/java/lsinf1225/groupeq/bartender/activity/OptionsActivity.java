@@ -83,15 +83,15 @@ public class OptionsActivity extends Activity {
                 try {
                     table = Integer.parseInt(noTable.getText().toString());
                 }catch (Exception e){
-                    Toast.makeText(OptionsActivity.this, "ParseInt errorgit ", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OptionsActivity.this, getString(R.string.tableIncorrect), Toast.LENGTH_SHORT).show();
                     table = 1;
                 }
 
                 if(table < 1) {
-                    Toast.makeText(OptionsActivity.this, "Table incorrect", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OptionsActivity.this, getString(R.string.tableIncorrect), Toast.LENGTH_SHORT).show();
                     Bartender.table = 1;
                 } else {
-                    Toast.makeText(OptionsActivity.this, "Table set to "+table, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OptionsActivity.this, getString(R.string.tableSetTo)+ " " + table, Toast.LENGTH_SHORT).show();
                     Bartender.table = table;
                 }
             }
@@ -108,7 +108,7 @@ public class OptionsActivity extends Activity {
                 Facture.factureActuelle = new Facture(Facture.factureActuelle.getNoFacture()+1, new Date().toString(), Bartender.table, Bartender.connectedUser, 0, 0);
                 //On réinitialise les détails
                 Detail.details = new ArrayList<Detail>();
-                Toast.makeText(OptionsActivity.this, "New Facture", Toast.LENGTH_SHORT).show();
+                Toast.makeText(OptionsActivity.this, getString(R.string.resetFacture), Toast.LENGTH_SHORT).show();
             }
         });
 

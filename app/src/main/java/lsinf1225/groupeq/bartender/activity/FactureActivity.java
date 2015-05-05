@@ -87,9 +87,10 @@ public class FactureActivity extends Activity {
                     prixFacture.setText("" + String.format("%.2f",Facture.factureActuelle.computePrice()) + " €");
 
                     Detail.details.get(position / 2).ajouterCommandeToFacture(1);
+
             }else{
                 if(Bartender.connectedUser != null)
-                    Detail.details.get((position / 2)).ajouterBoissonToCommande(1);
+                    Facture.factureActuelle.validateLivraison(Detail.details.get((position / 2)).getNoProduit(), 1);
             }
                 Intent intent = new Intent(FactureActivity.this, FactureActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
