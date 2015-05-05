@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -41,6 +42,7 @@ public class InventaireActivity extends ListActivity {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         Inventaire.getInventaires().get(position).remplirInventaire(1);
+        //Toast.makeText(InventaireActivity.this, Inventaire.getInventaires().get(position).getQteMax(), Toast.LENGTH_SHORT).show();
 
         ArrayList<Inventaire> inventaireAL = Inventaire.getInventaires();
 

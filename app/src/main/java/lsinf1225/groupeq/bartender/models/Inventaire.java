@@ -55,7 +55,7 @@ public class Inventaire {
     }
 
     public void remplirInventaire(int quantitee){
-        if(this.qteMax == this.qteStock)return;
+        if(this.qteMax >= this.qteStock)return;
         this.qteStock += quantitee;
     }
 

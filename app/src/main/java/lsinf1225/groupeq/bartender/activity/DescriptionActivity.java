@@ -66,9 +66,9 @@ public class DescriptionActivity extends Activity {
         public void onClick(View v) {
             int r = Facture.factureActuelle.addDetail(lastId, 1);
             if (r == 0)
-                Toast.makeText(DescriptionActivity.this, "Stock Vide", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DescriptionActivity.this, getString(R.string.stockVide), Toast.LENGTH_SHORT).show();
             else
-                Toast.makeText(DescriptionActivity.this, "Boisson Ajoutée x1", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DescriptionActivity.this, getString(R.string.boissonAjoutee) + " x1", Toast.LENGTH_SHORT).show();
 
         }
     };
@@ -77,7 +77,7 @@ public class DescriptionActivity extends Activity {
         @Override
         public void onClick(View v) {
             Facture.factureActuelle.validateLivraison(lastId, 1);
-            Toast.makeText(DescriptionActivity.this, "Boisson Livrée x1", Toast.LENGTH_SHORT).show();
+            Toast.makeText(DescriptionActivity.this, getString(R.string.boissonLivree) + " x1", Toast.LENGTH_SHORT).show();
         }
     };
 

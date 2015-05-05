@@ -39,6 +39,11 @@
     <string name="stock">Stock</string>
     <string name="appelezServeur">Appelez le serveur pour payer svp!</string>
     <string name="payementValide">Paiement validé</string>
+    <string name="boissonAjoutee">Boisson Ajoutée</string>
+    <string name="boissonLivree">Boisson Livrée</string>
+    <string name="stockVide">Stock Vide</string>
+    <string name="genre">Genre</string>
+    <string name="annee">Année</string>
 
 
 </resources>

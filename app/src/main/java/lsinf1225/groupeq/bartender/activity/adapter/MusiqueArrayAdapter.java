@@ -38,7 +38,7 @@ public class MusiqueArrayAdapter extends ArrayAdapter<Musique> {
 
         name.setText(m.getTitre());
         artist.setText(m.getArtiste());
-        info.setText("Annee: " + m.getAnnee() + " Genre: "+ m.getGenre());
+        info.setText(getContext().getString(R.string.annee) + ": " + m.getAnnee() + ", " + getContext().getString(R.string.genre)+": "+ m.getGenre());
 
         return rowView;
     }
