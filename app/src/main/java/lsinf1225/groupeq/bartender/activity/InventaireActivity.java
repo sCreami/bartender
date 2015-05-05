@@ -46,7 +46,7 @@ public class InventaireActivity extends ListActivity {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         Inventaire.getInventaires().get(position).remplirInventaire(1);
-        Toast.makeText(InventaireActivity.this, Inventaire.getInventaires().get(position).getQteMax(), Toast.LENGTH_SHORT).show();
+        //Toast.makeText(InventaireActivity.this, Inventaire.getInventaires().get(position).getQteMax(), Toast.LENGTH_SHORT).show();
 
         ArrayList<Inventaire> inventaireAL = Inventaire.getInventaires();
 
