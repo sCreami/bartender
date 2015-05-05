@@ -3,7 +3,10 @@ package lsinf1225.groupeq.bartender.activity;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -16,6 +19,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
@@ -37,6 +41,11 @@ public class FactureActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_facture);
+
+        if(!getResources().getConfiguration().locale.toString().equals(Bartender.locale)) {
+            setLocale(Bartender.locale);
+            refreshActivity();
+        }
 
         liste = (GridView) findViewById(R.id.factureView);
         final List<String> exemple = new ArrayList<String>();
@@ -107,10 +116,20 @@ public class FactureActivity extends Activity {
         this.onCreate(null);
     }
 
-    public void reloadActivity() {
+    public void setLocale(String lang) {
+        Locale myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+
+        refreshActivity();
+    }
+
+    public void refreshActivity() {
         Intent intent = new Intent(this, FactureActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
     }
-
 }
