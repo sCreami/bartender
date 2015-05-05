@@ -57,12 +57,14 @@ public class DescriptionActivity extends Activity {
 
         TextView nom = (TextView) findViewById(R.id.produitNom);
         TextView description = (TextView) findViewById(R.id.produitDescription);
+        TextView prix = (TextView) findViewById(R.id.produitPrix);
         TextView format = (TextView) findViewById(R.id.produitFormat);
         TextView taux = (TextView) findViewById(R.id.produitTaux);
         TextView type = (TextView) findViewById(R.id.produitType);
 
         nom.setText(bo.getNom());
         description.setText(bo.getDescription());
+        prix.setText(in.getPrix()+"€");
         format.setText(in.getFormat()+"cl");
         taux.setText(Double.toString(bo.getTauxAlcool())+"%");
         type.setText(bo.getType());
