@@ -40,8 +40,9 @@ public class CarteArrayAdapter extends ArrayAdapter<Inventaire> {
         Inventaire i = values[position];
         Boisson b = Boisson.getBoissonFromNo(values[position].getNoBoisson());
 
+
         name.setText(b.getNom());
-        price.setText("Prix: " + Double.toString(i.getPrix()) + "€");
+        price.setText(getContext().getResources().getString(R.string.prix) + ": " + Double.toString(i.getPrix()) + "€");
         info.setText("Alc: " + Double.toString(b.getTauxAlcool()) + "% Ft: "+ i.getFormat() +"cl");
 
         return rowView;
