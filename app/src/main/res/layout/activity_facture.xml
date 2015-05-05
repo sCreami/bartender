@@ -23,7 +23,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Boisson"
+            android:text="@string/boisson"
             android:layout_weight="1"
             android:textSize="20dp"
             android:textStyle="bold"
@@ -32,11 +32,10 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Qte     Prix"
+            android:text="@string/qteAndPrix"
             android:layout_weight="1"
-            android:textSize="20dp"
             android:textStyle="bold"
-            android:layout_marginLeft="30dp"
+            android:layout_marginLeft="65dp"
             style="@style/couleurTexteBase"/>
 
     </LinearLayout>
@@ -64,7 +63,7 @@
              <TextView
                  android:layout_width="wrap_content"
                  android:layout_height="wrap_content"
-                 android:text="Total"
+                 android:text="@string/total"
                  android:layout_weight="1"
                  android:layout_marginLeft="100dp"
                  android:textSize="20dp"

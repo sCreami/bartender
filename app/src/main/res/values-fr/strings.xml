@@ -15,6 +15,10 @@
     <string name="title_activity_musique">Musique</string>
     <string name="title_activity_options">Options</string>
 
+    <string name="boisson">Boisson</string>
+    <string name="total">Total</string>
+    <string name="qteAndPrix">A livrer / Livré / Prix</string>
+
     <string name="format">Format</string>
     <string name="ajouter">Ajouter</string>
     <string name="description">Description</string>
