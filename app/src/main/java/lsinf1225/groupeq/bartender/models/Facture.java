@@ -171,7 +171,8 @@ public class Facture {
         while (itr.hasNext()) {
             Detail dtl = itr.next();
             if (dtl.getNoProduit() == noProduit){
-                dtl.ajouterBoissonToCommande(quantite);
+                if(dtl.ajouterBoissonToCommande(quantite) == 0)
+                    return;
 
                 Inventaire inv = Inventaire.getProduitFromNo(dtl.getNoProduit());
                 double paye = inv.getPrix()*quantite;

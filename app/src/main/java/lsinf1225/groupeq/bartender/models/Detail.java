@@ -82,10 +82,11 @@ public class Detail {
         this.dejaPaye = dejaPaye;
     }
 
-    public void ajouterBoissonToCommande(int quantite){
-        if(this.aLivrer == 0)return;
+    public int ajouterBoissonToCommande(int quantite){
+        if(this.aLivrer == 0)return 0;
         this.aLivrer -= quantite;
         this.dejaLivre += quantite;
+        return 1;
     }
 
     public void ajouterCommandeToFacture(int quantite){

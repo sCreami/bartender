@@ -46,9 +46,9 @@ public class MusiqueActivity extends ListActivity {
         if (Facture.factureActuelle.getJetons()>0) {
             Facture.factureActuelle.setJetons(Facture.factureActuelle.getJetons() - 1);
             Musique m = Musique.getMusiqueFromNo(position + 1);
-            Toast.makeText(MusiqueActivity.this, "Musique " + m.getTitre() + " ajoutéee à la playlist", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MusiqueActivity.this,getString(R.string.title_activity_musique)+ " " + m.getTitre() + " " + getString(R.string.ajoutPlaylist), Toast.LENGTH_SHORT).show();
         }else{
-            Toast.makeText(MusiqueActivity.this, "Vous n'avez plus de jeton. Vous gagnez 1 jeton par tranche de 5€.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(MusiqueActivity.this, getString(R.string.noJetons), Toast.LENGTH_SHORT).show();
         }
     }
 }

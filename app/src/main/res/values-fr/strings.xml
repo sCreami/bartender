@@ -44,6 +44,10 @@
     <string name="stockVide">Stock Vide</string>
     <string name="genre">Genre</string>
     <string name="annee">Année</string>
+    <string name="jeton">Jetons</string>
+    <string name="noJetons">Vous ne possédez plus de jeton, vous gagnez 1 jeton par tranche de 5€</string>
+    <string name="ajoutPlaylist">ajoutée à la playlist</string>
+    <string name="resetFacture">Clôturer Facture</string>
 
 
 </resources>

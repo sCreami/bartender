@@ -45,5 +45,9 @@
     <string name="stockVide">Empty Stock</string>
     <string name="genre">Genre</string>
     <string name="annee">Year</string>
+    <string name="jeton">Tokens</string>
+    <string name="noJetons">You have no token, you earn 1 token for every 5 €</string>
+    <string name="ajoutPlaylist">added to playlist</string>
+    <string name="resetFacture">Close Bill</string>
 
 </resources>

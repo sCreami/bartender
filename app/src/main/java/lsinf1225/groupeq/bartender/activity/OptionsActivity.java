@@ -17,10 +17,14 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Date;
 import java.util.Locale;
 
 import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
+import lsinf1225.groupeq.bartender.models.Detail;
+import lsinf1225.groupeq.bartender.models.Facture;
 import lsinf1225.groupeq.bartender.models.Serveur;
 
 
@@ -28,6 +32,7 @@ public class OptionsActivity extends Activity {
 
     private static Button buttonOptionsConnexion;
     private static Button buttonOptionsLangue;
+    private static Button buttonOptionsReset;
     private static Button buttonOptionsValider;
     private static EditText noTable;
     private static TextView optionsNom;
@@ -43,6 +48,7 @@ public class OptionsActivity extends Activity {
         }
 
         buttonOptionsConnexion = (Button) findViewById(R.id.buttonOptionsConnexion);
+        buttonOptionsReset = (Button) findViewById(R.id.buttonOptionsReset);
         buttonOptionsLangue = (Button) findViewById(R.id.buttonOptionsLangue);
         buttonOptionsValider = (Button) findViewById(R.id.buttonOptionsValider);
         noTable = (EditText) findViewById(R.id.noTable);
@@ -60,11 +66,13 @@ public class OptionsActivity extends Activity {
             optionsNom.setText(getResources().getString(R.string.invite));
             noTable.setVisibility(View.GONE);
             buttonOptionsValider.setVisibility(View.GONE);
+            buttonOptionsReset.setVisibility(View.GONE);
         } else {
             // affiche les options serveur
             optionsNom.setText(Bartender.connectedUser);
             noTable.setVisibility(View.VISIBLE);
             buttonOptionsValider.setVisibility(View.VISIBLE);
+            buttonOptionsReset.setVisibility(View.VISIBLE);
         }
 
         // Changer de table
@@ -86,6 +94,16 @@ public class OptionsActivity extends Activity {
                     Toast.makeText(OptionsActivity.this, "Table set to "+table, Toast.LENGTH_SHORT).show();
                     Bartender.table = table;
                 }
+            }
+        });
+
+        // Réinitialiser Facture
+        buttonOptionsReset.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Facture.factureActuelle.closeFacture();
+                Facture.factureActuelle = new Facture(Facture.factureActuelle.getNoFacture()+1, new Date().toString(), Bartender.table, Bartender.connectedUser, 0, 0);
+                Detail.details = new ArrayList<Detail>();
+                Toast.makeText(OptionsActivity.this, "New Facture", Toast.LENGTH_SHORT).show();
             }
         });
 

@@ -62,8 +62,8 @@ public class DescriptionActivity extends Activity {
 
         nom.setText(bo.getNom());
         description.setText(bo.getDescription());
-        format.setText(in.getFormat());
-        taux.setText(Double.toString(bo.getTauxAlcool()));
+        format.setText(in.getFormat()+"cl");
+        taux.setText(Double.toString(bo.getTauxAlcool())+"%");
         type.setText(bo.getType());
     }
 
