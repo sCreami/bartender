@@ -11,6 +11,7 @@ public class Bartender extends Application {
 
     public static int table = 1;
     public static String connectedUser = null;
+    public static String locale = "fr";
 
     public static Bartender getContext(){
         return context;

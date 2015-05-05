@@ -10,6 +10,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".activity.MainActivity"
+            android:configChanges="locale|orientation|screenSize"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,6 +20,7 @@
         </activity>
         <activity
             android:name=".activity.CarteActivity"
+            android:configChanges="locale|orientation|screenSize"
             android:label="@string/title_activity_carte"
             android:parentActivityName=".activity.MainActivity" >
             <meta-data
@@ -27,6 +29,7 @@
         </activity>
         <activity
             android:name=".activity.FactureActivity"
+            android:configChanges="locale|orientation|screenSize"
             android:label="@string/title_activity_facture"
             android:parentActivityName=".activity.MainActivity" >
             <meta-data
@@ -35,6 +38,7 @@
         </activity>
         <activity
             android:name=".activity.MusiqueActivity"
+            android:configChanges="locale|orientation|screenSize"
             android:label="@string/title_activity_musique"
             android:parentActivityName=".activity.MainActivity" >
             <meta-data
@@ -43,6 +47,7 @@
         </activity>
         <activity
             android:name=".activity.InventaireActivity"
+            android:configChanges="locale|orientation|screenSize"
             android:label="@string/title_activity_inventaire"
             android:parentActivityName=".activity.MainActivity" >
             <meta-data
@@ -51,6 +56,7 @@
         </activity>
         <activity
             android:name=".activity.OptionsActivity"
+            android:configChanges="locale|orientation|screenSize"
             android:label="@string/title_activity_options"
             android:parentActivityName=".activity.MainActivity" >
             <meta-data
@@ -59,6 +65,7 @@
         </activity>
         <activity
             android:name=".activity.ConnexionActivity"
+            android:configChanges="locale|orientation|screenSize"
             android:label="@string/title_activity_connexion"
             android:parentActivityName=".activity.OptionsActivity" >
             <meta-data
@@ -67,6 +74,7 @@
         </activity>
         <activity
             android:name=".activity.DescriptionActivity"
+            android:configChanges="locale|orientation|screenSize"
             android:label="@string/title_activity_description"
             android:parentActivityName=".activity.CarteActivity" >
             <meta-data

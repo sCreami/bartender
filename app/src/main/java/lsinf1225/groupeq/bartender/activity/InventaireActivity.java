@@ -3,7 +3,10 @@ package lsinf1225.groupeq.bartender.activity;
 import android.app.Activity;
 import android.app.ListActivity;
 import android.content.Intent;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,6 +14,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Locale;
 
 import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
@@ -24,6 +28,11 @@ public class InventaireActivity extends ListActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(!getResources().getConfiguration().locale.toString().equals(Bartender.locale)) {
+            setLocale(Bartender.locale);
+            refreshActivity();
+        }
 
         ArrayList<Inventaire> inventaireAL = Inventaire.getInventaires();
 
@@ -59,10 +68,20 @@ public class InventaireActivity extends ListActivity {
 
     }
 
-    public void reloadActivity() {
+    public void setLocale(String lang) {
+        Locale myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+
+        refreshActivity();
+    }
+
+    public void refreshActivity() {
         Intent intent = new Intent(this, InventaireActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
     }
-
 }

@@ -5,7 +5,10 @@ import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.content.res.Configuration;
+import android.content.res.Resources;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -33,6 +36,11 @@ public class OptionsActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_options);
+
+        if(!getResources().getConfiguration().locale.toString().equals(Bartender.locale)) {
+            setLocale(Bartender.locale);
+            refreshActivity();
+        }
 
         buttonOptionsConnexion = (Button) findViewById(R.id.buttonOptionsConnexion);
         buttonOptionsLangue = (Button) findViewById(R.id.buttonOptionsLangue);
@@ -84,16 +92,18 @@ public class OptionsActivity extends Activity {
         buttonOptionsLangue.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
 
-                final String[] items = {"Français","English"};
+                final String[] items = {"Français", "English"};
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(OptionsActivity.this);
                 builder.setTitle("Select language");
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
                         if (items[item].equals("Français")) {
-                            //
+                            Bartender.locale = "fr";
+                            setLocale("fr");
                         } else {
-                            //
+                            Bartender.locale = "en";
+                            setLocale("en");
                         }
                     }
                 });
@@ -112,11 +122,22 @@ public class OptionsActivity extends Activity {
         } else {
             // Pour se déconnecter
             Bartender.connectedUser = null;
-            reloadActivity();
+            refreshActivity();
         }
     }
 
-    public void reloadActivity() {
+    public void setLocale(String lang) {
+        Locale myLocale = new Locale(lang);
+        Resources res = getResources();
+        DisplayMetrics dm = res.getDisplayMetrics();
+        Configuration conf = res.getConfiguration();
+        conf.locale = myLocale;
+        res.updateConfiguration(conf, dm);
+
+        refreshActivity();
+    }
+
+    public void refreshActivity() {
         Intent intent = new Intent(this, OptionsActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
