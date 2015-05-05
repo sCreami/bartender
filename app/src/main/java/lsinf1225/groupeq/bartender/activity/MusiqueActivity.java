@@ -40,7 +40,7 @@ public class MusiqueActivity extends ListActivity {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         if (Facture.factureActuelle.getJetons()>0) {
-            Facture.factureActuelle.setJetons(Facture.factureActuelle.getJetons() - 5);
+            Facture.factureActuelle.setJetons(Facture.factureActuelle.getJetons() - 1);
             Musique m = Musique.getMusiqueFromNo(position + 1);
             Toast.makeText(MusiqueActivity.this, "Musique " + m.getTitre() + " ajoutéee à la playlist", Toast.LENGTH_SHORT).show();
         }else{

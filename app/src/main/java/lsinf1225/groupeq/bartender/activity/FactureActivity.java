@@ -31,6 +31,7 @@ public class FactureActivity extends Activity {
     GridView liste = null;
     TextView prixFacture = null;
     TextView noTable = null;
+    TextView jetonsFacture = null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +49,9 @@ public class FactureActivity extends Activity {
 
         prixFacture = (TextView)findViewById(R.id.facturePrix);
         prixFacture.setText("" + Facture.factureActuelle.computePrice() + " €");
+
+        jetonsFacture = (TextView)findViewById(R.id.factureJetons);
+        jetonsFacture.setText("" + Facture.factureActuelle.getJetons());
 
         liste.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
@@ -69,6 +73,10 @@ public class FactureActivity extends Activity {
             @Override
             public void onItemClick(AdapterView <?> parent, View v,
                                     int position, long id) {
+                if(Bartender.connectedUser == null) {
+                    Toast.makeText(FactureActivity.this, getString(R.string.appelezServeur), Toast.LENGTH_SHORT).show();
+                    return;
+                }
 
                 Toast.makeText(FactureActivity.this, "Payement Validé", Toast.LENGTH_SHORT).show();
                 prixFacture.setText("" + Facture.factureActuelle.computePrice() + " €");

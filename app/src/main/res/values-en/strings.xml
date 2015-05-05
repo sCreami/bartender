@@ -16,6 +16,10 @@
     <string name="title_activity_options">Settings</string>
     <string name="hello_world"></string>
 
+    <string name="boisson">Boisson</string>
+    <string name="total">Total</string>
+    <string name="qteAndPrix">To deliver / Delivered / Price</string>
+
     <string name="description">Description</string>
     <string name="prix">Price</string>
     <string name="format">Format</string>
@@ -23,5 +27,18 @@
     <string name="taux">Alcohol Concentration</string>
     <string name="ajouter">Add</string>
     <string name="livrer">Deliver</string>
+    <string name="connexion">Connection</string>
+    <string name="langue">Language</string>
+    <string name="connecteEnTantQue">Logged in as</string>
+    <string name="deconnexion">Disconnect</string>
+    <string name="invite">Guest</string>
+    <string name="login">Login</string>
+    <string name="mdp">Password</string>
+    <string name="numTable">N°Table</string>
+    <string name="valider">Validate</string>
+    <string name="seuil">Threshold</string>
+    <string name="stock">Stock</string>
+    <string name="appelezServeur">Call the server to pay please!</string>
+    <string name="payementValide">Payment validated</string>
 
 </resources>

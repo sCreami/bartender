@@ -42,14 +42,14 @@ public class OptionsActivity extends Activity {
 
         // Boutton connexion
         if(!Serveur.isConnect())
-            buttonOptionsConnexion.setText("Connexion");
+            buttonOptionsConnexion.setText(getResources().getString(R.string.connexion));
         else
-            buttonOptionsConnexion.setText("Déconnexion");
+            buttonOptionsConnexion.setText(getResources().getString(R.string.deconnexion));
 
         // Connecté user
         if(Bartender.connectedUser == null) {
             // cache les options serveur
-            optionsNom.setText("invité");
+            optionsNom.setText(getResources().getString(R.string.invite));
             noTable.setVisibility(View.GONE);
             buttonOptionsValider.setVisibility(View.GONE);
         } else {
