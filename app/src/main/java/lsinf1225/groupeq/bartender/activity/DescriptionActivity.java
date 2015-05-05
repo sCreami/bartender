@@ -63,7 +63,11 @@ public class DescriptionActivity extends Activity {
         TextView type = (TextView) findViewById(R.id.produitType);
 
         nom.setText(bo.getNom());
-        description.setText(bo.getDescription());
+        if(Bartender.locale.equals("fr"))
+            description.setText(bo.getDescriptionFR());
+        else
+            description.setText(bo.getDescriptionEN());
+
         prix.setText(in.getPrix()+"€");
         format.setText(in.getFormat()+"cl");
         taux.setText(Double.toString(bo.getTauxAlcool())+"%");

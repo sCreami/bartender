@@ -23,7 +23,7 @@ public class Inventaire {
     private static final String DB_COL_FT = "format";
     private static final String DB_COL_SK = "stock";
     private static final String DB_COL_SL = "seuil";
-    private static final String DB_COL_MX = "max";
+    private static final String DB_COL_MX = "maxStock";
 
     /* Attributs objet */
     private int noProduit;
@@ -165,9 +165,9 @@ public class Inventaire {
             int noBoisson = cursor.getInt(1);
             double prix = cursor.getDouble(2);
             String format = cursor.getString(3);
-            int qteSeuil = cursor.getInt(4);
-            int qteMax = cursor.getInt(5);
-            int qteStock = cursor.getInt(6);
+            int qteStock = cursor.getInt(4);
+            int qteSeuil = cursor.getInt(5);
+            int qteMax = cursor.getInt(6);
 
             // Vérification pour savoir s'il y a déjà une instance de cet utilisateur.
             Inventaire inventaire = Inventaire.InventaireSparseArray.get(noProduit);
