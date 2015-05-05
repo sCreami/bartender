@@ -87,7 +87,7 @@ public class FactureActivity extends Activity {
                     return;
                 }
 
-                Toast.makeText(FactureActivity.this, "Payement Validé", Toast.LENGTH_SHORT).show();
+                Toast.makeText(FactureActivity.this, getString(R.string.payementValide), Toast.LENGTH_SHORT).show();
                 prixFacture.setText("" + Facture.factureActuelle.computePrice() + " €");
 
                 Detail.details.get(position / 2).ajouterCommandeToFacture(1);
