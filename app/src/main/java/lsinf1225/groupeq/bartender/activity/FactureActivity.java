@@ -52,7 +52,7 @@ public class FactureActivity extends Activity {
         noTable.setText("Table " + Bartender.table);
 
         prixFacture = (TextView)findViewById(R.id.facturePrix);
-        prixFacture.setText("" + Facture.factureActuelle.computePrice() + " €");
+        prixFacture.setText("" + String.format("%.2f",Facture.factureActuelle.computePrice()) + " €");
 
         jetonsFacture = (TextView)findViewById(R.id.factureJetons);
         jetonsFacture.setText("" + Facture.factureActuelle.getJetons());
@@ -77,15 +77,20 @@ public class FactureActivity extends Activity {
             @Override
             public void onItemClick(AdapterView <?> parent, View v,
                                     int position, long id) {
-                if(Bartender.connectedUser == null) {
-                    Toast.makeText(FactureActivity.this, getString(R.string.appelezServeur), Toast.LENGTH_SHORT).show();
-                    return;
-                }
+            if(position %2 == 0) {//Sion clique sur le nom
+                    if (Bartender.connectedUser == null) {
+                        Toast.makeText(FactureActivity.this, getString(R.string.appelezServeur), Toast.LENGTH_SHORT).show();
+                        return;
+                    }
 
-                Toast.makeText(FactureActivity.this, getString(R.string.payementValide), Toast.LENGTH_SHORT).show();
-                prixFacture.setText("" + Facture.factureActuelle.computePrice() + " €");
+                    Toast.makeText(FactureActivity.this, getString(R.string.payementValide), Toast.LENGTH_SHORT).show();
+                    prixFacture.setText("" + String.format("%.2f",Facture.factureActuelle.computePrice()) + " €");
 
-                Detail.details.get(position / 2).ajouterCommandeToFacture(1);
+                    Detail.details.get(position / 2).ajouterCommandeToFacture(1);
+            }else{
+                if(Bartender.connectedUser != null)
+                    Detail.details.get((position / 2)).ajouterBoissonToCommande(1);
+            }
                 Intent intent = new Intent(FactureActivity.this, FactureActivity.class);
                 intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 startActivity(intent);
