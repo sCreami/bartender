@@ -100,8 +100,13 @@ public class OptionsActivity extends Activity {
         // Réinitialiser Facture
         buttonOptionsReset.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                //On cloture la facture actuelle
                 Facture.factureActuelle.closeFacture();
+                //On la garde tout de même en mémoire
+                Facture.getFactures().add(Facture.factureActuelle);
+                //On crée la nouvelle
                 Facture.factureActuelle = new Facture(Facture.factureActuelle.getNoFacture()+1, new Date().toString(), Bartender.table, Bartender.connectedUser, 0, 0);
+                //On réinitialise les détails
                 Detail.details = new ArrayList<Detail>();
                 Toast.makeText(OptionsActivity.this, "New Facture", Toast.LENGTH_SHORT).show();
             }
