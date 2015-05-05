@@ -1,6 +1,8 @@
 package lsinf1225.groupeq.bartender;
 
 import android.app.Application;
+import android.view.Gravity;
+import android.widget.Toast;
 
 /**
  * Created by alexis on 30/04/15.
