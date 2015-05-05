@@ -37,7 +37,7 @@
     <string name="login">Nom</string>
     <string name="valider">Valider</string>
     <string name="numTable">N°Table</string>
-    <string name="invite">Invité</string>
+    <string name="invite">Client</string>
     <string name="connecteEnTantQue">Connecté en tant que</string>
 
     <string name="seuil">Seuil</string>
