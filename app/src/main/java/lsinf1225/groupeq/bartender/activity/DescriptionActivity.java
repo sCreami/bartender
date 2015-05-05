@@ -80,4 +80,10 @@ public class DescriptionActivity extends Activity {
             Toast.makeText(DescriptionActivity.this, "Boisson Livrée x1", Toast.LENGTH_SHORT).show();
         }
     };
+
+    public void reloadActivity() {
+        Intent intent = new Intent(this, DescriptionActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+    }
 }

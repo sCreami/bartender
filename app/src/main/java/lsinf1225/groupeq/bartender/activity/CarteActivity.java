@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
 import lsinf1225.groupeq.bartender.activity.adapter.CarteArrayAdapter;
 import lsinf1225.groupeq.bartender.models.Boisson;
@@ -43,6 +44,12 @@ public class CarteActivity extends ListActivity {
         Intent myIntent = new Intent(this,DescriptionActivity.class);
         myIntent.putExtra("position",Integer.toString(position));
         startActivity(myIntent);
+    }
+
+    public void reloadActivity() {
+        Intent intent = new Intent(this, CarteActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
 }

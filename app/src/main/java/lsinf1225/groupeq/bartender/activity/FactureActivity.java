@@ -37,7 +37,6 @@ public class FactureActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_facture);
 
-
         liste = (GridView) findViewById(R.id.factureView);
         final List<String> exemple = new ArrayList<String>();
         load(exemple);
@@ -98,6 +97,12 @@ public class FactureActivity extends Activity {
 
         super.onResume();
         this.onCreate(null);
+    }
+
+    public void reloadActivity() {
+        Intent intent = new Intent(this, FactureActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
 }

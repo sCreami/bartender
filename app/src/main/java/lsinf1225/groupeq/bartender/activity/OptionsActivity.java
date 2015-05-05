@@ -28,7 +28,6 @@ public class OptionsActivity extends Activity {
     private static Button buttonOptionsValider;
     private static EditText noTable;
     private static TextView optionsNom;
-    private Locale myLocale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -91,10 +90,11 @@ public class OptionsActivity extends Activity {
                 builder.setTitle("Select language");
                 builder.setItems(items, new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int item) {
-                        if(items[item].equals("Français"))
-                            changeLang("fr");
-                        else
-                            changeLang("en");
+                        if (items[item].equals("Français")) {
+                            //
+                        } else {
+                            //
+                        }
                     }
                 });
                 AlertDialog alert = builder.create();
@@ -116,32 +116,9 @@ public class OptionsActivity extends Activity {
         }
     }
 
-    public void changeLang(String lang) {
-        if (lang.equalsIgnoreCase(""))
-            return;
-        myLocale = new Locale(lang);
-        saveLocale(lang);
-        Locale.setDefault(myLocale);
-        android.content.res.Configuration config = new android.content.res.Configuration();
-        config.locale = myLocale;
-        getBaseContext().getResources().updateConfiguration(config, getBaseContext().getResources().getDisplayMetrics());
-
-        reloadActivity();
-    }
-
-
-    public void saveLocale(String lang) {
-        String langPref = "Language";
-        SharedPreferences prefs = getSharedPreferences("CommonPrefs", Activity.MODE_PRIVATE);
-        SharedPreferences.Editor editor = prefs.edit();
-        editor.putString(langPref, lang);
-        editor.commit();
-    }
-
     public void reloadActivity() {
-        Intent intent = new Intent(OptionsActivity.this, OptionsActivity.class);
+        Intent intent = new Intent(this, OptionsActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
     }
-
 }

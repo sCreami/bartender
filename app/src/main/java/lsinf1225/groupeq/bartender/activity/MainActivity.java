@@ -7,6 +7,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
@@ -20,7 +21,7 @@ import lsinf1225.groupeq.bartender.models.Serveur;
 
 public class MainActivity extends Activity {
 
-    static boolean ok = false;
+    static boolean bddLoaded = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,7 +34,7 @@ public class MainActivity extends Activity {
         else
             b.setVisibility(View.VISIBLE);
 
-        if(ok == false) {
+        if(bddLoaded == false) {
             // Faut bien générer ça une fois !
             //Oui mais ca le racharge a chaque fois qu'on retourne au menu...!
             //J'ai ajouté un boolean ok pour lutter contre cela
@@ -46,7 +47,7 @@ public class MainActivity extends Activity {
             Serveur.loadServeurs();
 
             Facture.factureActuelle = new Facture(123, null, Bartender.table, "oli", 0, 0);
-            ok = true;
+            bddLoaded = true;
         }
     }
 
@@ -77,6 +78,12 @@ public class MainActivity extends Activity {
     public void openOptions(View view)
     {
         Intent intent = new Intent(MainActivity.this, OptionsActivity.class);
+        startActivity(intent);
+    }
+
+    public void reloadActivity() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
         startActivity(intent);
     }
 }

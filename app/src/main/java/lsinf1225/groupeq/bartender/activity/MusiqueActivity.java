@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
+import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
 import lsinf1225.groupeq.bartender.activity.adapter.CarteArrayAdapter;
 import lsinf1225.groupeq.bartender.activity.adapter.MusiqueArrayAdapter;
@@ -45,5 +46,11 @@ public class MusiqueActivity extends ListActivity {
         }else{
             Toast.makeText(MusiqueActivity.this, "Vous n'avez plus de jeton. Vous gagnez 1 jeton par tranche de 5€.", Toast.LENGTH_SHORT).show();
         }
+    }
+
+    public void reloadActivity() {
+        Intent intent = new Intent(this, MusiqueActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 }

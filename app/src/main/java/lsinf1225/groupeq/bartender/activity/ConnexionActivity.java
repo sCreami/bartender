@@ -10,9 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
 import lsinf1225.groupeq.bartender.models.Serveur;
-
 
 public class ConnexionActivity extends Activity {
 
@@ -35,6 +35,12 @@ public class ConnexionActivity extends Activity {
                 }
             }
         });
+    }
+
+    public void reloadActivity() {
+        Intent intent = new Intent(this, ConnexionActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
 }

@@ -11,6 +11,7 @@ import android.widget.ListView;
 
 import java.util.ArrayList;
 
+import lsinf1225.groupeq.bartender.Bartender;
 import lsinf1225.groupeq.bartender.R;
 import lsinf1225.groupeq.bartender.activity.adapter.CarteArrayAdapter;
 import lsinf1225.groupeq.bartender.activity.adapter.InventaireArrayAdapter;
@@ -54,6 +55,12 @@ public class InventaireActivity extends ListActivity {
 
         setListAdapter(adapter);
 
+    }
+
+    public void reloadActivity() {
+        Intent intent = new Intent(this, InventaireActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
     }
 
 }
