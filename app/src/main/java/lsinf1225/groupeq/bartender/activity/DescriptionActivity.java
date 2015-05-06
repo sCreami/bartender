@@ -62,6 +62,11 @@ public class DescriptionActivity extends Activity {
         lastId = in.getNoProduit();
         Boisson bo = Boisson.getBoissonFromNo(in.getNoBoisson());
 
+        ImageView pic = (ImageView) findViewById(R.id.descriptionPicture);
+
+        int id = (!bo.getPhoto().equals("")) ? getResources().getIdentifier(bo.getPhoto(), "drawable", getPackageName()) : R.drawable.default_img;
+        pic.setImageResource(id);
+
         ImageView icon = (ImageView) findViewById(R.id.descriptionIcon);
 
         switch(bo.getType()){
