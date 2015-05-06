@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/prix"
                 android:layout_weight="1"
-                android:layout_marginLeft="30dip"
+                android:layout_marginLeft="20dip"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 style="@style/couleurTexteBase"/>
@@ -72,7 +72,7 @@
                 android:id="@+id/produitPrix"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="20dp"
                 android:text="2,50€"/>
         </LinearLayout>
 
@@ -86,7 +86,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/format"
                 android:layout_weight="1"
-                android:layout_marginLeft="30dip"
+                android:layout_marginLeft="20dip"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 style="@style/couleurTexteBase"/>
@@ -94,7 +94,7 @@
                 android:id="@+id/produitFormat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="20dp"
                 android:text="33 cl"/>
         </LinearLayout>
 
@@ -108,7 +108,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/type"
                 android:layout_weight="1"
-                android:layout_marginLeft="30dip"
+                android:layout_marginLeft="20dip"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 style="@style/couleurTexteBase"/>
@@ -116,7 +116,7 @@
                 android:id="@+id/produitType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="20dp"
                 android:text="Bière"/>
         </LinearLayout>
 
@@ -130,7 +130,7 @@
                 android:layout_height="wrap_content"
                 android:text="@string/taux"
                 android:layout_weight="1"
-                android:layout_marginLeft="30dip"
+                android:layout_marginLeft="20dip"
                 android:textSize="20dp"
                 android:textStyle="bold"
                 style="@style/couleurTexteBase"/>
@@ -138,7 +138,7 @@
                 android:id="@+id/produitTaux"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="30dp"
+                android:layout_marginRight="20dp"
                 android:text="5,2%"
                 android:paddingBottom="20dp"/>
         </LinearLayout>

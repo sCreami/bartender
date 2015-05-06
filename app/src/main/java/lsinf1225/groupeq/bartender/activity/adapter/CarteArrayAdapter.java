@@ -60,7 +60,7 @@ public class CarteArrayAdapter extends ArrayAdapter<Inventaire> {
         }
 
         name.setText(b.getNom());
-        price.setText(getContext().getResources().getString(R.string.prix) + ": " + Double.toString(i.getPrix()) + "€");
+        price.setText(Double.toString(i.getPrix()) + "€");
         info.setText("Alc: " + Double.toString(b.getTauxAlcool()) + "% Ft: "+ i.getFormat() +"cl");
 
         if(i.getQteStock() == 0) {
