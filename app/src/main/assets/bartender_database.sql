@@ -1,6 +1,6 @@
 CREATE TABLE Serveur(identifiant TEXT PRIMARY KEY,nom TEXT NOT NULL,mdp TEXT NOT NULL);
 
-CREATE TABLE Boisson(numeroBoisson INTEGER PRIMARY KEY AUTOINCREMENT,nom TEXT NOT NULL UNIQUE,tauxAlcool REAL,descriptionFR TEXT NOT NULL, descriptionEN TEXT NOT NULL,type TEXT NOT NULL);
+CREATE TABLE Boisson(numeroBoisson INTEGER PRIMARY KEY AUTOINCREMENT,nom TEXT NOT NULL UNIQUE,tauxAlcool REAL,descriptionFR TEXT NOT NULL, descriptionEN TEXT NOT NULL,type TEXT NOT NULL, photo TEXT NOT NULL);
 
 CREATE TABLE Inventaire(numeroProduit INTEGER PRIMARY KEY AUTOINCREMENT,numeroBoisson INTEGER REFERENCES Boisson(numeroBoisson),prix REAL NOT NULL,format INTEGER NOT NULL,stock INTEGER NOT NULL,seuil INTEGER,maxStock INTEGER);
 
@@ -18,14 +18,14 @@ INSERT INTO Serveur VALUES ("server5", "Sébastien", "password");
 INSERT INTO Serveur VALUES ("server6", "a", "a");
 
 
-INSERT INTO Boisson VALUES (NULL, "Coca-Cola", 0, "Paquet de sucre liquide","Sugar blood" , "soft");
-INSERT INTO Boisson VALUES (NULL, "Stella", 3.6, "Pils blonde", "The blond pils","biere");
-INSERT INTO Boisson VALUES (NULL, "Jupiler", 3.7, "Pils blonde", "","biere");
-INSERT INTO Boisson VALUES (NULL, "Domaine de l'Agly", 12.7, "Vin de Bordeaux","", "vin");
-INSERT INTO Boisson VALUES (NULL, "Spa pétillante", 0, "L'eau hydratante","", "eau");
-INSERT INTO Boisson VALUES (NULL, "Tripel Karmeliet", 4.2, "Blonde triple","", "biere");
-INSERT INTO Boisson VALUES (NULL, "Kasteel Rouge", 4.7, "Parfaite pour violer","", "biere");
-INSERT INTO Boisson VALUES (NULL, "Fanta", 0, "Is this real life ? Or is this fanta sea ?","", "soft");
+INSERT INTO Boisson VALUES (NULL, "Coca-Cola", 0, "Paquet de sucre dur","Sugar blood" , "soft", "coca");
+INSERT INTO Boisson VALUES (NULL, "Stella", 3.6, "Pils blonde", "The blond pils","biere", "stella");
+INSERT INTO Boisson VALUES (NULL, "Jupiler", 3.7, "Pils blonde", "","biere", "jupiler");
+INSERT INTO Boisson VALUES (NULL, "Domaine de l'Agly", 12.7, "Vin de Bordeaux","", "vin", "agly");
+INSERT INTO Boisson VALUES (NULL, "Spa pétillante", 0, "L'eau hydratante","", "eau", "spa_pet");
+INSERT INTO Boisson VALUES (NULL, "Tripel Karmeliet", 4.2, "Blonde triple","", "biere", "tk");
+INSERT INTO Boisson VALUES (NULL, "Kasteel Rouge", 4.7, "Parfaite pour violer","", "biere", "kasteel_rouge");
+INSERT INTO Boisson VALUES (NULL, "Fanta", 0, "Is this real life ? Or is this fanta sea ?","", "soft", "fanta");
 
 INSERT INTO Inventaire VALUES (NULL, (SELECT numeroBoisson FROM Boisson WHERE nom="Coca-Cola"), 1.50, 33, 45, 15, 100);
 INSERT INTO Inventaire VALUES (NULL, (SELECT numeroBoisson FROM Boisson WHERE nom="Coca-Cola"), 2.00, 50, 45, 15, 100);
