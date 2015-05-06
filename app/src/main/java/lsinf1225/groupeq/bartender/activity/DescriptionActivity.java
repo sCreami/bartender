@@ -64,25 +64,26 @@ public class DescriptionActivity extends Activity {
 
         ImageView pic = (ImageView) findViewById(R.id.descriptionPicture);
 
-        int id = (!bo.getPhoto().equals("")) ? getResources().getIdentifier(bo.getPhoto(), "drawable", getPackageName()) : R.drawable.default_img;
-        pic.setImageResource(id);
 
-        ImageView icon = (ImageView) findViewById(R.id.descriptionIcon);
-
+        int defaultImg = R.mipmap.ic_launcher;
         switch(bo.getType()){
-            case "biere": icon.setImageResource(R.drawable.biere);
+            case "biere": defaultImg = R.drawable.biere;
                 break;
-            case "soft": icon.setImageResource(R.drawable.soft);
+            case "soft": defaultImg = R.drawable.soft;
                 break;
-            case "eau": icon.setImageResource(R.drawable.soft);
+            case "eau": defaultImg = R.drawable.soft;
                 break;
-            case "vin": icon.setImageResource(R.drawable.vin);
+            case "vin": defaultImg = R.drawable.vin;
                 break;
-            case "spirit": icon.setImageResource(R.drawable.spirit);
+            case "spirit": defaultImg = R.drawable.spirit;
                 break;
-            default: icon.setImageResource(R.mipmap.ic_launcher);
+            default: defaultImg = R.mipmap.ic_launcher;
                 break;
         }
+
+        int id = (!bo.getPhoto().equals("")) ? getResources().getIdentifier(bo.getPhoto(), "drawable", getPackageName()) : defaultImg;
+        pic.setImageResource(id);
+
 
         nom = (TextView) findViewById(R.id.produitNom);
         description = (TextView) findViewById(R.id.produitDescription);
