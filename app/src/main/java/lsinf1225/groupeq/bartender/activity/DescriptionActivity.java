@@ -64,7 +64,8 @@ public class DescriptionActivity extends Activity {
 
         ImageView pic = (ImageView) findViewById(R.id.descriptionPicture);
 
-        int id = getResources().getIdentifier(bo.getPhoto(), "drawable", getPackageName());
+        String photo = (!bo.getPhoto().equals("")) ? bo.getPhoto() : "default_img";
+        int id = getResources().getIdentifier(photo, "drawable", getPackageName());
         pic.setImageResource(id);
 
         ImageView icon = (ImageView) findViewById(R.id.descriptionIcon);
