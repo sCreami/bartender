@@ -183,3 +183,14 @@ INSERT INTO Musique VALUES (NULL,"Bob Marley","No Woman No Cry","Reggae", "1982"
 INSERT INTO Musique VALUES (NULL,"Gabriella Cilmi","Sweet About Me","Country", "2009");
 INSERT INTO Musique VALUES (NULL,"Maroon 5","Sugar","Pop", "2014");
 INSERT INTO Musique VALUES (NULL,"Hozier","Take me to chuch","Pop", "2014");
+INSERT INTO Musique VALUES (NULL,"Hindi Zahra","Kiss and thrills","Musique du Monde", "2010");
+INSERT INTO Musique VALUES (NULL,"Alela Diane","The rifle","Folk", "2006");
+INSERT INTO Musique VALUES (NULL,"Marie Sioux","Wild Eyes","Folk", "2007");
+INSERT INTO Musique VALUES (NULL,"Rodriguez","Sugar Man","Folk", "1972");
+INSERT INTO Musique VALUES (NULL,"the Broken Circle Breakdown Bluegrass Band","Way Faring Strenger","Folk", "2013");
+INSERT INTO Musique VALUES (NULL,"Officina Zoe","Don Pizzica","Musique du Monde", "2000");
+INSERT INTO Musique VALUES (NULL,"Canzioniere Grecanico Salentino","Nu te Fermare","Musique du Monde", "2012");
+INSERT INTO Musique VALUES (NULL,"Boubacar Trore","Mariama","Musique du Monde", "1990");
+INSERT INTO Musique VALUES (NULL,"Soledad Bravo","Cantos de Pilon","Latino", "1974");
+INSERT INTO Musique VALUES (NULL,"Serge Gainsbourg et Jane Birkin","Je t'aime moi non plus","Chanson Française", "1969");
+INSERT INTO Musique VALUES (NULL,"Claude Nougarou","Petite fille pleur","Chanson Française", "1964");
