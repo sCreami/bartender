@@ -46,16 +46,8 @@ public class Detail {
         return noFacture;
     }
 
-    public void setNoFacture(int noFacture) {
-        this.noFacture = noFacture;
-    }
-
     public int getNoProduit() {
         return noProduit;
-    }
-
-    public void setNoProduit(int noProduit) {
-        this.noProduit = noProduit;
     }
 
     public int getaLivrer() {
