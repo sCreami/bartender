@@ -63,7 +63,7 @@ public class FactureActivity extends Activity {
                 Intent intent = new Intent(FactureActivity.this, DescriptionActivity.class);
 
                 for(int i = 0; i < Inventaire.getInventaires().size(); i++){
-                    if(Detail.details.get(position / 2).getNoProduit() == Inventaire.getInventaires().get(i).getNoProduit()) {
+                    if(Facture.factureActuelle.facDet.get(position / 2).getNoProduit() == Inventaire.getInventaires().get(i).getNoProduit()) {
                         intent.putExtra("position", Integer.toString(i));
                         break;
                     }
@@ -86,7 +86,7 @@ public class FactureActivity extends Activity {
                     Toast.makeText(FactureActivity.this, getString(R.string.payementValide), Toast.LENGTH_SHORT).show();
                     prixFacture.setText("" + String.format("%.2f",Facture.factureActuelle.computePrice()) + " €");
 
-                    Detail.details.get(position / 2).ajouterCommandeToFacture(1);
+                    Facture.factureActuelle.facDet.get(position / 2).ajouterCommandeToFacture(1);
 
             }else{
                 if(Bartender.connectedUser != null)
@@ -100,13 +100,13 @@ public class FactureActivity extends Activity {
     }
 
     private void load(List<String> exemple){
-        for(int i = 0; i < Detail.getDetails().size(); i++)
+        for(int i = 0; i < Facture.factureActuelle.facDet.size(); i++)
         {
-            Detail det = Detail.getDetails().get(i);
+            Detail det = Facture.factureActuelle.facDet.get(i);
             Inventaire inv = Inventaire.getProduitFromNo(det.getNoProduit());
             Boisson boi = Boisson.getBoissonFromNo(inv.getNoBoisson());
             exemple.add(boi.getNom() + " " + inv.getFormat() + " cl");
-            exemple.add(det.getaLivrer() + " | " + det.getDejaLivre() + "   @   " + inv.getPrix() + " €");
+            exemple.add(det.getaLivrer() + " | " + det.getDejaLivre() + "   ~   " + inv.getPrix() + " €");
         }
     }
 
