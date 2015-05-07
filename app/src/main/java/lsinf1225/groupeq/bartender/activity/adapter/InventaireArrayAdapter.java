@@ -60,10 +60,10 @@ public class InventaireArrayAdapter extends ArrayAdapter<Inventaire> {
         }
 
         name.setText(b.getNom() + " " + i.getFormat());
-        seuil.setText(Integer.toString((int)i.getQteSeuil()));
-        stock.setText("Stock : " + Integer.toString((int)i.getQteStock()));
+        seuil.setText(getContext().getString(R.string.seuil) + ": " + Integer.toString((int) i.getQteSeuil()));
+        stock.setText(getContext().getString(R.string.stock) + ": " + Integer.toString((int)i.getQteStock()));
 
-        if(i.getQteStock() <= i.getQteSeuil())
+        if(i.getQteStock() < i.getQteSeuil())
             name.setTextColor(Color.RED);
 
         return rowView;

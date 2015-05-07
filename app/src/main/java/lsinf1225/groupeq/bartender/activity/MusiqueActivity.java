@@ -43,7 +43,11 @@ public class MusiqueActivity extends ListActivity {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
-        if (Facture.factureActuelle.getJetons()>0) {
+        if(Bartender.connectedUser != null) {
+            Musique m = Musique.getMusiqueFromNo(position + 1);
+            Toast.makeText(MusiqueActivity.this,getString(R.string.title_activity_musique)+ " " + m.getTitre() + " " + getString(R.string.ajoutPlaylist), Toast.LENGTH_SHORT).show();
+        }
+        else if (Facture.factureActuelle.getJetons()>0) {
             Facture.factureActuelle.setJetons(Facture.factureActuelle.getJetons() - 1);
             Musique m = Musique.getMusiqueFromNo(position + 1);
             Toast.makeText(MusiqueActivity.this,getString(R.string.title_activity_musique)+ " " + m.getTitre() + " " + getString(R.string.ajoutPlaylist), Toast.LENGTH_SHORT).show();
