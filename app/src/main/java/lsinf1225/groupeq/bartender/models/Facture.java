@@ -15,7 +15,7 @@ import lsinf1225.groupeq.bartender.models.Detail;
 
 public class Facture {
 
-    static ArrayList<Facture> factures;
+    public static ArrayList<Facture> factures;
 
     /* Table bdd */
     public static final String DB_TABLE_FT = "Facture";
@@ -33,9 +33,10 @@ public class Facture {
 	private int noTable;
     private String serveur;
     private int etat; // 0 = open, 1 = closed
-	private int jetons;
+    private int jetons;
 	private double discount;
     private double montant = 0.0;
+    public ArrayList<Detail> facDet = null;
 
     public static Facture factureActuelle;
 
@@ -47,8 +48,9 @@ public class Facture {
 		this.etat = etat;
 		this.discount = 0;
 		this.jetons = 0;
-        Facture.factureActuelle = this;
-		this.jetons = jetons;
+        facDet = new ArrayList<Detail>();
+        this.jetons = jetons;
+        Facture.factures.add(this);
 	}
 
 	public double getDiscount() {
@@ -66,6 +68,10 @@ public class Facture {
 	public void setNoFacture(int noFacture) {
 		this.noFacture = noFacture;
 	}
+
+    public int getEtat() {
+        return etat;
+    }
 
 	public String getDate() {
 		return date;
@@ -117,7 +123,7 @@ public class Facture {
 	 * Calcule le prix total a payer
 	 */
     public double computePrice() {
-        ListIterator<Detail> itr = Detail.details.listIterator();
+        ListIterator<Detail> itr = this.facDet.listIterator();
         double price = 0.0;
 
         while (itr.hasNext()){
@@ -138,7 +144,7 @@ public class Facture {
 	 * @param quantite
 	 */
 	public int addDetail(int noProduit, int quantite) {
-        ListIterator<Detail> itr = Detail.details.listIterator();
+        ListIterator<Detail> itr = this.facDet.listIterator();
         boolean existe = false;             // le produit noProduit existe-t-il dans le tableau ?
         if(Inventaire.getProduitFromNo(noProduit).viderInventaire(1) == 0)return 0;
 
@@ -152,7 +158,7 @@ public class Facture {
         }
         if (existe == false){               // Si pas encore dans la liste, cree detail et l'ajoute
             Detail newDtl = new Detail(0,this.noFacture, noProduit, quantite, 0, 0);
-            Detail.details.add(newDtl);
+            this.facDet.add(newDtl);
         }
         return 2;
     }
@@ -166,7 +172,7 @@ public class Facture {
 	 * @param quantite
 	 */
 	public void validateLivraison (int noProduit, int quantite)  {
-        ListIterator<Detail> itr = Detail.details.listIterator();
+        ListIterator<Detail> itr = this.facDet.listIterator();
 
         while (itr.hasNext()) {
             Detail dtl = itr.next();
@@ -198,7 +204,7 @@ public class Facture {
         }
 
 
-        ListIterator<Detail> itr = Detail.details.listIterator();
+        ListIterator<Detail> itr = this.facDet.listIterator();
 
         while (itr.hasNext()) {
             Detail dtl = itr.next();

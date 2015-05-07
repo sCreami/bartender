@@ -91,8 +91,19 @@ public class OptionsActivity extends Activity {
                     Toast.makeText(OptionsActivity.this, getString(R.string.tableIncorrect), Toast.LENGTH_SHORT).show();
                     Bartender.table = 1;
                 } else {
-                    Toast.makeText(OptionsActivity.this, getString(R.string.tableSetTo)+ " " + table, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(OptionsActivity.this, getString(R.string.tableSetTo) + " " + table, Toast.LENGTH_SHORT).show();
                     Bartender.table = table;
+                    boolean factureFound = false;
+
+                    for(int i = 0; i < Facture.factures.size(); i++){
+                        if(Facture.factures.get(i).getNoTable() == table  &&  Facture.factures.get(i).getEtat() == 0) {
+                            Facture.factureActuelle = Facture.factures.get(i);
+                            factureFound = true;
+                        }
+                    }
+                    if(factureFound == false)
+                        Facture.factureActuelle = new Facture(Facture.factures.size()+1, null, Bartender.table, "oli", 0, 0);
+
                 }
             }
         });
@@ -102,12 +113,8 @@ public class OptionsActivity extends Activity {
             public void onClick(View v) {
                 //On cloture la facture actuelle
                 Facture.factureActuelle.closeFacture();
-                //On la garde tout de même en mémoire
-                Facture.getFactures().add(Facture.factureActuelle);
                 //On crée la nouvelle
-                Facture.factureActuelle = new Facture(Facture.factureActuelle.getNoFacture()+1, new Date().toString(), Bartender.table, Bartender.connectedUser, 0, 0);
-                //On réinitialise les détails
-                Detail.details = new ArrayList<Detail>();
+                Facture.factureActuelle = new Facture(Facture.factures.size()+1, new Date().toString(), Bartender.table, Bartender.connectedUser, 0, 0);
                 Toast.makeText(OptionsActivity.this, getString(R.string.resetFacture), Toast.LENGTH_SHORT).show();
             }
         });
