@@ -25,6 +25,8 @@ import lsinf1225.groupeq.bartender.models.Inventaire;
 
 public class InventaireActivity extends ListActivity {
 
+    InventaireArrayAdapter adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,7 +40,7 @@ public class InventaireActivity extends ListActivity {
         // This is the array adapter, it takes the context of the activity as a
         // first parameter, the type of list view as a second parameter and your
         // array as a third parameter.
-        InventaireArrayAdapter adapter = new InventaireArrayAdapter(this, inventaire);
+        adapter = new InventaireArrayAdapter(this, inventaire);
 
         setListAdapter(adapter);
     }
@@ -46,20 +48,7 @@ public class InventaireActivity extends ListActivity {
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
         Inventaire.getInventaires().get(position).remplirInventaire(1);
-        //Toast.makeText(InventaireActivity.this, Inventaire.getInventaires().get(position).getQteMax(), Toast.LENGTH_SHORT).show();
-
-        ArrayList<Inventaire> inventaireAL = Inventaire.getInventaires();
-
-        // Besoin d'un tableau pour l'adaptateur sinon c'est dégeulasse
-        Inventaire[] inventaire = new Inventaire[inventaireAL.size()];
-        inventaire = inventaireAL.toArray(inventaire);
-
-        // This is the array adapter, it takes the context of the activity as a
-        // first parameter, the type of list view as a second parameter and your
-        // array as a third parameter.
-        InventaireArrayAdapter adapter = new InventaireArrayAdapter(this, inventaire);
-
-        setListAdapter(adapter);
-
+        adapter.notifyDataSetChanged();
     }
+
 }
