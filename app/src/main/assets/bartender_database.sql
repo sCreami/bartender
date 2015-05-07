@@ -20,28 +20,23 @@ INSERT INTO Serveur VALUES ("server6", "a", "a");
 
 INSERT INTO Boisson VALUES (NULL, "Sprite", 0, "Boisson citronnée","Lemon flavoured" , "soft", "sprite");
 INSERT INTO Boisson VALUES (NULL, "Ice-Tea Pêche", 0, "Thé glacé à la pêche", "Peach flavoured ice-tea", "soft", "ice_tea");
-INSERT INTO Boisson VALUES (NULL, "Fanta", 0, "Is this real life ? Or is this fanta sea ?","", "soft", "fanta");
+INSERT INTO Boisson VALUES (NULL, "Fanta", 0, "Is this real life ? Or is this fanta sea ?","You're Fanta-Stick !", "soft", "fanta");
 
-INSERT INTO Boisson VALUES (NULL, "Spa pétillante", 0, "L'eau hydratante","", "eau", "spa_pet");
+INSERT INTO Boisson VALUES (NULL, "Spa pétillante", 0, "L'eau hydratante","The watering water", "eau", "spa_pet");
 
 INSERT INTO Boisson VALUES (NULL, "Stella", 3.6, "Pils blonde", "The blond pils","biere", "stella");
 
-INSERT INTO Boisson VALUES (NULL, "Tripel Karmeliet", 4.2, "Blonde triple","", "biere", "tk");
-INSERT INTO Boisson VALUES (NULL, "Kasteel Rouge", 4.7, "Parfaite pour violer","", "biere", "kasteel_rouge");
-INSERT INTO Boisson VALUES (NULL, "Chimay Bleue", 9, "Abbaye Notre-Dame de Scourmont","", "biere", "chimay_bleue");
-INSERT INTO Boisson VALUES (NULL, "Orval", 6.2, "Abbaye Notre-Dame d'Orval","", "biere", "orval");
-INSERT INTO Boisson VALUES (NULL, "Rochefort 10", 11.3, "Abbaye Notre-Dame Saint-Remy de Rochefort","", "biere", "rochefort_10");
-
-INSERT INTO Boisson VALUES (NULL, "Chateau Tour de Pez", 12, "Dense et élégant, belle longueur, joli fruit. Belle réussite.", "", "vin", "tour_pez");
-INSERT INTO Boisson VALUES (NULL, "Château Soleil 2011", 12, "Un vin frais et pur, à boire sur le fruit.", "", "vin", "chateau_soleil");
-INSERT INTO Boisson VALUES (NULL, "Domaine de l'Agly", 12.7, "Vin de Bordeaux","", "vin", "agly");
-
+INSERT INTO Boisson VALUES (NULL, "Tripel Karmeliet", 4.2, "Blonde triple","Blond beer", "biere", "tk");
+INSERT INTO Boisson VALUES (NULL, "Kasteel Rouge", 4.7, "Parfaite pour violer","Red beer", "biere", "kasteel_rouge");
+INSERT INTO Boisson VALUES (NULL, "Chimay Bleue", 9, "Abbaye Notre-Dame de Scourmont","Blue beer", "biere", "chimay_bleue");
+INSERT INTO Boisson VALUES (NULL, "Orval", 6.2, "Abbaye Notre-Dame d'Orval","Heavy beer", "biere", "orval");
+INSERT INTO Boisson VALUES (NULL, "Rochefort 10", 11.3, "Abbaye Notre-Dame Saint-Remy de Rochefort","The best beer in the world", "biere", "rochefort_10");
+INSERT INTO Boisson VALUES (NULL, "Chateau Tour de Pez", 12, "Dense et élégant, belle longueur, joli fruit. Belle réussite.", "Don't buy this", "vin", "tour_pez");
+INSERT INTO Boisson VALUES (NULL, "Château Soleil 2011", 12, "Un vin frais et pur, à boire sur le fruit.", "A fresh wine, perfect for summer", "vin", "chateau_soleil");
+INSERT INTO Boisson VALUES (NULL, "Domaine de l'Agly", 12.7, "Vin de Bordeaux","Vino de Bordeaux", "vin", "agly");
 INSERT INTO Boisson VALUES (NULL, "Wenneker Mandarin", 20, "Cette liqueur tire son goût des mandarines marocaines les plus délicieuses.","", "spirit", "wenneker");
 INSERT INTO Boisson VALUES (NULL, "Pastis", 20, "Le pastis est une boisson alcoolisée parfumée à l'anis et à la réglisse.","", "spirit", "pastis");
-INSERT INTO Boisson VALUES (NULL, "Vermouth", 20, "Le vermouth est un apéritif à base de vin blanc.","", "spirit", "vermouth");
-
-
-
+INSERT INTO Boisson VALUES (NULL, "Vermouth", 20, "Le vermouth est un apéritif à base de vin blanc.","It doesn't that quite good", "spirit", "vermouth");
 INSERT INTO Boisson VALUES (NULL, "Abbaye d'Aulne Blonde des Pères", 6.3, "Bière de haute fermentation de couleur blonde dorée qui offre une mousse blanche abondante qui retombe rapidement. Cette bière possède un dégagement gazeux très important. Elle a un arôme malté, fruité, un goût doux et une très discrète amertume.","Blond beer", "biere", "");
 INSERT INTO Boisson VALUES (NULL, "Abbaye d'Aulne Triple Blonde", 8.0, "Bière de haute fermentation. Elle a une couleur dorée et une mousse blanche. Cette bière douce offre des saveurs houblonnées et de levure.","Tripel blond beer", "biere", "");
 INSERT INTO Boisson VALUES (NULL, "Affligem Blond", 7.0, "Elle a une couleur blonde dorée et une mousse blanche. Elle possède un arôme de citron, de houblon et un caractère épicé. Son volume d'alcool est de 7%.","Blond beer", "biere", "");
