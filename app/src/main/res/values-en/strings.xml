@@ -18,7 +18,7 @@
 
     <string name="boisson">Drink</string>
     <string name="total">Total</string>
-    <string name="qteAndPrix">To deliver | Delivered @ Price</string>
+    <string name="qteAndPrix">To deliver | Delivered ~ Price</string>
 
     <string name="description">Description</string>
     <string name="prix">Price</string>
