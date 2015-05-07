@@ -64,7 +64,14 @@ public class InventaireArrayAdapter extends ArrayAdapter<Inventaire> {
         stock.setText(getContext().getString(R.string.stock) + ": " + Integer.toString((int)i.getQteStock()));
 
         if(i.getQteStock() < i.getQteSeuil())
-            name.setTextColor(Color.RED);
+            rowView.setBackgroundColor(Color.parseColor("#FFB2AB"));// Rouge clair
+
+        if(i.getQteStock() == 0)
+            rowView.setBackgroundColor(Color.GRAY);
+
+        if(i.getQteStock() == i.getQteMax())
+            rowView.setBackgroundColor(Color.parseColor("#BBE2A3"));// Vert clair
+
 
         return rowView;
     }

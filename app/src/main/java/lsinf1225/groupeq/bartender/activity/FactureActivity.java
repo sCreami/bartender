@@ -90,7 +90,7 @@ public class FactureActivity extends Activity {
 
             }else{
                 if(Bartender.connectedUser != null)
-                    Facture.factureActuelle.validateLivraison(Detail.getDetails().get((position / 2)).getNoProduit(), 1);
+                    Facture.factureActuelle.validateLivraison(Facture.factureActuelle.facDet.get((position / 2)).getNoProduit(), 1);
             }
             Intent intent = new Intent(FactureActivity.this, FactureActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
@@ -112,7 +112,6 @@ public class FactureActivity extends Activity {
 
     @Override
     protected void onResume() {
-
         super.onResume();
         this.onCreate(null);
     }

@@ -88,7 +88,7 @@ public class Detail {
         this.dejaLivre -= quantite;
         this.dejaPaye += quantite;
         if(dejaLivre == 0 && aLivrer == 0) {
-            Detail.details.remove(this);
+            Facture.factureActuelle.facDet.remove(this);
         }
     }
 

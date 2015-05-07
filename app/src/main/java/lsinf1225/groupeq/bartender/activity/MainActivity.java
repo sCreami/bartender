@@ -13,6 +13,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.Locale;
 
 import lsinf1225.groupeq.bartender.Bartender;
@@ -48,6 +49,7 @@ public class MainActivity extends Activity {
             Musique.loadMusiques();
             Serveur.loadServeurs();
 
+            Facture.factures = new ArrayList<Facture>();
             Facture.factureActuelle = new Facture(1, null, Bartender.table, "oli", 0, 0);
             Facture.factureActuelle.facDet = Detail.details;
             bddLoaded = true;
