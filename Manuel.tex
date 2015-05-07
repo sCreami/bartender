@@ -1,0 +1,96 @@
+\documentclass[a4paper,11pt]{article}
+
+\usepackage[utf8]{inputenc} %encodage
+\usepackage[T1]{fontenc} %encodage alphabet accentué
+\usepackage{lmodern} %police moderne
+\usepackage{vmargin} %marge avancé
+\usepackage[french]{babel} %standardisation du français
+\usepackage{eurosym}
+
+%Mise en page
+\oddsidemargin = 2cm
+\evensidemargin = 2cm
+\textwidth = 17cm
+\topmargin = 7mm
+\setlength{\textheight}{27cm}
+%\setlength{\headheight}{0pt}
+
+\titlepage{
+	\title{Manuel d'utilisation de Bartender}
+	\date{\today}
+	\author{Groupe Q}
+}
+
+\begin{document}
+
+{\let\newpage\relax\maketitle}
+
+\section{En tant que client}
+
+Quatres options sont utilisables dans le menu :
+
+\begin{description}
+	\item[Carte] Affiche l'entièreté des boissons disponibles.
+	\item[Facture] Affiche l'état de la facture courante pour la table.
+	\item[Musique] Permet d'ajouter une chanson à la playlist du bar.
+	\item[Options] Permet de changer la langue
+\end{description}
+
+\subsection{Carte}	
+L'entièreté du choix des consommations est affichée dans cette liste. Si une boisson n'est plus en stock, sa ligne devient grisée. Appuyer sur une boisson ouvre sa description dans laquelle il est possible de l'ajouter à la facture courante.
+
+\subsection{Facture}
+L'option Facture reprend plusieurs éléments :
+\begin{itemize}
+	\item Le numéro de table.
+	\item La quantité de jetons disponibles.
+	\item Les consommations commandées avec :
+	\begin{itemize}
+		\item Leur nombre à livrer.
+		\item Le nombre déjà livré.
+		\item Le prix unitaire.
+	\end{itemize}
+	\item Le prix total des consommations.
+\end{itemize}
+
+Appuyer longuement sur une boisson permet d'ouvrir sa description.
+
+\subsection{Musique}
+
+La section Musique permet d'utiliser des jetons pour ajouter ses musiques préférées dans un choix imposé à la playlist du bar. Un jeton est obtenu pour tout les 5\euro{} de consommations.
+
+\subsection{Options}
+
+Le menu Options permet à un client de changer la langue de l'application. Son choix se restreint à anglais ou français.
+
+
+\pagebreak
+\section{En tant que serveur}
+
+Cinq options sont utilisables dans le menu :
+
+\begin{description}
+	\item[Carte] Affiche l'entièreté des boissons disponibles.
+	\item[Facture] Affiche l'état de la facture courante pour la table, de modifier le statut d'une consommation en payé et de définir une boisson comme livrée.
+	\item[Musique] Permet d'ajouter une chanson à la playlist du bar.
+	\item[Inventaire] Permet de monitorer l'état du stock de boisson et de l'augmenter après livraison.
+	\item[Options] Permet de changer la langue, de se connecter en serveur, de changer le numéro de table courant et de clôturer une facture.
+\end{description}
+
+\subsection{Carte}	
+Pareil que pour le client.
+\subsection{Facture}
+En plus des options client, le serveur peut définir une consommation comme payé en appuyant sur son nom, et la définir comme livré en appuyant sur les quantités à livrer/livré.
+
+\subsection{Musique}
+Un serveur peut ajouter une musique à la playlist sans avoir besoin d'utiliser des jetons.
+
+\subsection{Inventaire}
+L'état du stock est disponible dans cette section. Le seuil d'alerte et la quantité actuelle y sont inscrit. Quand une boisson est commandée, une unité est automatiquement retiré du stock. Si la quantité d'une boisson descend en dessous de son seuil, sa ligne devient rouge. En cliquant sur le nom d'un boisson, on augmente son stock d'une unité.
+
+\subsection{Options}
+
+En ajout du client, c'est la section où un serveur peut se connecter. Une fois conncter il dispose d'un champs lui permettant de changer la table courante. Ceci peut-être utiliser pour définir la table d'une tablette statique où apercevoir l'état de la facture d'une table sur sa tablette portable.
+
+
+\end{document}
