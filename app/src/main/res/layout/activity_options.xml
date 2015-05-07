@@ -11,7 +11,7 @@
             style="@style/couleurTexteBase"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="Options"
+            android:text="@string/title_activity_options"
             android:textSize="50dp"
             android:paddingBottom="15dp"
             android:gravity="center"/>
