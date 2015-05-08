@@ -62,5 +62,6 @@
     <string name="badlogin">Nom Incorrect</string>
     <string name="tableSetTo">N°Table est</string>
     <string name="tableIncorrect">Table Incorrecte</string>
+    <string name="facture_boisson"><b>Boisson</b></string>
 
 </resources>
