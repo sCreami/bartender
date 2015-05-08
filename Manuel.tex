@@ -1,4 +1,4 @@
-﻿\documentclass[a4paper,11pt]{article}
+\documentclass[a4paper,11pt]{article}
 
 \usepackage[utf8]{inputenc} %encodage
 \usepackage[T1]{fontenc} %encodage alphabet accentué
@@ -6,6 +6,18 @@
 \usepackage{vmargin} %marge avancé
 \usepackage[french]{babel} %standardisation du français
 \usepackage{eurosym}
+\usepackage{color}
+\usepackage{tcolorbox}% http://ctan.org/pkg/tcolorbox
+\definecolor{mycolor}{rgb}{1, 0, 0}% Rule colour
+\makeatletter
+\newcommand{\mybox}[1]{%
+  \setbox0=\hbox{#1}%
+  \setlength{\@tempdima}{\dimexpr\wd0+13pt}%
+  \begin{tcolorbox}[colframe=mycolor,boxrule=1pt,arc=4pt,
+      left=6pt,right=6pt,top=6pt,bottom=6pt,boxsep=0pt,width=17cm]
+    #1
+  \end{tcolorbox}
+}
 
 %Mise en page
 \oddsidemargin = 2cm
@@ -20,6 +32,8 @@
 }
 
 \begin{document}
+
+\mybox{Les identifiant de connexion sont Nom: \texttt{Marcel} et Mot de passe: \texttt{hunter2}}
 
 {\let\newpage\relax\maketitle}
 
