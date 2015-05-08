@@ -5,6 +5,8 @@
 \usepackage{lmodern} %police moderne
 \usepackage{vmargin} %marge avancé
 \usepackage[french]{babel} %standardisation du français
+\usepackage{graphicx}
+\usepackage{pdflscape}
 
 %Mise en page
 \oddsidemargin = 2cm
@@ -12,7 +14,6 @@
 \textwidth = 17cm
 \topmargin = 7mm
 \setlength{\textheight}{27cm}
-%\setlength{\headheight}{0pt}
 
 \titlepage{
 	\title{Rapport d'implémentations de Bartender}
@@ -40,5 +41,11 @@ Ce document reprend les modifications que nous avons du apporter à nos modèles
 	\item Changement du type de l'attribut \textit{Photo} dans la classe \texttt{Boisson} de Blob vers String.
 	\item Ajout de l'attribut \textit{DescriptionEN} dans la classe \texttt{Boisson}.
 \end{itemize}
+
+\begin{landscape}
+\scalebox{0.4}{\includegraphics{ORM.png}}
+\hspace*{1.25cm}
+\scalebox{0.7}{\includegraphics{UML.png}}
+\end{landscape}
 
 \end{document}
